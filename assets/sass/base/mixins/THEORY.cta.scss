@@ -1,0 +1,214 @@
+@mixin button($radius : $globalRadius) {
+    line-height: normal;
+}
+
+
+@mixin btn--primary($color: $primary-color, $hover: $white, $textColor:$white, $textColorHover: $black) {
+    @include button;
+ 
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-decoration: none !important;
+    background-color: $color;
+    padding: 20px 50px;
+    display: inline-block;
+    font-family: $font-avalon-medium;
+    position: relative;
+    opacity:1;
+    
+
+    &:before {
+        background-color:$hover;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        @include TransitionBezier;
+        z-index: 0;        
+    }
+
+    &:hover {
+        
+
+        &:before {
+            top: 0;
+            height: 100%;
+        }
+
+        span {
+            color: $textColorHover;
+        }
+    }
+
+    span {
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+        color: $textColor;
+        @include Transition;
+    }
+
+}
+
+@mixin btn-banner-large {
+    line-height: 1;
+    font-size: 7.25vw;
+    letter-spacing: -0.04em;
+	font-family: $font-avalon-bold;
+    color: $white;
+
+	@include breakpoint(sm){
+		font-size: 3.71094vw;
+	}
+
+	@include breakpoint(md){
+		font-size: 5.76126vw;
+	}
+
+	@include breakpoint(lg){
+		font-size: 7.76126vw;
+	}
+
+	@include breakpoint(xl){
+		
+    }    
+    
+    &:hover {
+        color: $white !important;
+    }    
+
+    @include Transition; 
+    
+    @include btn-underline-effect($white);
+}
+
+@mixin btn--menu {
+    @include button;
+
+    color: #fff;
+    letter-spacing: -0.05em;
+    font-size: 40px;
+    line-height: 1.1;
+    font-family: $font-avalon-bold;
+    text-decoration: none;
+    @include Transition;    
+
+    &:hover {
+        color: #fff !important;
+    }    
+
+    &:focus {
+        color: #fff !important;
+    }
+}
+
+@mixin btn--blog-headline {
+    @include button;
+    color: $black ;
+    position: relative;
+    display: inline-block;
+    padding: 0 0 15px;
+    width: 100%;
+    @include Transition;  
+    
+    .post-title {
+        @include Transition;
+    }
+
+    &:hover {
+        color: $primary-color;
+
+        .post-title {
+            color: $primary-color !important;
+        }
+    }
+
+    
+    
+
+}
+
+@mixin btn--blog-category {
+    @include button;
+    color: $black ;
+    font-family: $font-graphik-light;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    padding: 0 0 15px;
+
+    @include Transition;
+    
+
+} //9726993040 liza
+
+@mixin btn--meta {
+    @include button;
+    color: $black;
+    font-family: $font-graphik-light;
+    font-size: 16px;    
+    position: relative;
+    display: inline-block;    
+    padding: 0 0 15px;
+
+    @include Transition;
+}
+
+@mixin btn-underline-effect($color: $primary-color) {
+    &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;        
+        background-color: $color;
+        bottom: 10px;
+        right: 0;
+        @include TransitionBezier;
+               
+    }
+
+    &:hover {
+        color: $color;
+
+        &:before {
+            left: 0;
+            width: calc(100%);
+        }
+    }
+}
+
+/* ----------------------------------------------------
+  inline element definition
+------------------------------------------------------- */
+.btn--primary {
+    @include btn--primary;
+}
+.btn--primary-reverse {
+    @include btn--primary($white, $primary-color, $black, $white);
+}
+.btn-menu {
+    @include btn--menu;
+}
+
+.btn-blog-headline {
+    @include btn--blog-headline;
+}
+.btn-blog-category {
+    @include btn--blog-category;
+}
+
+.btn-meta {
+    @include btn--meta;
+}
+
+.button-animated {
+    @include btn-underline-effect;
+}
+
+.button-animated-white {
+    @include btn-underline-effect($white);
+    @include Transition;
+}

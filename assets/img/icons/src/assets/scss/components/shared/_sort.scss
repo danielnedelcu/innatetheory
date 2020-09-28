@@ -1,0 +1,62 @@
+.comp__sort {
+    
+    .dropdown {
+        &.show {
+            .dropdown-toggle {
+                &:after {
+                    content: '';
+                    -webkit-transform: scaleY(-1);
+                    -ms-transform: scaleY(-1);
+                    transform: scaleY(-1);
+                    -webkit-filter: FlipH;
+                    filter: FlipH;
+                    -ms-filter: "FlipH";     
+                }
+            }
+        }        
+        .dropdown-toggle {
+            font-family: $font-gilroy-extra-bold;
+            font-size: 14px;
+            color: $c;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            &:after {                    
+                content: '';
+                background-image: url(/dist/assets/img/icons/Arrow_Large.svg);
+                width: 15px;
+                height: 9px;
+                margin-left: 10px;
+                display: inline-block;
+                background-repeat: no-repeat;                    
+                -webkit-transform: scaleY(1);
+                -ms-transform: scaleY(1);
+                transform: scaleY(1);                          
+            }               
+        }
+        .dropdown-menu {
+            min-width: 180px;
+            border-radius: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            padding: 5px 10px;
+
+            .dropdown-item {
+                float: left;      
+                border-bottom: 1px solid $v; 
+                padding: 15px 10px;
+                text-transform: lowercase;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }  
+            
+            a {
+                @include btn--header-links;
+                font-size: 14px;
+                font-family: $font-gilroy-regular;
+            }
+        }
+    }
+}

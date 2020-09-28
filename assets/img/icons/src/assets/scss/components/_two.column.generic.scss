@@ -1,0 +1,61 @@
+.two_column-generic {
+    &-label {
+        font-size: 10px;
+        line-height: 27px;
+        letter-spacing: 1.43px;
+        color: $r;
+        text-align: center;
+        font-family: $font-gilroy-extra-bold;
+
+        @include md {
+            text-align: left;
+        }        
+    }
+
+    h2 {
+        text-align: center;
+
+        @include md {
+            text-align: left;
+        }        
+    }    
+
+    &-body {
+        padding: 30px 0;
+        text-align: center;
+        width: auto;
+        
+        @include md {
+            width: 25%;
+            text-align: left;
+        }         
+    }   
+    
+    &-cta {
+        text-align: center;
+
+        @include md {
+            text-align: left;
+        }            
+    }   
+    
+    &-grid {
+        margin-top: 40px;
+        
+        @include md {
+            margin-top: 0;
+        }
+
+        &-item {
+            padding: 15px 0;
+
+            @include md {
+                padding: 40px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

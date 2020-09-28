@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Roundpoint</title>
+		<meta name="description" content="Roundpoint">
+		<meta name="author" content="Roundpoint">
+		<link href="/dist/assets/css/libs/jquery.flipster.css" rel="stylesheet">
+		<link href="/dist/assets/css/app.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+</head>
+
+<body>
+	<header class="header">
+	<div class="container-fluid">
+		<div class="menu__section hidden-md hidden-lg">
+			<button type="button" id="headerMenuButton" title="Menu" class="menu__btn">
+					<img src="dist/assets/img/icons/Menu_Icon.svg" />	
+			</button>		
+		</div>
+		<div class="header__logo-block">
+			<img src="dist/assets/img/icons/RP_Logo.svg" />
+		</div>
+
+		<div class="header__account pull-right hidden-md hidden-lg">
+			<button type="button">
+				<img src="dist/assets/img/icons/Account_Small.svg">
+			</button>
+		</div>
+
+		<div class="header__menu pull-right hidden-xs hidden-sm">
+			<ul class="header__menu-ul">
+				<li class="header__menu-li">
+					<div class="utility__search">
+						<input type="text" class="utility__search-expand" placeholder="SEARCH"/>
+					</div>
+				</li>
+				<li class="header__menu-li active">
+					<a href="">
+						pay now
+					</a>
+				</li>
+				<li class="header__menu-li">
+					<form action="/my-handling-form-page" method="post"> 					
+						<button type="submit">log in</button>
+					</form>
+				</li>	
+				
+				<li class="header__menu-li">
+					<div class="dropdown">
+						<button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								eng
+						</button>
+
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="http://www.google.com">eng</a>
+							<a class="dropdown-item" href="http://www.hotmail.com">spa</a>
+							<a class="dropdown-item" href="http://www.amazon.com">ita</a>
+						</div>
+
+					</div>
+
+				</li>			
+							
+			</ul>
+		</div>
+	</div>
+	
+</header>
+    <nav class="navigation__section" role="navigation" aria-label="navigation">
+    <div class="navigation__section-search hidden-md hidden-lg">
+        <img src="/dist/assets/img/icons/search_icon.svg" />
+        <input type="text" class="navigation__section-input" placeholder="SEARCH">
+    </div>    
+    <div class="navigation__content" id="main-nav-collapse" aria-expanded="true">
+        <ul class="navigation-ul">
+            <li class="navigation-li">
+                <div class="accordion-heading">
+                    <div class="navigation-a-wrapper">
+                        <a href="" class="navigation-a">
+                            <div class="navigation-label">i have a loan</div>
+                        </a>
+
+                        <a class="accordion-toggle collapsed" data-parent="#main-nav-collapse" desktop-href="/have" mobile-href="#collapse1" href="#collapse1" data-toggle="collapse" aria-expanded="true"></a>                        
+                    </div>
+                    <span class="line"></span>                    
+                </div>
+                <ul class="subnavigation-ul off collapse" id="collapse1" aria-expanded="true">
+                    <li class="subnavigation-li">
+                        <a href="/marketplace.html" class="subnavigation-a" >
+                            have item one
+                        </a>
+                    
+                    </li>
+                    <li class="subnavigation-li">
+                        <a href="" class="subnavigation-a">
+                            have item two
+                        </a>
+                    </li>        
+                    <li class="subnavigation-li" >
+                        <a href="" class="subnavigation-a">
+                            have item three
+                        </a>
+                    </li>
+                    <li class="subnavigation-li" >
+                        <a href="" class="subnavigation-a">
+                            have item four
+                        </a>
+                    </li>                                  
+                </ul>
+            </li>
+            <li class="navigation-li">
+                <div class="accordion-heading">
+                    <div class="navigation-a-wrapper">
+                            <a href="" class="navigation-a">
+                            <div class="navigation-label">i have a loan</div>
+                        </a>
+
+                        <a class="accordion-toggle collapsed" data-parent="#main-nav-collapse" desktop-href="/need" mobile-href="#collapse2" href="#collapse2" data-toggle="collapse" aria-expanded="true"></a>                        
+                    </div>
+                    <span class="line"></span>  
+                </div>
+                <ul class="subnavigation-ul off collapse" id="collapse2" aria-expanded="true">
+                    <li class="subnavigation-li">
+                        <a href="" class="subnavigation-a">
+                                need item one
+                        </a>
+                    </li>
+                    <li class="subnavigation-li">
+                        <a href="" class="subnavigation-a">
+                                need item two
+                        </a>
+                    </li>        
+                    <li class="subnavigation-li">
+                        <a href="" class="subnavigation-a">
+                                need item three
+                        </a>
+                    </li>
+                    <li class="subnavigation-li">
+                        <a href="" class="subnavigation-a">
+                                need item four
+                        </a>
+                    </li>                                  
+                </ul>
+            </li>
+            <li class="navigation-li active"> <!-- "active" class indicates that we are on this page -->
+                <div class="accordion-heading">
+                    <div class="navigation-a-wrapper">
+                        <a href="" class="navigation-a">
+                            <div class="navigation-label">marketplace</div>
+                        </a>                        
+                    </div>
+                    <span class="line"></span>                          
+                </div>
+            </li>
+            <li class="navigation-li ">
+                <div class="accordion-heading">
+                    <div class="navigation-a-wrapper">
+                        <a href="" class="navigation-a">
+                            <div class="navigation-label">payment help</div>
+                        </a>                        
+                    </div>
+                    <span class="line"></span>                          
+                </div>
+            </li>
+            <li class="navigation-li ">
+                <div class="accordion-heading">
+                    <div class="navigation-a-wrapper">
+                        <a href="" class="navigation-a">
+                            <div class="navigation-label">insurance</div>
+                        </a>                        
+                    </div>
+                    <span class="line"></span>  
+                </div>                        
+            </li>
+            <li class="navigation-li ">
+                <div class="accordion-heading">
+                    <div class="navigation-a-wrapper">
+                        <a href="" class="navigation-a">
+                            <div class="navigation-label">resources</div>
+                        </a>                        
+                    </div>
+                    <span class="line"></span>   
+                </div>                       
+            </li>
+            <li class="navigation-li ">
+                <div class="accordion-heading">
+                    <div class="navigation-a-wrapper">
+                        <a href="" class="navigation-a">
+                            <div class="navigation-label">new customer</div>
+                        </a>                        
+                    </div>
+                    <span class="line"></span>    
+                </div>                      
+            </li>
+        </ul>
+
+        <ul class="utility-ul navigation-ul hidden-md hidden-lg">
+            <li class="utility-li navigation-li">
+                <div class="navigation-a-wrapper">
+                        <a href="" class="navigation-a">
+                            <div class="navigation-label">pay now</div>
+                        </a>                        
+                    </div>
+                    <span class="line"></span>                
+            </li>
+
+            <li class="utility-li navigation-li">
+                <div class="accordion-heading">
+                    <div class="navigation-a-wrapper">
+                        <a href="" class="navigation-a">
+                            <div class="navigation-label">eng</div>
+                        </a>
+
+                        <a class="accordion-toggle collapsed" data-parent="#main-nav-collapse" desktop-href="/have" mobile-href="#collapse3" href="#collapse3" data-toggle="collapse" aria-expanded="true"></a>                        
+                    </div>
+                    <span class="line"></span>                    
+                </div>
+                <ul class="subnavigation-ul off collapse" id="collapse3" aria-expanded="true">
+                    <li class="subnavigation-li">
+                        <a href="/marketplace.html" class="subnavigation-a" >
+                            eng
+                        </a>
+                    
+                    </li>
+                    <li class="subnavigation-li">
+                        <a href="" class="subnavigation-a">
+                            ita
+                        </a>
+                    </li>        
+                        
+                </ul>                  
+            </li>            
+        </ul>
+    </div>
+
+    <div class="navigation__overlay">
+        
+    </div>
+</nav>
+
+    <!-- Alerts banner -->
+    <section class="alerts__section">
+    <div class="container-modified">
+        <!-- "alert-warning", "alert-info" or "alert-other". These give you the three colors -->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert"> 
+            
+            <div class="alert__wrapper">
+                <div class="alert__message">
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                </div>
+                <button type="button" class="close pull-left" data-dismiss="alert" aria-label="Close">
+                    
+                    <img src="/dist/assets/img/icons/alert_close.svg" />
+                    
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+	<!-- Minimalist banner section -->
+	<section class="search__section">
+		<div class="container-fluid">
+				<div class="container-modified">
+					<div class="banner__section-label dark">
+						<div class="banner__section-label-wrapper">
+							<h4>all search results</h4>
+							<hr class="label-hr">
+						</div>
+					</div>
+										
+                    <div class="search__section-header">
+                        <div class="search__section-count pull-left">
+                            <div class="search__section-count-label">
+                                showing <span class="search-range">1-10</span> of <span class="search-total">123</span>
+                                results for <span class="search-criteria">matic</span>
+                            </div>
+                        </div>
+
+                        <!-- Sort dropdown -->
+                        <div class="comp__sort pull-right">
+    <div class="dropdown">
+        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                sort by
+        </button>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="http://www.google.com">most relevant</a>
+            <a class="dropdown-item" href="http://www.hotmail.com">most recent</a>
+            <a class="dropdown-item" href="http://www.amazon.com">alphabetical</a>
+        </div>
+
+    </div>                            
+</div>
+                    </div>
+
+                    <div class="search__section-results">
+                        <ul class="search__section-results-ul">
+                            <li class="search__section-results-li">
+                                <div class="card">
+                                    <h4>Lorem ipsum dolor</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia hendrerit pretium. Integer eu purus in nulla mollis ornare. Proin at eros at elit sodales pellentesque sed quis quam. Nunc ac urna lorem. Vivamus a lobortis tortor.</p>
+                                    <a href="" class="btn-simple">see more<i class="arrow right"></i></a>
+                                </div>
+                            </li>
+
+                            <li class="search__section-results-li">
+                                <div class="card">
+                                    <h4>Lorem ipsum dolor</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia hendrerit pretium. Integer eu purus in nulla mollis ornare. Proin at eros at elit sodales pellentesque sed quis quam. Nunc ac urna lorem. Vivamus a lobortis tortor.</p>
+                                    <a href="" class="btn-simple">see more<i class="arrow right"></i></a>
+                                </div>
+                            </li>        
+                            
+                            <li class="search__section-results-li">
+                                <div class="card">
+                                    <h4>Lorem ipsum dolor</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia hendrerit pretium. Integer eu purus in nulla mollis ornare. Proin at eros at elit sodales pellentesque sed quis quam. Nunc ac urna lorem. Vivamus a lobortis tortor.</p>
+                                    <a href="" class="btn-simple">see more<i class="arrow right"></i></a>
+                                </div>
+                            </li>     
+                            
+                            <li class="search__section-results-li">
+                                <div class="card">
+                                    <h4>Lorem ipsum dolor</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia hendrerit pretium. Integer eu purus in nulla mollis ornare. Proin at eros at elit sodales pellentesque sed quis quam. Nunc ac urna lorem. Vivamus a lobortis tortor.</p>
+                                    <a href="" class="btn-simple">see more<i class="arrow right"></i></a>
+                                </div>
+                            </li>      
+                                                      
+                        </ul>
+                    </div>    
+                    
+                    <div class="search__section-pagination">
+                        <ul class="search__section-pagination-ul">
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>                                                        
+                            <li class="page-item ellipsis">
+                                <a class="page-link">...</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">10</a>
+                            </li>   
+                            <li class="page-item">
+                                <a class="page-link" href="#">next</a>
+                            </li>                                                                                                 
+                        </ul>
+                    </div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer -->
+    <footer class="footer">
+    <div class="container-fluid">
+            <div class="row">
+                <div class="container-alt">
+                    <div class="row">
+                                        
+                            <div class="footer__section">
+                                <div class="container-alt">
+                                    <div class="col-xs-12">
+                                        <div class="footer__header">
+                                                <img src="/dist/assets/img/RP_Logo_Horizontal-White.svg" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12">
+                                        <div class="footer__body">
+                                            <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="accordion" id="contactMobileExpand">
+                                                            <div class="card">
+                                                                <div class="card-header" id="headingOne">
+                                                                    <h5 class="mb-0">
+                                                                        <!-- This is a button because on mobile it functions as an accordion -->
+                                                                        <button class="footer__body-btn collapsed hidden-md hidden-lg" type="button" data-toggle="collapse" data-target="#collapseContact" aria-expanded="false" aria-controls="collapseContact">
+                                                                            <div class="footer__body-title">
+                                                                                <h5>contact us</h5>
+                                                                            </div>
+                                                                        </button>
+
+                                                                        <!-- Duplicate for desktop -->
+                                                                        <div class="footer__body-no-mobile hidden-xs hidden-sm">
+                                                                            <div class="footer__body-title">
+                                                                                <h5>contact us</h5>
+                                                                            </div>  
+                                                                        </div>                                                          
+                                                                    </h5>
+                                                                </div>
+                                                            
+                                                                <div id="collapseContact" class="collapse" aria-labelledby="headingOne" data-parent="#contactMobileExpand">
+                                                                    <div class="card-body">
+                                                                            <div class="footer__body__contact">
+                                                                                <div class="footer__body__contact-block">
+                                                                                    <div class="footer__body__contact-headline">
+                                                                                        <h6>call us</h6>
+                                                                                    </div>
+                                                                                    <div class="footer__body__contact-details">
+                                                                                        <span>877-426-8805</span>
+                                                                                        <p>
+                                                                                            M-F 8:00am – 9:00pm EST<br>
+                                                                                            SAT 10:00am – 3:00pm EST
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="footer__body__contact-block">
+                                                                                    <div class="footer__body__contact-headline">
+                                                                                    <h6>mail to:</h6>
+                                                                                    </div>
+                                                                                    <div class="footer__body__contact-details">
+                                                                                        <p>
+                                                                                                RoundPoint Mortgage Servicing Corporation
+                                                                                                Attention Correspondence<br>
+                                                                                                PO Box 19409<br>
+                                                                                                Charlotte, NC 28219-9409
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>                                        
+                                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>                                         
+                                                        </div>
+                                                    </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="footer__body-column">
+                                                        <div class="accordion" id="aboutMobileExpandLinks">                                    
+                                                                <div class="card">
+                                                                    <div class="card-header" id="headingTwo">
+                                                                        <h5 class="mb-0">
+                                                                            <button class="footer__body-btn collapsed  hidden-md hidden-lg" type="button" data-toggle="collapse" data-target="#collapseLinks2" aria-expanded="false" aria-controls="collapseLinks2">
+                                                                                <div class="footer__body-title">
+                                                                                    <h5>about us</h5>
+                                                                                </div>
+                                                                            </button>
+
+                                                                            <!-- Duplicate for desktop -->
+                                                                            <div class="footer__body-no-mobile hidden-xs hidden-sm">
+                                                                                <div class="footer__body-title">
+                                                                                    <h5>about us</h5>
+                                                                                </div>  
+                                                                            </div>                                                              
+                                                                        </h5>
+                                                                    </div>
+                                                                
+                                                                    <div id="collapseLinks2" class="collapse" aria-labelledby="headingOne" data-parent="#aboutMobileExpandLinks">
+                                                                        <div class="card-body">
+                                                                            <ul class="footer__body-list">
+                                                                                    <li><a href="">our story</a></li>
+                                                                                    <li><a href="">careers</a></li>
+                                                                                    <li><a href="">contact us</a></li>
+                                                                                    <li><a href="">clients</a></li>
+                                                                                    <li><a href="">vendors</a></li>
+                                                                                    <li><a href="">press</a></li>
+                                                                                    <li><a href="">legal</a></li>
+                                                                                    <li><a href="">privacy policy</a></li>
+                                                                                </ul>
+                                                                        
+                                                                        </div>
+                                                                    </div>
+                                                                </div>   
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="footer__body-column">
+                                                        <div class="accordion" id="helpfulMobileExpandLinks">                                    
+                                                                <div class="card">
+                                                                    <div class="card-header" id="headingTwo">
+                                                                        <h5 class="mb-0">
+                                                                            <button class="footer__body-btn collapsed  hidden-md hidden-lg" type="button" data-toggle="collapse" data-target="#collapseLinks3" aria-expanded="false" aria-controls="collapseLinks3">
+                                                                                <div class="footer__body-title">
+                                                                                    <h5>helpful links</h5>
+                                                                                </div>
+                                                                            </button>
+
+                                                                            <!-- Duplicate for desktop -->
+                                                                            <div class="footer__body-no-mobile hidden-xs hidden-sm">
+                                                                                <div class="footer__body-title">
+                                                                                    <h5>helpful links</h5>
+                                                                                </div>  
+                                                                            </div>                                                              
+                                                                        </h5>
+                                                                    </div>
+                                                                
+                                                                    <div id="collapseLinks3" class="collapse" aria-labelledby="headingOne" data-parent="#helpfulMobileExpandLinks">
+                                                                        <div class="card-body">
+                                                                            <ul class="footer__body-list">
+                                                                                    <li><a href="">my dashboard</a></li>
+                                                                                    <li><a href="">payment</a></li>
+                                                                                    <li><a href="">refinance</a></li>
+                                                                                    <li><a href="">marketplace</a></li>
+                                                                                    <li><a href="">customer support</a></li>
+                                                                                    <li><a href="">faqs</a></li>
+                                                                                    <li><a href="">customer ombudsman</a></li>
+                                                                                </ul>
+                                                                        
+                                                                        </div>
+                                                                    </div>
+                                                                </div>   
+                                                        </div>
+                                                    </div>                                        
+                                                </div>
+                                            </div>                    
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="footer__footer">
+                                                    <img src="/dist/assets/img/Equal_Housing_Opp_Grey.svg" />
+                                                    <img src="/dist/assets/img/SSAE_16_SOC-Service_Org_B_Logo.svg" />
+                                                    <p>© 2018 RoundPoint Mortgage Servicing Corporation RoundPoint Mortgage 
+                                                            Servicing Corporation is a Washington Consumer Loan Company Licensee, 
+                                                            NMLS ID 18188 For Additional Information, please visit: NMLS CONSUMER ACCESS</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+                            <!-- Copyright -->
+                            <div class="col-md-12 footer__copyright">
+                                    
+                                    <div class="container-alt">
+                                        
+                                            <p>
+                                                The Personal Household Economy ™
+                                                By clicking Shop Now, you will be directed to a third-party website not operated or maintained by RoundPoint Mortgage Servicing Corporation or any of its affiliates (collectively, “RoundPoint”). 
+                                                The link is provided as part of a marketing program which allows RoundPoint to potentially earn advertising fees. RoundPoint encourages you to review the third party’s privacy policy and security level, 
+                                                which may differ from that of RoundPoint. RoundPoint does not monitor the content of the third-party website, nor does it guarantee the third party’s products or services. Any opinions expressed 
+                                                on a third-party website are those of the third party and not those of RoundPoint.
+                                                
+                                                RoundPoint is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn 
+                                                advertising fees by advertising and linking to amazon.com.
+                                            </p>
+                                    
+                                    </div>
+                                
+                        </div>
+                        <!--/Copyright -->            
+        </div>
+    </div>
+</footer> 
+    <!-- Javascript assets -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/dist/assets/js/libs/jquery.flipster.js"></script>
+<script src="/dist/assets/js/libs/bootstrap-toolkit.min.js"></script>
+<script src="/dist/assets/js/app.bundle.js"></script> 
+</body>
+
+</html>

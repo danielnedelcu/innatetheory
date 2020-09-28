@@ -1,0 +1,37 @@
+.search__section {
+    background-color: $white; 
+    padding: 25px 0;
+    margin-left: 0;
+    position: relative;
+
+    @include md {
+        padding: 90px 0;
+        margin-left: 150px;
+    }     
+
+    &-header {
+        margin-top: 35px;
+        @include clearfix;
+
+        .search__section-count {
+            &-label {
+                color: $black;
+                font-family: $font-gilroy-regular;
+                font-size: 11px;
+                text-transform: uppercase;
+                
+                .search-range {
+
+                }
+
+                .search-total {
+
+                }
+
+                .search-criteria {
+                    font-family: $font-gilroy-extra-bold;
+                }
+            }
+        }
+    }
+}

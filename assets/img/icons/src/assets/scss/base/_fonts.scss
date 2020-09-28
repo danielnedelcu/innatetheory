@@ -1,0 +1,111 @@
+
+/* 
+ * -----------------------------------------
+ *  Fonts
+ *  @@ File: base/_fonts.scss
+ * ----------------------------------------- 
+ */
+
+
+// Font Imports 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+/* 
+* ----------------------------------------------------
+*
+*  Font Variables, Mixins
+*
+* ----------------------------------------------------
+*/
+
+
+//font weight variables
+// $light: 300;
+// $regular: 400;
+// $medium: 500;
+// $semi-bold: 600;
+// $bold: 700;
+// $extra-bold: 800;
+
+//font-family variables
+// $font-primary: "GT-Walsheim-Reg", "GT-Walsheim-Med"; 
+
+$font-gilroy-light: "GilroyLight";
+$font-gilroy-medium: "GilroyMedium";
+$font-gilroy-black :'GilroyBlack';
+$font-gilroy-bold: "GilroyBold"; 
+$font-gilroy-extra-bold: "GilroyExtraBold"; 
+$font-gilroy-semi-bold: "GilroySemiBold"; 
+$font-gilroy-regular: "GilroyRegular";
+$font-baskerville-semibold: "BaskervilleSemiBold";
+ 
+ @font-face {
+    font-family: 'GilroyLight';
+    src: url('/dist/assets/fonts/38BE85_3_0.eot');
+    src: url('/dist/assets/fonts/38BE85_3_0.eot?#iefix') format('embedded-opentype'),
+    url('/dist/assets/fonts/38BE85_3_0.woff2') format('woff2'),
+    url('/dist/assets/fonts/38BE85_3_0.woff') format('woff'),
+    url('/dist/assets/fonts/38BE85_3_0.ttf') format('truetype');
+}
+
+@font-face {
+     font-family: 'GilroyMedium';
+     src: url('/dist/assets/fonts/38BE85_2_0.eot');
+     src: url('/dist/assets/fonts/38BE85_2_0.eot?#iefix') format('embedded-opentype'),
+     url('/dist/assets/fonts/38BE85_2_0.woff2') format('woff2'),
+     url('/dist/assets/fonts/38BE85_2_0.woff') format('woff'),
+     url('/dist/assets/fonts/38BE85_2_0.ttf') format('truetype');
+ }
+
+
+@font-face {
+    font-family: 'GilroyBlack';
+    src: url('/dist/assets/fonts/38BE85_5_0.eot');
+    src: url('/dist/assets/fonts/38BE85_5_0.eot?#iefix') format('embedded-opentype'),
+    url('/dist/assets/fonts/38BE85_5_0.woff2') format('woff2'),
+    url('/dist/assets/fonts/38BE85_5_0.woff') format('woff'),
+    url('/dist/assets/fonts/38BE85_5_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GilroyBold';
+  src: url('https://www.grantthornton.com/static/fonts/GTWalsheimMedium.ttf') format('truetype'),
+       url('https://www.grantthornton.com/static/fonts/GTWalsheimMedium.eot?iefix') format('embedded-opentype'),
+       url('https://www.grantthornton.com/static/fonts/GTWalsheimMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GilroyExtraBold';
+  src: url('/dist/assets/fonts/38BE85_4_0.eot');
+  src: url('/dist/assets/fonts/38BE85_4_0.eot?#iefix') format('embedded-opentype'),
+  url('/dist/assets/fonts/38BE85_4_0.woff2') format('woff2'),
+  url('/dist/assets/fonts/38BE85_4_0.woff') format('woff'),
+  url('/dist/assets/fonts/38BE85_4_0.ttf') format('truetype');
+}
+
+@font-face {
+     font-family: 'GilroySemiBold';
+     src: url('/dist/assets/fonts/38BE85_0_0.eot');
+     src: url('/dist/assets/fonts/38BE85_0_0.eot?#iefix') format('embedded-opentype'),
+          url('/dist/assets/fonts/38BE85_0_0.woff2') format('woff2'),
+          url('/dist/assets/fonts/38BE85_0_0.woff') format('woff'),
+          url('/dist/assets/fonts/38BE85_0_0.ttf') format('truetype');
+     
+   }
+
+@font-face {
+  font-family: 'GilroyRegular';
+  src: url('/dist/assets/fonts/38BE85_1_0.eot');
+  src: url('/dist/assets/fonts/38BE85_1_0.eot?#iefix') format('embedded-opentype'),
+       url('/dist/assets/fonts/38BE85_1_0.woff2') format('woff2'),
+       url('/dist/assets/fonts/38BE85_1_0.woff') format('woff'),
+       url('/dist/assets/fonts/38BE85_1_0.ttf') format('truetype');
+}
+
+@font-face {
+     font-family: 'BaskervilleSemiBold';
+     src: url('https://www.grantthornton.com/static/fonts/GTWalsheimBold.ttf') format('truetype'),
+          url('https://www.grantthornton.com/static/fonts/GTWalsheimBold.eot?iefix') format('embedded-opentype'),
+          url('https://www.grantthornton.com/static/fonts/GTWalsheimBold.woff') format('woff');
+   }

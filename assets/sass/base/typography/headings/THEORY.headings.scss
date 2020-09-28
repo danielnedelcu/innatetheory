@@ -1,0 +1,123 @@
+h1, .h1 {
+	line-height: 1.1;
+	margin: 10px 0 20px;
+	// font-size: 7.25vw;
+	font-size: 45px;
+	letter-spacing: -0.04em;
+	font-family: $font-avalon-bold;
+
+
+	@include breakpoint(sm){
+		// font-size: 3.71094vw;
+		font-size: 45px;
+	}
+
+	@include breakpoint(md){
+		// font-size: 2.76126vw;
+		font-size: 55px;
+	}
+
+	@include breakpoint(lg){
+		// font-size: 3.76126vw;
+		font-size: 65px;
+	}
+
+	@include breakpoint(xl){
+		
+	}
+}
+
+h2, .h2 {
+	font-size: (30 / 480) * 100vw;
+	line-height: (37 / 30);
+	letter-spacing: 0.025em;
+    letter-spacing: -0.04em;
+	font-family: $font-avalon-bold;
+	margin-bottom: 20px;
+		
+	@include breakpoint(xs){
+		font-size: 6vw;
+		line-height: (55 / 45);
+	}
+	@include breakpoint(sm){
+		font-size: (38 / 768) * 100vw;
+		line-height: (45 / 38);
+	}
+	@include breakpoint(lg){
+		font-size: (30 / 1200) * 100vw;
+		line-height: (72 / 60);
+	}
+	@include breakpoint(wide){
+		font-size: 3rem;
+	}
+}
+
+h3, .h3 {
+	font-size: (30 / 480) * 100vw;
+	line-height: (37 / 30);
+    letter-spacing: -0.02em;
+	font-family: $font-gilroy-regular;
+
+	@include breakpoint(xs){
+		font-size: 6vw;
+		line-height: (55 / 45);
+	}
+	@include breakpoint(sm){
+		font-size: (38 / 768) * 100vw;
+		line-height: (45 / 38);
+	}
+	@include breakpoint(lg){
+		font-size: (30 / 1200) * 100vw;
+		line-height: (72 / 60);
+	}
+	@include breakpoint(wide){
+		font-size: 1.5rem;
+	}
+}
+
+h4, .h4 {
+	font-size: (24 / $screen-mobile) * 100vw;
+	line-height: (32 / 24);
+	letter-spacing: -0.04em;
+	font-family: $font-avalon-bold;
+	margin: 0;
+
+	@include breakpoint(xs){
+		font-size: 3.2rem;
+		line-height: (45 / 32);
+	}
+	@include breakpoint(sm){
+		font-size: (35 / $screen-tablet) * 100vw;
+		line-height: (32 / 24);
+	}
+	@include breakpoint(lg){
+		font-size: (35 / $screen-desktop) * 100vw;
+		line-height: (32 / 24);
+	}
+	@include breakpoint(wide){
+		font-size: 2.5rem;
+	}
+}
+
+h5, .h5 {
+    font-size: .9rem;
+    line-height: 1.4;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+	max-width: none;
+	font-family: $font-avalon-bold;
+	
+	@include breakpoint(xs){
+	
+	}
+	@include breakpoint(sm){
+	
+	}
+	@include breakpoint(lg){
+		font-size: 0.8rem;
+		line-height: 1.36364;
+	}
+	@include breakpoint(wide){
+
+	}
+}

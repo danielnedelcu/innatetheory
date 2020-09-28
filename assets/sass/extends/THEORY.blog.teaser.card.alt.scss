@@ -1,0 +1,128 @@
+%blogcardwidealt {
+    .blog__teaser-article {
+        position: relative;
+        // display: flex;
+        // flex: 1 0 100%;
+        // padding: 80px 0;
+        overflow: hidden;
+        margin-bottom: 0;
+        width: 100%;
+        height: 250px;
+
+        .card {
+            position: relative;
+            width: 100%;
+            display: table;
+            height: 100%;
+            @include clearfix;
+
+            &:hover {
+                .blog__image {
+                    opacity: 0.3;
+                }
+            }           
+
+
+        }
+ 
+        
+
+
+        .blog__image {
+            background-size: inherit;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -ms-background-size: inherit;
+            background-size: cover;
+            height: 250px;
+            position: relative;
+            margin-bottom: 80px;
+            opacity: 1;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            @include Transition;
+        }
+        
+        .blog-information {
+            align-items: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        .meta-categories {
+            margin: 0 0 10px;
+
+            .post-categories {
+                margin: 0;
+
+                li {
+                    display: inline-block;
+                    margin-right: 5px;
+                    max-width: 30em;
+                    a {
+                        
+                    }
+
+                    &:after {
+                        content: '/';
+                        font-size: 16px;
+                        margin-left: 10px;
+                        color: $c ;
+                    }
+
+                    &:last-child {
+                        &:after {
+                            content: '';
+                        }                            
+                    }
+                }
+            }
+        }
+
+        .post-title {
+            font-family: $font-avalon-medium;
+            font-size: 30px;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .entry-meta {
+            display: flex;
+            margin-bottom: 0;
+            margin-top: 10px;
+
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 1px;
+                height: 15px;
+                background-color: #888;
+                vertical-align: middle;
+                -webkit-transform: skew(-45deg);
+                transform: skew(-45deg);
+                margin-left: 70px;        
+            }
+
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                font-size: 12px;
+
+                &.entry-date {
+
+                }
+
+                &.entry-author {
+                    
+                }
+            }
+        }
+    }
+
+    
+}

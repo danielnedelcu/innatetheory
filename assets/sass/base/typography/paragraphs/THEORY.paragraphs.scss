@@ -1,0 +1,28 @@
+p {
+    line-height: 1.8;
+    letter-spacing: 0;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    font-family: $font-graphik-light;
+ 
+    @include breakpoint(md) {
+        letter-spacing: 0;
+        font-size: 1.25rem;        
+    }
+        
+    @include breakpoint(lg) {
+        letter-spacing: 0;
+        font-size: 1.25rem        
+    }
+}
+
+.p {
+    line-height: 1.8;
+    letter-spacing: 0.4px;
+    font-size: 1.25rem;
+
+    @include breakpoint(md) {
+     
+    }    
+}
+

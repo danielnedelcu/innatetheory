@@ -1,0 +1,19 @@
+﻿ /* ==========================================================================
+   Global Animations and Filters
+   ========================================================================== */
+
+  @mixin Transition($speed : 300ms, $property : all, $ease : ease) {
+     transition: $speed $property $ease;
+     -webkit-transition: $speed $property $ease;
+     -moz-transition: $speed $property $ease;
+     -ms-transition: $speed $property $ease;
+     -o-transition: $speed $property $ease;
+  }
+
+  @mixin TransitionBezier {
+      -webkit-transition: all .3s cubic-bezier(.785,.135,.15,.86);
+      -moz-transition: all .3s cubic-bezier(.785,.135,.15,.86);
+      -ms-transition: all .3s cubic-bezier(.785,.135,.15,.86);
+      -o-transition: all .3s cubic-bezier(.785,.135,.15,.86);    
+      transition: all .3s cubic-bezier(.785,.135,.15,.86);     
+  }

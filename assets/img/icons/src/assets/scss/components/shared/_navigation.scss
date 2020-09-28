@@ -1,0 +1,319 @@
+/*
+ * -----------------------------------------
+ *  Navigation
+ * -----------------------------------------
+ */
+
+ .navigation__section {
+     width: 100%;
+     position: fixed;
+     top: 50px;
+    //  height: 100%;
+     z-index: 2;
+     display: none;
+
+     @include md {
+         display: block;
+         top: 80px;
+         width: auto;
+         height: 100% !important;
+     }
+
+     &.open {
+        display: block;
+        overflow: auto;
+         
+        @include md {
+            overflow: visible;
+        }
+     }
+
+    .navigation__overlay {
+        background-color: $black;
+        opacity: 0.5;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 80px;
+        left: 0;      
+        opacity: 0;
+        visibility: hidden;  
+        @include Transition;
+
+        &.active {
+            visibility: visible;
+            opacity: 0.5;            
+        }
+
+        @include md {
+            top: 80px;
+        }
+    }
+
+    &-search {
+        background-color: $white;
+        width: 100%;
+        border-top: 1px solid $q;
+        border-bottom: 1px solid $q;
+        position: relative;
+        z-index: 9;
+        padding: 12px 15px; 
+        position: relative;
+        
+        img {
+            position: absolute;
+        }
+
+        .navigation__section-input {
+            border: none;
+            // margin-left: 20px;
+            font-family: $font-gilroy-medium;
+            font-size: 12px;
+            letter-spacing: 1.45px;
+            color: $black;
+            width: 100%;
+            padding-left: 50px;
+
+            @include md {
+
+            }
+        }
+    }
+
+     .navigation__content {
+        background-color: $white;
+        // height: 100%;
+        z-index: 2;
+        width: 100%;
+        position: relative;       
+        @include clearfix;
+        
+        @include md {
+            width: 156px;
+            height: 100%;
+        }
+
+        .utility-ul {
+            background-color: $u;
+            margin: 0;
+            float: left;
+            width: 100%;
+        
+            .utility-li {
+                &:last-child {
+                    .navigation-a-wrapper {
+               
+                        border-bottom: none;
+                    }
+                 }          
+            }
+        }
+
+         .navigation-ul {             
+             .navigation-li {
+                 .accordion-heading{
+                     position: relative;
+                 }
+                 .navigation-a-wrapper {
+                    border-bottom: 1px solid #e2e2e2;
+                    margin: 0 20px 0;
+                    position: relative;                    
+                 }
+
+                 .line {
+                    width: 136px;
+                    height: 2px;
+                    background-color: $black;
+                    position: absolute;
+                    right:0;
+                    bottom: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    display: none;
+                    @include Transition;
+
+                    @include md {
+                        display: block;
+                    }
+                }                    
+                 .navigation-a {
+                     @include btn--navigation-links;
+                     border-bottom: none;                
+                     position: relative;
+                 }
+
+                 &.active {
+                    .navigation-a {
+                        color: $l;
+                    }
+                 }
+
+                 .accordion-toggle {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: auto;
+                    height: auto;
+                    padding: 25px 0 25px 40px;
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);                  
+                    transform: translateY(-50%);   
+                    
+                    &:after {
+                        content: '';
+                        background-image: url(/dist/assets/img/icons/navarrow.svg);
+                        width: 15px;
+                        height: 9px;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        -webkit-transform: scaleY(-1);
+                        -ms-transform: scaleY(-1);
+                        transform: scaleY(-1);
+                        -webkit-filter: FlipH;
+                        filter: FlipH;
+                        -ms-filter: "FlipH";                        
+                    }
+
+                    &.collapsed {
+                        &:after {
+                            content: '';
+                            -webkit-transform: scaleY(1);
+                            -ms-transform: scaleY(1);
+                            transform: scaleY(1);                            
+                        }
+                    }
+
+                     @include md {
+                         display: none;
+                     }
+                 }
+
+                 &:last-child {
+                    border-bottom: none;
+                 }
+
+                @include md {
+                    &.hover, &:hover {
+                        background-color: $white;           
+                        z-index: 100;     
+                        left: 0;         
+                    
+                        >a {
+                            @include Transition;                     
+                        }
+
+                        .line {
+                            opacity: 1;
+                            visibility: visible;
+                        }           
+                        
+                        ul {
+                            &.subnavigation-ul {
+                                visibility: visible;
+                                opacity: 1;   
+                                pointer-events: auto;	
+                                
+                                transform: translateX(156px);
+                            }	                            
+
+                            >li {
+                                position: relative;
+                                z-index: 100;
+                                &:hover {
+                                    background-color: $j;
+
+                                    >a {
+                                        &:focus, &:focus-within {
+                                            & + li {
+                                                background-color: $j;
+                                            }
+                                        }
+                                        color: $white;
+                                        @include Transition;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+
+				>a {
+				    display: block;			
+				}                
+                
+                .collapse {
+                    @include md {
+                        display: block !important;                    
+                    }
+                }
+
+                .subnavigation-ul {
+                    position: relative;
+                    width: 100%;                
+                    background-color: $black;
+                    visibility: visible;
+                    opacity: 1;               
+                    @include Transition;
+                    @include clearfix;
+
+                    @include md {
+                        position: absolute;
+                        top: 0;
+                        width: 350px;     
+                        height: 900px;
+                        padding: 0 0;    
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateX(150px);          
+                        pointer-events: none;                                    
+                    }
+
+                    .subnavigation-li {
+                        padding: 0 40px;
+                        cursor: pointer;
+                        line-height: 0;
+                        @include Transition;
+                
+                        >a {
+                            &:focus, &:focus-within {
+                                & + li {
+                                    background-color: $j;
+                                }
+                            }
+                            text-decoration: none;                                                                                
+                        }
+                
+                        a {
+                            @include btn--navigation-links($white, 100%);
+                        }
+
+                        &:last-child {
+                            a {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+             }
+         }
+     }
+ }
+
+ .navigation-open {
+     overflow: hidden;
+
+     @include md {
+        overflow: auto;
+     }
+
+    .navigation__overlay {
+        visibility: visible;
+        opacity: 0.5;   
+
+        @include md {
+            opacity: 0;
+            visibility: hidden;              
+        }
+    }
+}

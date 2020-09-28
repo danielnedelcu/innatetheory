@@ -1,0 +1,174 @@
+/* 
+ * -----------------------------------------
+ *  Typography
+ *  @@ File: base/_typography.scss
+ * ----------------------------------------- 
+ */
+
+body, .body-text{
+    color: $b;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 24px;
+
+    @include md {
+        font-size: 14px;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    letter-spacing: 0;
+}
+
+h1, .h1{
+    font-size: 30px;
+    color: $white;
+    line-height: 28px;
+    letter-spacing: -0.1px;
+    font-family: $font-gilroy-light;
+    strong {
+        font-size: 34px;
+        line-height: 40px;        
+        letter-spacing: -0.11;
+        font-family: $font-gilroy-black;
+    }
+
+    @include md {
+        font-size: 60px;
+        line-height:56px;
+        letter-spacing: 0.79px;    
+        
+        strong {
+            font-size: 60px;
+            line-height: 56px;
+            letter-spacing: 0.79px;
+            font-family: $font-gilroy-black;
+        }        
+    }
+}
+h2, .h2{
+    font-size: 26px;
+    color: $black;
+    line-height: 38px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    font-family: $font-gilroy-light;
+    @include clearfix;
+
+    strong {
+        font-size: 54px;
+        letter-spacing: 0.92px;
+        font-family: $font-gilroy-black;        
+    }    
+
+    @include md {
+        font-size: 54px;
+        letter-spacing: 0.92px;
+        line-height: 46px;
+        font-family: $font-gilroy-black;   
+        
+        strong {
+            font-size: 54px;
+            line-height: 46px;
+            letter-spacing: 0.79px;
+            font-family: $font-gilroy-black;
+        }        
+    }    
+}
+h3, .h3 {
+    font-size: 14px;
+    line-height: 17px;
+    color: $a;
+    margin: 0px;
+    font-family: $font-gilroy-bold;
+    letter-spacing: 1.61px;
+    text-transform: uppercase;
+
+    @include md {
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: 0.8px;
+    }
+}
+h4, .h4 {
+    font-size: 20px;
+    color: $a;
+    margin: 0;
+    line-height: 1;
+    font-family: $font-gilroy-extra-bold;
+}
+h5, .h5{
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 2.04px;
+    color: $white;
+    margin: 0;
+    text-transform: uppercase;
+
+    @include md {
+        font-size: 20px;
+        line-height: 18px;
+        letter-spacing: 0.8px;
+    }
+}
+
+h6, .h6{
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.4px;
+    color: $white;
+    text-transform: uppercase;
+}
+
+p{
+    @extend .body-text;
+    font-family: $font-gilroy-regular;
+    margin-bottom: 10px;
+}
+
+ul, dl{
+    padding-left: 15px;
+    list-style-type: disc;
+    font-size: 16px;
+    color: $a;
+    ul, dl{
+        list-style-type: disc;
+        padding-left: 25px;
+        > li {
+            margin-top: 5px;
+        }
+    }
+    > li {
+        margin-bottom: 5px;
+    }
+}
+ol{
+    padding-left: 0;
+    list-style-type: number;
+    font-size: 16px;
+    color: $b;
+    ol{
+        list-style: number;
+        padding-left: 25px;
+        > li {
+            margin-top: 5px;
+        }
+    }
+    > li {
+        margin-bottom: 5px;
+    }
+}
+p{
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+a.btn.cta-icon em{
+    margin-right: 10px;
+}
+a.btn.cta-icon{
+    margin-bottom: 5px;
+}

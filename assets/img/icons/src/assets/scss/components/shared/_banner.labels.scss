@@ -1,0 +1,53 @@
+%bannerLabel {
+    text-align: center;
+    position: relative;
+    padding: 25px 0;
+    margin: 30px 0;
+    @include clearfix;
+
+    @include md {
+        padding: 25px 0;
+        margin: 0;
+    }
+
+    .banner__section-label-wrapper {
+        position: absolute;
+        display: table;
+        width: 100%;
+        top: 20px;        
+    }
+
+    .banner__section-counter{
+        font-size: 160px;
+        color: $o;
+        // position: absolute;
+        // top: -97px;
+        position: relative;
+        top: 0;
+        margin: 0;
+        line-height: 0;
+
+        left: 0;
+        right: 0;    
+        font-family: $font-baskerville-semibold;    
+    }
+    h4{
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $white;
+    }
+
+    hr {
+        margin: 0;
+        border-top: 2px solid $brand-hr-yellow;
+        display: inline-block;
+        width: 120px;
+    }
+
+    &.dark {
+        h4 {
+            color: $black;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.banner__section {
+    background-color: $black;
+    padding: 50px 0;
+    position: relative;
+
+    @include md {
+        margin-left: 150px;
+        padding: 90px 0;
+    }         
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $black;
+        opacity: 0.5;
+    }
+
+    &.banner__section-image {
+        background-repeat: no-repeat;
+        background-position: center center;
+        -ms-background-size: inherit;
+        background-size: cover;     
+        height: auto;  
+        padding: 0;
+
+        @include md {
+            height: 540px;  
+        }
+
+        .banner__section-wrapper {
+            height: auto;
+            display: table-cell;
+            vertical-align: middle; 
+            padding: 90px 0;          
+            
+            @include md {
+                height: 540px;  
+                padding: 0;
+            }            
+        }
+    }
+    .banner__center {
+        display: table;
+        height: 100%;
+        width: 100%;        
+    }
+    &-wrapper {
+        text-align: center;
+        z-index: 1;
+        position: relative;       
+        padding: 0 50px;
+        
+        @include md {
+            padding: 0;
+        }
+    }
+
+    &-label {
+        @extend %bannerLabel;
+    }
+
+    &-body{
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 35px;
+        margin-top: 35px;
+        @include clearfix;
+
+        @include md {
+            width: 35%;
+        }              
+
+        p {
+            color: $white;
+            text-align: center;
+        }
+    }    
+
+    .banner__cta {
+        a {
+            margin: 5px 10px;
+            width: 100%;
+
+            @include md {
+                margin: 0 10px;
+                width: auto;
+            }
+        }
+    }
+}

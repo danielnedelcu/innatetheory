@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="32px" viewBox="0 0 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>search icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.8805744,2.46153846 C7.13534359,2.46153846 2.46170256,7.136 2.46170256,12.8812308 C2.46170256,18.6264615 7.13534359,23.3009231 12.8805744,23.3009231 C18.6258051,23.3009231 23.3002667,18.6264615 23.3002667,12.8812308 C23.3002667,7.136 18.6258051,2.46153846 12.8805744,2.46153846 M22.592082,21.3346192 L30.4875487,29.2404513 C30.9667282,29.7212718 30.9667282,30.500759 30.4859077,30.9815795 C30.2463179,31.2211692 29.931241,31.3409641 29.6161641,31.3409641 C29.3010872,31.3409641 28.9851897,31.2211692 28.7447795,30.9799385 L20.8054163,23.0294067 C18.6184182,24.7410931 15.8664541,25.7624615 12.8805744,25.7624615 C5.77821538,25.7624615 0.000164102565,19.9835897 0.000164102565,12.8812308 C0.000164102565,5.77805128 5.77821538,0 12.8805744,0 C19.9829333,0 25.7618051,5.77805128 25.7618051,12.8812308 C25.7618051,16.1129632 24.5653164,19.0706737 22.592082,21.3346192 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation/Mobile---Active-Logged-In" transform="translate(-12.000000, -60.000000)">
+            <g id="Main-Nav---Active">
+                <g id="search" transform="translate(0.000000, 50.000000)">
+                    <g id="search-icon" transform="translate(12.000000, 10.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Fill-1" fill="#808E9F" xlink:href="#path-1"></use>
+                        <g id="color/black" mask="url(#mask-2)" fill="#000000" fill-rule="nonzero">
+                            <g transform="translate(-1.000000, -1.000000)">
+                                <rect x="0" y="0" width="33" height="33"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

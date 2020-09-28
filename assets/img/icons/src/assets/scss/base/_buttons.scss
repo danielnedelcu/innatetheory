@@ -1,0 +1,271 @@
+@mixin button($radius : $globalRadius) {
+	cursor: pointer;
+    line-height: normal;
+}
+
+@mixin btn--footer-links {
+    color: $white;   
+    padding: 10px 0 10px 30px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.15);
+    font-family: $font-gilroy-bold;
+
+    @include md {
+        padding: 10px 0;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    @include button;
+    @include Transition;  
+}
+
+@mixin btn--header-links {
+    color: $black;   
+    padding: 5px 20px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-decoration: none;
+
+    &:hover {
+      color: $g;
+    }
+
+    @include button;
+    @include Transition;  
+}
+
+@mixin btn--header-search {
+    color: $black;   
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-decoration: none;
+    line-height: normal;
+    border: none;
+
+    &:hover {
+      color: $g;
+    }
+
+    @include Transition;  
+}
+
+@mixin btn--navigation-links($color: $black, $width: auto) {
+    color: $color;   
+    padding: 23px 0px;
+    width: $width;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid #e2e2e2;
+    font-family: $font-gilroy-medium;
+
+    &:hover {
+    //   color: $g;
+    }
+
+    @include md {
+        font-size: 13px;
+        width: 100%;
+    }
+
+    @include button;
+    @include Transition;  
+}
+
+@mixin btn--hero-links {
+    color: $black;   
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    font-family: $font-gilroy-semi-bold;
+
+    &:hover {
+      color: $g;
+    }
+
+    @include md {
+        font-size: 16px;
+    }
+
+    @include button;
+    @include Transition;  
+}
+
+@mixin btn--product-list {
+    // padding: 50px 0;
+    color: $r;   
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    margin: 0 auto;
+    display: block;
+    font-family: $font-gilroy-semi-bold;
+    float: left;
+
+    &:after {
+        content: '';
+        border-bottom: 2px solid transparent;
+        width: 50px;
+        margin: 0 auto;
+        display: block;
+        width: 70%;
+        margin-top: 8px;
+        @include Transition;  
+    }
+
+    &:hover {
+        color: $l;
+
+        &:after {
+            content: '';
+            border-bottom: 2px solid $l;
+        }        
+    }
+  
+    @include md {
+        font-size: 16px;
+    }
+  
+      @include button;
+      @include Transition;      
+}
+
+@mixin btn--primary {
+    @include button;
+    color: $white;   
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-decoration: none !important;
+    border: 1px solid $white !important;
+    background-color: $black;
+    padding: 20px 50px;
+    display: inline-block;
+    font-family: $font-gilroy-extra-bold;
+
+    .arrow {
+        border-color: $white;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $black;   
+      border: 1px solid $black !important;
+
+      .arrow {
+        border-color: $black;
+      }
+    }
+    @include Transition;  
+}
+
+@mixin btn--video-play {
+    background-color: $black;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;    
+    border-radius: 50%;
+    @include Transition;
+    
+    .play {
+        width: 0px;
+        height: 0px;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 15px solid $white;
+        display: block;
+        margin: 0 auto;
+        top: 0;
+        bottom: 0;
+        position: relative;
+        left: 3px;                
+    }
+
+    &:hover {
+        background-color: $c;
+    }
+}
+
+@mixin btn-tabs {
+    text-align: center;
+    font-family: $font-gilroy-extra-bold;
+    line-height: 27px;
+    letter-spacing: 2px;
+    color: $p;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include Transition;
+
+    &.active {
+        color: $c;
+
+        span {
+            border-bottom: 1px solid $c;
+        }
+
+        .arrow {
+            border-color: $c;
+        }            
+    }
+
+    span {
+        padding: 5px 0;
+        border-bottom: 1px solid transparent;
+    }
+
+    .arrow {
+        border-color: $p;
+    }    
+}
+
+
+@mixin btn--simple {
+    @include button;
+    color: $c;   
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-decoration: none !important;
+    padding: 20px 0;
+    display: inline-block;
+    font-family: $font-gilroy-extra-bold;
+
+    .arrow {
+        border-color: $c;
+    }    
+
+    &:hover {
+      color: $g;
+
+      .arrow {
+        border-color: $g;
+      }      
+    }
+    @include Transition;  
+}
+
+/* ----------------------------------------------------
+  inline element definition
+------------------------------------------------------- */
+.btn-primary {
+    @include btn--primary;
+}
+.btn-simple {
+    @include btn--simple;
+}

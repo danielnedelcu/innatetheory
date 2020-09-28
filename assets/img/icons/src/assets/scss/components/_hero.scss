@@ -1,0 +1,169 @@
+/*
+ * -----------------------------------------
+ *  Hero Component
+ * -----------------------------------------
+ */
+
+
+ .comp__hero {
+    margin-left: 0;
+
+    @include md {
+        margin-left: 150px;
+    }   
+
+    &.secondary {
+        .comp__hero-image {
+            @include md {
+                height: 400px;
+            }            
+        }
+    }
+
+     p { 
+         color: $white;
+     }
+     &-half {
+         width: 80%;
+         float: left;
+         margin-top: 0px;
+
+         @include md {
+            margin-top: 20px;
+            width: 40%;
+        }         
+     }
+
+     &-image {
+        background-repeat: no-repeat;
+        background-position: center center;
+        -ms-background-size: inherit;
+        background-size: cover;   
+        height: 300px;  
+        display: table;
+        width: 100%;      
+        @include ShadowRectangle;
+
+        @include md {
+            height: 576px;
+        }
+        
+        &-content {
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            padding: 0 20px;
+            top: -30px;
+
+            @include md {
+                padding: 0 100px;
+                top: 0;
+            }
+        }
+     }
+     
+     &-cta {
+         width: 90%;
+         margin:0 auto;
+         margin-top: -70px;
+
+         @include md {
+            width: 80%;
+        }             
+
+         .comp__hero-label {
+             background-color: $a;
+             display: table;
+             margin: 0 auto;
+             padding: 15px 20px;    
+             color: $white;       
+             font-size: 11px;
+             letter-spacing: 2px;
+             text-transform: uppercase; 
+             z-index: 1;
+             position: relative;  
+             text-align: center;
+             font-family: $font-gilroy-extra-bold;      
+             
+             @include md {
+                font-size: 14px;
+            }             
+         }
+         
+         .comp__hero-options{
+             @include clearfix;
+             background-color: $white;
+             display: table;
+             width: 100%;
+             border: 1px solid $j;
+             margin-top: -15px;
+             @include ShadowRectangle;
+
+             ul {
+                display: flex;
+                flex-wrap: wrap;
+                @include clearfix;
+
+                 li {
+                    flex-grow: 1;
+                    width: 50%;                    
+                    border-bottom: 1px solid $j;
+                    text-align: center;
+                    padding: 30px 0;
+
+                    &:nth-child(odd) {
+                        border-right: 1px solid $j;
+                    }      
+                    
+                    &:nth-child(3) {
+                        border-bottom: none;
+                    }                         
+
+                     @include md {
+                        padding: 50px 0;
+                        border-bottom: none;
+                        border-right: 1px solid $j;
+                        min-width: 130px; 
+                        width: auto;
+
+                        &:last-child {
+                            border: none;
+                        }                         
+                     }
+
+                     @include lg {
+                        min-width: 160px; 
+                     }
+
+                     @include xl {
+                        min-width: 200px; 
+                     }                     
+
+                     &:last-child {
+                         border: none;
+                     }
+
+                     a {
+                        height: 100%;
+                        display: block;
+                        @include btn--hero-links;
+                     }
+                     .options-label {
+                        // padding: 0 35px;
+                     }
+
+                     .hero-hr {
+                         width: 30px;
+                         height: 3px;
+                         background-color: $p;
+                         display: inline-block;
+                     }
+                 }
+             }
+
+             .comp__hero-hr {
+
+             }
+         }
+     }
+ }

@@ -1,0 +1,76 @@
+/* 
+ * -----------------------------------------
+ *  Variables
+ *  @@ File: base/_variables.scss
+ * ----------------------------------------- 
+ */
+
+
+
+/* ----------------------------------------------------
+   Colors
+------------------------------------------------------- */
+$black			:		#000000;
+$white			: 		#ffffff;
+$gray           :       #808e96;
+$brand-hr-gray	:		#d9d9d9;
+$brand-hr-yellow:       #ffc601;
+$alert-warning  :       #cd0505;
+$alert-info  :          #6cb8d8;
+$alert-other  :         #f3a511;
+
+$a		: 		#004b7c;
+$b		:		#272727;
+$c		:		#6cb8d8;
+$d		:		#374e64;
+$e 		: 		#404042;
+$f	 	: 		#89898B;
+$g 	    :		#8c8c8e;
+$h      :       #4c5969;
+$i      :       #353b3e;
+$j      :       rgba(128, 142, 159, 0.5);
+$k      :       #ffea82;
+$l      :       #005b92;
+$m      :       #982c86;
+$n      :       #631f50;
+$o      :       rgba(108, 184, 216, 0.25);
+$p      :       #808e9f;
+$q      :       #979797;
+$r      :       #2c2c2c;
+$s      :       rgba(76, 89, 105, 0.1);
+$t      :       #7f8f96;
+$u      :       #efefef;
+$v      :       #e2e2e2;
+$w      :       #f4f4f4;
+
+
+
+/* ----------------------------------------------------
+   Color Override Classes
+------------------------------------------------------- */
+.black			{color: $black		!important;}		
+.white			{color: $white		!important;} 		
+	
+.color-a		{color: $a	!important;} 		
+.color-b		{color: $b	!important;} 		
+.color-c		{color: $c	!important;}
+	
+
+
+/* ----------------------------------------------------
+   Background Color Override Classes
+------------------------------------------------------- */
+
+.bg-black{
+	background-color: $black;
+}
+.bg-white{
+	background-color: $white;
+}
+
+/* ----------------------------------------------------
+   Global Radius
+------------------------------------------------------- */
+$globalRadius: 0px;
+
+

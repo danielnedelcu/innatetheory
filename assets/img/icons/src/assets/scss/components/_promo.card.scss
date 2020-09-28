@@ -1,0 +1,56 @@
+.promo__card {
+    padding: 50px 0;
+
+    &-image {
+        background-repeat: no-repeat;
+        background-position: center center;
+        -ms-background-size: inherit;
+        background-size: cover;     
+         height: 300px;  
+        padding: 0;
+        overflow: hidden;
+        border-radius: 5px;        
+
+        @include md {
+            height: 400px;  
+        }
+    }
+
+    &-callout {
+        background-color: $black;
+        display: table;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: -175px;
+        color: $white;
+        padding: 30px 30px;
+
+        @include md {
+            padding: 30px 70px;
+        }
+
+        h2 {
+            color: $white;
+            padding-bottom: 20px;
+            font-size: 26px;
+            letter-spacing: -0.2px;
+            line-height: 28px;
+
+            strong {
+                font-size: 28px;
+                letter-spacing: -0.22px;
+            }
+
+            @include md {
+                font-size: 32px;
+                letter-spacing: 0.42px;
+
+                strong {
+                    font-size: 40px;
+                    letter-spacing: 0.68px;
+                    line-height: 46px;
+                }                
+            }            
+        }
+    }
+}

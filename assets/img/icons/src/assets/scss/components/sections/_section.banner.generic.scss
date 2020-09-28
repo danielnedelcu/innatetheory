@@ -1,0 +1,15 @@
+.banner__generic {
+    padding: 90px 0;
+    position: relative;
+    box-shadow: 
+    inset 0px 31px 38px -20px #CCC,
+    inset 0px -31px 38px -20px #CCC;
+    
+    @include md {
+        margin-left: 150px;
+    }             
+
+    &.gray {
+        background-color: $s;
+    }
+}

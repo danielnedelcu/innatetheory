@@ -1,0 +1,103 @@
+@@include('../partials/head.html')
+
+<body>
+	@@include('../partials/header.html')
+    @@include('../partials/navbar.html')
+
+    <!-- Alerts banner -->
+    @@include('../partials/alerts.html')
+
+	<!-- Minimalist banner section -->
+	<section class="search__section">
+		<div class="container-fluid">
+				<div class="container-modified">
+					<div class="banner__section-label dark">
+						<div class="banner__section-label-wrapper">
+							<h4>all search results</h4>
+							<hr class="label-hr">
+						</div>
+					</div>
+										
+                    <div class="search__section-header">
+                        <div class="search__section-count pull-left">
+                            <div class="search__section-count-label">
+                                showing <span class="search-range">1-10</span> of <span class="search-total">123</span>
+                                results for <span class="search-criteria">matic</span>
+                            </div>
+                        </div>
+
+                        <!-- Sort dropdown -->
+                        @@include('./sort.html')
+                    </div>
+
+                    <div class="search__section-results">
+                        <ul class="search__section-results-ul">
+                            <li class="search__section-results-li">
+                                <div class="card">
+                                    <h4>Lorem ipsum dolor</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia hendrerit pretium. Integer eu purus in nulla mollis ornare. Proin at eros at elit sodales pellentesque sed quis quam. Nunc ac urna lorem. Vivamus a lobortis tortor.</p>
+                                    <a href="" class="btn-simple">see more<i class="arrow right"></i></a>
+                                </div>
+                            </li>
+
+                            <li class="search__section-results-li">
+                                <div class="card">
+                                    <h4>Lorem ipsum dolor</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia hendrerit pretium. Integer eu purus in nulla mollis ornare. Proin at eros at elit sodales pellentesque sed quis quam. Nunc ac urna lorem. Vivamus a lobortis tortor.</p>
+                                    <a href="" class="btn-simple">see more<i class="arrow right"></i></a>
+                                </div>
+                            </li>        
+                            
+                            <li class="search__section-results-li">
+                                <div class="card">
+                                    <h4>Lorem ipsum dolor</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia hendrerit pretium. Integer eu purus in nulla mollis ornare. Proin at eros at elit sodales pellentesque sed quis quam. Nunc ac urna lorem. Vivamus a lobortis tortor.</p>
+                                    <a href="" class="btn-simple">see more<i class="arrow right"></i></a>
+                                </div>
+                            </li>     
+                            
+                            <li class="search__section-results-li">
+                                <div class="card">
+                                    <h4>Lorem ipsum dolor</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia hendrerit pretium. Integer eu purus in nulla mollis ornare. Proin at eros at elit sodales pellentesque sed quis quam. Nunc ac urna lorem. Vivamus a lobortis tortor.</p>
+                                    <a href="" class="btn-simple">see more<i class="arrow right"></i></a>
+                                </div>
+                            </li>      
+                                                      
+                        </ul>
+                    </div>    
+                    
+                    <div class="search__section-pagination">
+                        <ul class="search__section-pagination-ul">
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>                                                        
+                            <li class="page-item ellipsis">
+                                <a class="page-link">...</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">10</a>
+                            </li>   
+                            <li class="page-item">
+                                <a class="page-link" href="#">next</a>
+                            </li>                                                                                                 
+                        </ul>
+                    </div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer -->
+    @@include('../partials/footer.html') 
+    <!-- Javascript assets -->
+    @@include('../partials/assets.html') 
+</body>
+
+</html>

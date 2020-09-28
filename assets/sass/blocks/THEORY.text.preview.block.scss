@@ -1,0 +1,27 @@
+.text__preview-block {
+	position: absolute;
+	top: 50px;
+    z-index: 3;    
+    margin-left: 90px;
+    margin-right: 0;
+
+	@include breakpoint(sm){
+
+	}
+
+	@include breakpoint(md){
+
+	}
+
+	@include breakpoint(lg){
+		margin-right: 150px;
+	}
+
+	@include breakpoint(xl){
+		margin-right: 150px;
+    }    
+    
+	@include breakpoint(wide){
+		margin-right: 200px;
+	}       
+}

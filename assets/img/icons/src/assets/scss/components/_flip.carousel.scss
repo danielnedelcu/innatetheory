@@ -1,0 +1,133 @@
+.flip-carousel {
+    overflow-y: hidden;
+
+    ul {
+        // height: auto !important;
+
+        &.generic__card-ul {
+            .generic__card-li {
+                .card {
+                    transform-style: preserve-3d;
+                    width: 100%;
+                    height: 400px;
+                    @include ShadowRectangle;   
+
+                    @include md {
+                        height: 458px;
+                    } 
+
+                    .generic__card-image {
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        -ms-background-size: inherit;
+                        background-size: cover;
+                        width: 100%;
+                        height: 0;
+                        padding-top: 52.64%;                                        
+                    }         
+                    
+                    img {
+                        padding: 30px 30px 0px;
+                    }
+
+                    .generic__card-content {
+                        padding: 30px 30px 0;
+                        
+                        .generic__card-headline {
+                            color: $white;
+                        }
+
+                        p {
+                            color: $white;
+                            padding-top: 15px;
+                            font-family: $font-gilroy-regular;
+                
+                        }  
+                        
+                        .generic__card-a{
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        li {
+        
+            .flipster__item__content {
+                background-color:$black;                
+                width: 300px;
+                border-radius: 5px;
+                overflow: hidden; 
+                
+                @include md {
+                    width: 363px;
+                }
+            }
+        }
+    }
+    .flip-carousel-pagination {
+        text-align: center;
+        display: table;
+        position: relative;
+        margin: 0 auto;
+        padding: 40px 0;
+
+        .flipster__button {
+            float: left;
+            position: relative;
+            background-image: none;
+            margin: 4px 0;
+            width: 7px;
+            left: auto;
+
+            &--prev {
+
+            }
+
+            &--next {
+
+            }
+
+            svg {
+                width: 9px;
+            }
+        }
+    }
+
+    .flipster__nav {
+        margin: 0;
+        display: inline-block;
+        float: left;
+        margin: 0 15px;
+
+        .flipster__nav__item {
+            margin: 0 4px;
+
+            .flipster__nav__link {
+                width: 8px;
+                height: 8px;
+                display: inline-block;
+                border-radius: 100%;
+                margin: 0;
+                background: #ffffff;
+                padding: 0;
+                border: 2px solid #808e96;
+
+                &:after {
+                }
+            }
+
+            &--current {
+                .flipster__nav__link {
+                    border: 2px solid #000000;
+                    background: #000000;                                        
+                    &:after {
+           
+                    }
+                }
+            }            
+        }
+    }    
+}

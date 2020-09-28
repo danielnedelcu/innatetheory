@@ -1,0 +1,189 @@
+/*
+ * -----------------------------------------
+ *  Header
+ * -----------------------------------------
+ */
+
+ .header {
+     height: 50px;
+     background-color: $white;
+     position: fixed;
+     width: 100%;
+     top: 0;
+     z-index: 2;
+     @include Shadow;
+
+     @include md {
+        height: 80px;
+     }
+
+     .menu__section {
+        display: inline-block;
+        z-index: 3;
+        position: relative;
+        height: 50px;
+        width: 30px;  
+        
+        @include md {
+            height: 80px;
+        }
+
+        .menu__btn {
+            img {
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);                
+            }
+        }
+    }
+
+    &__account {
+        right: 15px;
+        @include align(true, false, absolute);        
+    }
+
+     &__logo-block {
+        height: 50px;
+        width: 100%;
+        top: 0;
+        position: absolute;
+         text-align: center;   
+
+         @include md {
+            float: left;
+            width: auto;
+            height: 80px;
+            text-align: left;   
+         }
+
+
+         img {
+            width: 200px;
+            position: absolute;
+            transform: translateX(-50%);
+            margin-top: 10px;
+
+            @include md {
+                margin-top: 0;
+                @include align(true, false, absolute);
+            }
+
+            @include sm {
+
+            }
+         }
+     }
+
+     &__menu {
+        display: table;
+        height: 80px;
+     }
+
+     &__menu-ul {
+        display: table-cell;
+        vertical-align: middle;
+    }     
+
+    &__menu-li {
+        float: left;
+        margin: 25px 0;
+        display: flex;
+        font-family: $font-gilroy-medium;
+
+        &:after {
+            content:'';
+            border-right: 1px solid #ccc;
+        }
+        
+        &:last-child {
+            &:after {
+                content:'';
+                border-right: none;
+            }            
+        }
+
+        &.active {
+            a {
+                color : $c;
+            }
+        }
+
+        .utility__search {
+            margin-right: 20px;
+
+            &-expand {
+                float: right;
+                display: inline-block;
+                width: 55px;
+                color: $black;  
+                @include btn--header-search;
+                border-bottom: 1px solid $white;
+                @include Transition;
+                
+
+                &:focus {
+                    width: 100% !important;
+                    border-bottom: 1px solid #000;
+                    cursor: none;
+                  }
+            }
+        }
+
+        a {
+            @include btn--header-links;
+        }
+
+        .dropdown {
+            &.show {
+                .dropdown-toggle {
+                    &:after {
+                        content: '';
+                        -webkit-transform: scaleY(-1);
+                        -ms-transform: scaleY(-1);
+                        transform: scaleY(-1);
+                        -webkit-filter: FlipH;
+                        filter: FlipH;
+                        -ms-filter: "FlipH";     
+                    }
+                }
+            }
+            .dropdown-toggle {                
+                &:after {                    
+                    content: '';
+                    background-image: url(/dist/assets/img/icons/navarrow.svg);
+                    width: 15px;
+                    height: 9px;
+                    margin-left: 10px;
+                    display: inline-block;
+                    background-repeat: no-repeat;                    
+                    -webkit-transform: scaleY(1);
+                    -ms-transform: scaleY(1);
+                    transform: scaleY(1);                          
+                }            
+            }
+        
+            .dropdown-menu {
+                min-width: 180px;
+                border-radius: 0;
+                box-shadow: none; 
+                padding: 5px 10px;           
+        
+                .dropdown-item {
+                    float: left;      
+                    border-bottom: 1px solid $v; 
+                    padding: 15px 20px; 
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+        button {
+            @include btn--header-links;
+        }
+    }    
+ }

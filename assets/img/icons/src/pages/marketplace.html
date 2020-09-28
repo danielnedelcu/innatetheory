@@ -1,0 +1,516 @@
+@@include('../partials/head.html')
+
+<body>
+    @@include('../partials/modal.html')
+    @@include('../partials/header.html')
+    @@include('../partials/navbar.html')
+
+    <!-- Alerts banner -->
+    @@include('../partials/alerts.html')
+
+    <!-- Hero section -->
+	<section class="comp__hero secondary"> <!-- Add class "secondary" for the alternative hero style -->
+		<div class="container-modified">           
+			<div class="comp__hero-image" style="background-image: url('/dist/assets/img/hero_image.jpg');">
+				<div class="comp__hero-image-content">
+					<h1>
+						Feel at home with<br>
+						<strong>your mortgage.</strong>
+					</h1>
+					<div class="comp__hero-half">
+						<p>We know what it means to own a home. It’s time to get smarter—combining the best of the mortgage and technology worlds.</p>
+					</div>
+				</div>
+			</div>
+
+            <!-- Hero cta list -->
+            @@include('./hero-cta-list.html')
+		</div>
+	</section>
+
+	<!-- Minimalist banner section -->
+	<section class="minimalist__section m-t-b-50">
+		<div class="container-fluid">
+			<div class="container-modified">
+                <!-- Banner header label -->
+                @@include('./banner-label.html')
+
+				<!-- Slider main container -->
+				<div class="swiper-container swiper-basic">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="two_column-media table-layout">
+								<div class="col-md-12">
+									<div class="row">	
+										<div class="table-cell-layout w-50 p-b-m-40">
+											<div class="col-md-12">
+												<div class="row">		
+													<h5 class="two_column-media-label">our vision</h5>										
+													<h2>
+														We're on point<br>
+														<strong>for all things home.</strong>
+													</h2>
+
+													<div class="two_column-media-body">
+														<p>Explore personalized home recommendations inspired by the benefits you love. </p>
+													</div>
+													
+													<div class="two_column-media-cta">
+														<a href="" class="btn-primary">learn more<i class="arrow right"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="table-cell-layout w-50 p-b-m-40">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="two_column-media-video m-r-15">
+														<img src="/dist/assets/img/video_image.jpg" />
+														<button class="video__play-btn"  data-embed="X1VzzNbfPaM">
+															<i class="play"></i>
+														</button>
+													</div>
+												</div>
+											</div>	
+										</div>		
+									</div>
+								</div>		
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="two_column-media table-layout">
+								<div class="col-md-12">
+									<div class="row">									
+										<div class="table-cell-layout w-50 p-b-m-40">
+											<div class="col-md-12">
+												<div class="row">
+													<h5 class="two_column-media-label">our vision two</h5>	
+													<h2>
+														Second slider<br>
+														<strong>distance and space</strong>
+													</h2>
+
+													<div class="two_column-media-body">
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+													</div>
+
+													<div class="two_column-media-cta">
+														<a href="" class="btn-primary">learn more<i class="arrow right"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="table-cell-layout w-50 p-b-m-40">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="two_column-media-video m-r-15">
+														<img src="/dist/assets/img/video_image_alt.jpg" />
+														<button class="video__play-btn" data-embed="X1VzzNbfPaM">
+															<i class="play"></i>
+														</button>
+													</div>
+												</div>
+											</div>	
+										</div>				
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+
+					<div class="comp__pagination">
+						<div class="swiper-button-prev"><i class="arrow left"></i></div>						
+						<div class="swiper-pagination"></div>	
+						<div class="swiper-button-next"><i class="arrow right"></i></div>
+					</div>						
+				</div>		
+							
+					
+			</div>
+		</div>
+	</section>
+
+	<section class="banner__section banner__section-image" style="background-image: url('/dist/assets/img/banner_image.jpg');">
+        <div class="container-fluid">
+            <div class="container-modified">
+                <div class="banner__center">
+                    <div class="banner__section-wrapper">
+                        <!-- Banner header label -->
+                        @@include('./banner-label-alt.html')
+
+                        <div class="banner__section-headline">
+                            <h2 class="h1">
+                                We've had your back<br>
+                                <strong>since 2007</strong>
+                            </h2>
+                        </div>
+                        <div class="banner__section-body">
+                                <p>Fill out a few key pieces of information and start saving on homeownership services.</p>						
+                        </div>
+
+                        <a href="" class="btn-primary">get started<i class="arrow right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>	
+
+	<!-- Minimalist banner section -->
+	<section class="minimalist__section box-shadow ">
+			<div class="container-fluid">
+				<div class="container-modified">
+                <!-- Banner header label -->
+                @@include('./banner-label.html')
+
+
+                <!-- Promo card -->
+                @@include('./promo-card.html')
+
+
+				<!-- Slider main container -->
+				<div class="swiper-container swiper-basic" data-effect="slide" data-slides-view="2" data-slides-group="2" data-slides-space="20">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- Promo card -->
+                            @@include('./promo-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Promo card -->
+                            @@include('./promo-card.html')                           
+                        </div>	
+                        
+                        <div class="swiper-slide">
+                            <!-- Promo card -->
+                            @@include('./promo-card.html')                           
+                        </div>	     
+                        
+                        <div class="swiper-slide">
+                            <!-- Promo card -->
+                            @@include('./promo-card.html')                           
+                        </div>                        
+                    </div>
+
+                    <div class="comp__pagination">
+                        <div class="swiper-button-prev"><i class="arrow left"></i></div>						
+                        <div class="swiper-pagination"></div>	
+                        <div class="swiper-button-next"><i class="arrow right"></i></div>
+                    </div>						
+                </div>		
+						
+					
+			</div>
+		</div>
+	</section>
+
+	<section class="minimalist__section">
+        <div class="container-fluid">
+            <div class="container-modified">
+                <!-- Banner header label -->
+                @@include('./banner-label.html')
+
+                <div class="product__list">
+                    <div class="row">
+                        <div class="product__list-buttons col-xs-12">
+
+                            <div class="swiper-container swiper-free-container product__list-buttons-ul" data-effect="slide" data-free-mode="true" data-slides-view="6">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper line-separated">
+                                    <div class="swiper-slide product__list-buttons-li">       
+                                        <a href="" class="h4">
+                                            All deals
+                                        </a>
+                                    </div>
+
+                                    <div class="swiper-slide product__list-buttons-li">       
+                                        <a href="" class="h4">
+                                            Featured
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="swiper-slide product__list-buttons-li">       
+                                        <a href="" class="h4">
+                                            Insurance
+                                        </a>
+                                    </div>      
+                                    
+                                    <div class="swiper-slide product__list-buttons-li">       
+                                        <a href="" class="h4">
+                                            Home protection
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="swiper-slide product__list-buttons-li">       
+                                        <a href="" class="h4">
+                                            home services
+                                        </a>
+                                    </div>    
+                                    
+                                    <div class="swiper-slide product__list-buttons-li">       
+                                        <a href="" class="h4">
+                                            additional services
+                                        </a>
+                                    </div>                                       
+                                </div>
+                            </div>
+                                                                                                                         
+                        </div>
+
+                        <div class="product__sort">
+                            <div class="col-xs-12">
+                                <!-- Sort dropdown -->
+                                @@include('./sort.html')
+                            </div>
+                        </div>
+
+                        <ul class="product__list-ul">
+
+                            <li class="product__list-li col-sm-6 col-lg-4">
+
+                                    <div class="card">
+                                        <div class="card-front">
+                                            <div class="product__list-image" style="background-image: url('/dist/assets/img/product1.jpg');">
+    
+                                            </div>
+                                            <div class="product__list-content">
+                                                <h3 class="product__list-headline">promotional item headline one</h3>
+                                                <p>Lorem ipsum this is the second and thirl lines that are longer and therefore we will make them longers o i can tell what it looks like odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+    
+                                                <div class="product__list-a">
+                                                    <a href="" class="btn-simple">lorem ipsum<i class="arrow right"></i></a>
+                                                </div>
+                                            </div>
+    
+                                            <button type="button" class="info-btn open-btn">i</button>
+                                        </div>
+    
+                                        <div class="card-back">
+                                            <h3 class="product__list-headline">promotional item headline lorem</h3>
+                                            <p>Lorem ipsum odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+                                            <button type="button" class="info-btn close-btn">
+                                                <img src="/dist/assets/img/icons/promo_close.svg" />
+                                            </button>
+                                        </div>
+                                    </div>
+                            </li>
+
+                            <li class="product__list-li col-sm-6 col-lg-4">
+
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="product__list-image" style="background-image: url('/dist/assets/img/product1.jpg');">
+
+                                        </div>
+                                        <div class="product__list-content">
+                                            <h3 class="product__list-headline">promotional item headline one</h3>
+                                            <p>Lorem ipsum this is the second and thirl lines that are longer and therefore we will make them longers o i can tell what it looks like odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+
+                                            <div class="product__list-a">
+                                                <a href="" class="btn-simple">lorem ipsum<i class="arrow right"></i></a>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="info-btn open-btn">i</button>
+                                    </div>
+
+                                    <div class="card-back">
+                                        <h3 class="product__list-headline">promotional item headline lorem</h3>
+                                        <p>Lorem ipsum odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+                                        <button type="button" class="info-btn close-btn">
+                                            <img src="/dist/assets/img/icons/promo_close.svg" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>                            
+                            <li class="product__list-li col-sm-6 col-lg-4">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="product__list-image" style="background-image: url('/dist/assets/img/product1.jpg');">
+
+                                        </div>
+                                        <div class="product__list-content">
+                                            <h3 class="product__list-headline">promotional item headline one</h3>
+                                            <p>Lorem ipsum this is the second and thirl lines that are longer and therefore we will make them longers o i can tell what it looks like odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+
+                                            <div class="product__list-a">
+                                                <a href="" class="btn-simple">lorem ipsum<i class="arrow right"></i></a>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="info-btn open-btn">i</button>
+                                    </div>
+
+                                    <div class="card-back">
+                                        <h3 class="product__list-headline">promotional item headline lorem</h3>
+                                        <p>Lorem ipsum odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+                                        <button type="button" class="info-btn close-btn">
+                                            <img src="/dist/assets/img/icons/promo_close.svg" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>    
+                            
+                            <li class="product__list-li col-sm-6 col-lg-4">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="product__list-image" style="background-image: url('/dist/assets/img/product1.jpg');">
+
+                                        </div>
+                                        <div class="product__list-content">
+                                            <h3 class="product__list-headline">promotional item headline one</h3>
+                                            <p>Lorem ipsum this is the second and thirl lines that are longer and therefore we will make them longers o i can tell what it looks like odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+
+                                            <div class="product__list-a">
+                                                <a href="" class="btn-simple">lorem ipsum<i class="arrow right"></i></a>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="info-btn open-btn">i</button>
+                                    </div>
+
+                                    <div class="card-back">
+                                        <h3 class="product__list-headline">promotional item headline lorem</h3>
+                                        <p>Lorem ipsum odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+                                        <button type="button" class="info-btn close-btn">
+                                            <img src="/dist/assets/img/icons/promo_close.svg" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                    
+	<section class="banner__section">
+			<div class="container-fluid">
+				<div class="container-modified">
+					<div class="banner__section-wrapper">
+                        <!-- Banner header label -->
+                        @@include('./banner-label-alt.html')
+
+						<div class="banner__section-headline">
+							<h2 class="h1">
+								Want to<br>
+								<strong>talk to us?</strong>
+							</h2>
+						</div>
+
+						<div class="banner__section-body">
+								<p>Our offices are open Monday - Friday from 8am until 9pm and Saturday from 10am until 3pm EST.</p>						
+						</div>	
+						
+						<div class="banner__cta">
+								<a href="" class="btn-primary">live chat<i class="arrow right"></i></a>
+								<a href="" class="btn-primary">support<i class="arrow right"></i></a>
+								<a href="" class="btn-primary">email<i class="arrow right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+    </section>	
+    
+	<section class="minimalist__section">
+        <div class="container-fluid">
+            <div class="container-modified">
+                <!-- Banner header label -->
+                @@include('./banner-label.html')
+
+                <div class="flip-carousel">
+                    <ul class="generic__card-ul">
+                        <li class="generic__card-li">
+                            <div class="card">
+                                
+                                <div class="generic__card-content">
+                                    <h3 class="generic__card-headline">promotional item headline one</h3>
+                                    <p>Lorem ipsum this is the second and thirl lines that are longer and therefore we will make them longers o i can tell what it looks like odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+
+                                    <div class="generic__card-a">
+                                        <a href="" class="btn-simple">lorem ipsum<i class="arrow right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="generic__card-li">
+                        <div class="card">
+                            <img src='/dist/assets/img/thumbnail.jpg' />
+                            <div class="generic__card-content">
+                                <h3 class="generic__card-headline">promotional item headline two</h3>
+                                <p>Lorem ipsum this is the second and thirl lines that are longer and therefore we will make them longers o i can tell what it looks like odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+
+                                <div class="generic__card-a">
+                                    <a href="" class="btn-simple">lorem ipsum<i class="arrow right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        </li>        
+                    
+                        <li class="generic__card-li">
+                            <div class="card">
+                                <div class="generic__card-image" style="background-image: url('/dist/assets/img/product1.jpg');"></div>
+                                <div class="generic__card-content">
+                                    <h3 class="generic__card-headline">promotional item headline three</h3>
+                                    <p>Lorem ipsum this is the second and thirl lines that are longer and therefore we will make them longers o i can tell what it looks like odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+
+                                    <div class="generic__card-a">
+                                        <a href="" class="btn-simple">lorem ipsum<i class="arrow right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>         
+                    
+                        <li class="generic__card-li">
+                            <div class="card">
+                                <img src='/dist/assets/img/thumbnail2.jpg' />
+                                <div class="generic__card-content">
+                                    <h3 class="generic__card-headline">promotional item headline four</h3>
+                                    <p>Lorem ipsum this is the second and thirl lines that are longer and therefore we will make them longers o i can tell what it looks like odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+
+                                    <div class="generic__card-a">
+                                        <a href="" class="btn-simple">lorem ipsum<i class="arrow right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>            
+                    
+                        <li class="generic__card-li">
+                            <div class="card">
+                                <div class=" generic__card-image" style="background-image: url('/dist/assets/img/product1.jpg');"></div>
+                                <div class="generic__card-content">
+                                    <h3 class="generic__card-headline">promotional item headline four</h3>
+                                    <p>Lorem ipsum this is the second and thirl lines that are longer and therefore we will make them longers o i can tell what it looks like odolar sto amet, nisil docuemasda marius paogaskjsdf asdasd a, gienaksf.</p>
+
+                                    <div class="generic__card-a">
+                                        <a href="" class="btn-simple">lorem ipsum<i class="arrow right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                     
+                                                     
+                  
+                    </ul>
+
+                    <div class="flip-carousel-pagination">
+                        
+                    </div>
+
+        
+                </div>                
+            </div>
+        </div>
+    </section>
+
+
+	<!-- Footer -->
+    @@include('../partials/footer.html')     
+    <!-- Javascript assets -->
+    @@include('../partials/assets.html') 
+</body>
+
+</html>

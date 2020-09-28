@@ -1,0 +1,203 @@
+/*
+ * -----------------------------------------
+ *  Footer
+ * -----------------------------------------
+ */
+
+.footer {
+    background-color: $i; 
+    @include md {
+        margin-left: 150px;
+    }     
+    
+    &__section {  
+        color: $white;   
+        // background-color: $i;  
+        padding: 100px 0;
+        @include clearfix;
+    }
+
+    &__header {
+        border-bottom: 1px solid $t;
+        padding: 35px 0;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    &__body {
+        padding: 0;
+
+        &-column {
+            width: 100%;
+        }
+        @include md {
+            padding: 35px 0;
+
+            &-column {
+                width: 50%;
+                float: left;
+                padding-right: 10px;
+            }            
+        }
+
+
+        &-no-mobile {
+            padding: 15px 0 ;
+            float: left;
+        }
+
+        &-btn {
+            padding: 25px 0 ;
+            border-bottom: 1px solid $t;
+            width: 100%;
+            text-align: left;            
+
+            @include md {
+                padding: 15px 0;
+                border-bottom: 1px solid transparent;
+            }
+
+            &:after {
+                content: '';
+
+                background-image: url('/dist/assets/img/icons/Arrow_Small.svg');
+                width: 9px;
+                height: 5px;
+                display: inline-block;
+                float: right;    
+                background-repeat: no-repeat;    
+                -moz-transform: scaleY(-1);
+                -o-transform: scaleY(-1);
+                -webkit-transform: scaleY(-1);
+                transform: scaleY(-1);
+                filter: FlipH;
+                -ms-filter: "FlipH";      
+                margin-top: 5px;          
+            }
+
+            &.collapsed {
+                &:after {
+                    content : '';
+                    -moz-transform: scaleY(1);
+                    -o-transform: scaleY(1);
+                    -webkit-transform: scaleY(1);
+                    transform: scaleY(1);             
+                }
+            }
+        }
+
+        .collapse {
+            @include md {
+                display: block;
+            }
+        }
+        &-title {
+            h5 {
+                float: left;
+                font-family: $font-gilroy-bold;
+            }
+        }
+
+        .card-body {
+            border-bottom: 1px solid $t;
+            padding: 20px 0;
+            @include clearfix;
+
+            @include md{
+                padding: 5px 0;
+                border-bottom: 1px solid transparent;
+            }
+        }
+        &__contact {
+            &-block {
+                float: left;
+                width: 100%;
+                padding-right: 20px;
+                background-color: rgba(255, 255, 255, 0.15);
+                margin-bottom: 3px;
+                display: table;
+                padding-left: 40px;
+                
+                @include md {      
+                    display: block;
+                    padding-left: 0;              
+                    background-color: rgba(255, 255, 255, 0);
+                }
+                
+                .footer__body__contact-headline {
+                    display: table-cell;
+                    padding-top: 20px;
+                    width: 25%;
+
+                    h6 {
+                        font-size: 14px;
+                    }
+
+                    @include md {
+                        display: block;
+                        width: auto;
+                        padding-top: 0;
+
+                        h6 {
+                            font-size: 14px;
+                            letter-spacing: 0;                            
+                        }                        
+                    }
+                }
+
+                .footer__body__contact-details {
+                    display: table-cell;
+                    padding-bottom: 20px;
+
+                    span {
+                        font-size: 18px;
+                        letter-spacing: 0.4px;
+                        line-height: 21px;
+                    }
+                    p {
+                        color: $white;
+                        font-size: 14px;
+                        line-height: 21px;
+                        letter-spacing: 0;
+                    }
+
+                    @include md {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+        &-list {
+            li {
+                margin-bottom: 3px;
+                a {
+                    @include btn--footer-links;
+                }
+            }
+        }
+    }
+
+    &__footer {
+        padding: 40px 0;
+
+        p {
+            color: $white;
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+
+    &__copyright {
+        padding: 40px 0;
+        background-color: $white; 
+
+        p {
+            color: $h;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+
+/* 
+ * -----------------------------------------
+ *  Fonts
+ *  @@ File: base/_fonts.scss
+ * ----------------------------------------- 
+ */
+
+
+// Font Imports 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+/* 
+* ----------------------------------------------------
+*
+*  Font Variables, Mixins
+*
+* ----------------------------------------------------
+*/
+
+$font-avalon-bold: "AvalonBold";
+$font-avalon-book: "AvalonBook";
+$font-avalon-medium: "AvalonMedium";
+$font-bauweb-regular: "BauWebProRegular"; 
+$font-gilroy-regular: "GilroyRegular";
+$font-brandon-black: 'BrandonBlack';
+$font-brandon-medium: 'BrandonMedium';
+$font-dinweb: 'DinWeb';
+
+
+@font-face {
+      font-family: 'GilroyRegular';
+      src: url('~static/fonts/38BE85_1_0.eot');
+      src: url('~static/fonts/38BE85_1_0.eot?#iefix') format('embedded-opentype'),
+           url('~static/fonts/38BE85_1_0.woff2') format('woff2'),
+           url('~static/fonts/38BE85_1_0.woff') format('woff'),
+           url('~static/fonts/38BE85_1_0.ttf') format('truetype');
+    }
+ 
+ @font-face {
+    font-family: 'AvalonBold';
+    src: url('~static/fonts/Avalon-Bold-webfont.woff2') format('woff2'),
+          url('~static/fonts/Avalon-Bold-webfont.woff') format('woff')
+}
+
+@font-face {
+     font-family: 'AvalonBook';
+     src: url('~static/fonts/Avalon-Book-webfont.woff2') format('woff2'),
+           url('~static/fonts/Avalon-Book-webfont.woff') format('woff')
+ }
+
+ @font-face {
+     font-family: 'AvalonMedium';
+     src: url('~static/fonts/Avalon-Medium-webfont.woff2') format('woff2'),
+           url('~static/fonts/Avalon-Medium-webfont.woff') format('woff')
+ }
+
+ $font-graphik-black: "Graphik-Black";
+ $font-graphik-bold: "Graphik-Bold";
+ $font-graphik-semibold: "Graphik-Semibold";
+ $font-graphik-medium: "Graphik-Medium";
+ $font-graphik-regular: "Graphik-Regular";
+ $font-graphik-light: "Graphik-Light";
+ $font-graphik-extra-light: "Graphik-ExtraLight";
+ $font-graphik-thin: "Graphik-Thin";
+
+
+      @font-face {
+      font-family: 'Graphik-Black';
+      src: url("~static/fonts/Graphik-Black-Web.woff2") format("woff2"), url("~static/fonts/Graphik-Black-Web.woff") format("woff");
+      font-weight: 800;
+      font-style: normal;
+      font-stretch: normal;
+      font-display: swap; }
+
+
+      @font-face {
+      font-family: 'Graphik-Bold';
+      src: url("~static/fonts/Graphik-Bold-Web.woff2") format("woff2"), url("~static/fonts/Graphik-Bold-Web.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+      font-stretch: normal;
+      font-display: swap; }
+
+
+      @font-face {
+      font-family: 'Graphik-Semibold';
+      src: url("~static/fonts/Graphik-Semibold-Web.woff2") format("woff2"), url("~static/fonts/Graphik-Semibold-Web.woff") format("woff");
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      font-display: swap; }
+
+
+      @font-face {
+      font-family: 'Graphik-Medium';
+      src: url("~static/fonts/Graphik-Medium-Web.woff2") format("woff2"), url("~static/fonts/Graphik-Medium-Web.woff") format("woff");
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      font-display: swap; }
+
+
+      @font-face {
+      font-family: 'Graphik-Regular';
+      src: url("~static/fonts/Graphik-Regular-Web.woff2") format("woff2"), url("~static/fonts/Graphik-Regular-Web.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+      font-stretch: normal;
+      font-display: swap; }
+
+      @font-face {
+      font-family: 'Graphik-Light';
+      src: url("~static/fonts/Graphik-Light-Web.woff2") format("woff2"), url("~static/fonts/Graphik-Light-Web.woff") format("woff");
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      font-display: swap; }
+
+
+      @font-face {
+      font-family: 'Graphik-ExtraLight';
+      src: url("~static/fonts/Graphik-Extralight-Web.woff2") format("woff2"), url("~static/fonts/Graphik-Extralight-Web.woff") format("woff");
+      font-weight: 200;
+      font-style: normal;
+      font-stretch: normal;
+      font-display: swap; }
+
+      @font-face {
+      font-family: 'Graphik-Thin';
+      src: url("~static/fonts/Graphik-Thin-Web.woff2") format("woff2"), url("~static/fonts/Graphik-Thin-Web.woff") format("woff");
+      font-weight: 100;
+      font-style: normal;
+      font-stretch: normal;
+      font-display: swap; }

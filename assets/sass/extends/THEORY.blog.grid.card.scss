@@ -1,0 +1,115 @@
+%blogcardgrid {
+    // .gutter-sizer { width: 3.26%; }
+
+    .blogs-blog-article {
+        // -webkit-box-flex: 0;
+        // -ms-flex: none;
+        // flex: none;
+        // width: 50%;
+        // position: relative;
+        float: left;
+        width: 50%;
+
+        .btn-blog-headline {
+            // padding: 0 0 100px;
+        }
+
+        .card {
+            margin: 0 3.26305%;
+            margin-bottom: 13.26305%;
+
+            .blog__description {
+                padding-right: 50px;
+            }
+
+        }
+
+        &:nth-child(even) {
+            .card {
+                // margin-left: 3.26305%;
+                // margin-right: 0;
+            }
+        }        
+        
+
+        .blog__image {
+            background-size: inherit;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -ms-background-size: inherit;
+            background-size: cover;
+            height: 500px;
+            position: relative;
+            margin-bottom: 30px;
+
+            .blog__description {
+
+            }
+        }
+
+        .meta-categories {            
+            // margin: 0 10.65163% 0 0;
+            padding-left: 5.5rem;
+            color: $black;
+
+            .post-categories {
+                margin: 0;
+
+                li {
+                    display: inline-block;
+                    margin-right: 5px;
+                    max-width: 30em;
+                    a {
+                        
+                    }
+
+                    &:after {
+                        content: '/';
+                        font-size: 16px;
+                        margin-left: 10px;
+                        color: $c ;
+                    }
+
+                    &:last-child {
+                        &:after {
+                            content: '';
+                        }                            
+                    }
+                }
+            }            
+
+   
+        }
+
+        .post-title {
+            font-family: $font-avalon-medium;
+            font-size: 30px;
+            // margin: 0 10.65163% 0 0;
+            padding-left: 5.5rem;
+        }
+
+        .entry-meta {
+            display: block;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-left: 5.5rem;
+
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                font-size: 12px;
+
+                &.entry-date {
+
+                }
+
+                &.entry-author {
+                    
+                }
+            }
+        }
+    }
+
+    
+}

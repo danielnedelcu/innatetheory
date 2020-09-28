@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>X Close / Large White</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI-Toolkit---KR" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Alerts-Desktop" transform="translate(-1157.000000, -210.000000)">
+            <g id="Red-Alert" transform="translate(0.000000, 183.000000)">
+                <g id="Icon/X-Close---Large-White" transform="translate(1158.000000, 28.000000)">
+                    <circle id="Oval-2" stroke="#FFFFFF" stroke-width="2" transform="translate(12.000000, 12.000000) rotate(45.000000) translate(-12.000000, -12.000000) " cx="12" cy="12" r="12"></circle>
+                    <g id="X" stroke-width="1" fill-rule="evenodd" transform="translate(12.000000, 12.000000) rotate(45.000000) translate(-12.000000, -12.000000) translate(5.000000, 5.000000)" fill="#FFFFFF">
+                        <rect id="Rectangle-8" x="6" y="0" width="2" height="14"></rect>
+                        <rect id="Rectangle-8-Copy" transform="translate(7.000000, 7.000000) rotate(90.000000) translate(-7.000000, -7.000000) " x="6" y="0" width="2" height="14"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

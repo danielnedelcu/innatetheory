@@ -1,0 +1,164 @@
+/* 
+ * -----------------------------------------
+ *  MIXINS
+ *  @@ File: base/_mixins.scss
+ * ----------------------------------------- 
+ */
+
+
+//Placeholders
+
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+// Fonts
+@mixin font-source-sans($size: false, $color: false, $weight: false,  $lh: false) {
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    @if $size { font-size: $size; }
+    @if $color { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}
+
+
+//To quickly centre a block element 
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+
+@mixin clearfix {
+	clear: both;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+//When using ::before and ::after you'll always need these three, so we're saving two lines of code every time you use this.
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+
+// Utilities
+@mixin hidden {
+	display: none;
+	visibility: hidden;
+}
+
+@mixin visible($state: 'block') {
+	display: unquote($state);
+	visibility: visible;
+}
+
+// Hide visually and from screenreaders, but maintain layout
+@mixin invisible {
+	visibility: hidden;
+}
+
+@mixin retina {
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (-moz-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3 / 2),
+	only screen and (min-device-pixel-ratio: 1.5),
+	only screen and (min-resolution: 1.5dppx) {
+		@content;
+	}
+}
+
+@mixin align($vertical: true, $horizontal: false, $position: relative) {
+	@if $position {
+		position: $position;
+	}
+	@if $vertical {
+		top: 50%;
+	}
+	@if $horizontal {
+		left: 50%;
+	}
+
+	@if $vertical and $horizontal {
+		transform: translateX(-50%) translateY(-50%);
+	} @else if $vertical {
+		transform: translateY(-50%);
+	} @else {
+		transform: translateX(-50%);
+	}
+}
+
+// Shadow 
+@mixin Shadow {
+	-webkit-box-shadow: 0px 2px 14px -3px rgba(240,240,240,1);
+	-moz-box-shadow: 0px 2px 14px -3px rgba(240,240,240,1);
+	box-shadow: 0px 2px 14px -3px rgba(240,240,240,1);
+	
+	@include md {
+		-webkit-box-shadow: 0px 6px 19px -1px rgba(240,240,240,1);
+		-moz-box-shadow: 0px 6px 19px -1px rgba(240,240,240,1);
+		box-shadow: 0px 6px 19px -1px rgba(240,240,240,1);		
+	}
+}
+
+@mixin ShadowRectangle {
+	-webkit-box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.11);
+	-moz-box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.11);
+	box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.11);
+}
+
+
+@mixin ShadowCircle {
+	-webkit-box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.22);
+	box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.22);
+}
+ /* ==========================================================================
+   Global Animations and Filters
+   ========================================================================== */
+
+   @mixin Transition($speed : 0.3s, $property : all, $ease : cubic-bezier(0.3, 1, 0.1, 1) ) {
+	transition: $speed $property $ease;
+	-webkit-transition: $speed $property $ease;
+	-moz-transition: $speed $property $ease;
+	-ms-transition: $speed $property $ease;
+	-o-transition: $speed $property $ease;
+ }
+
+ @mixin Filter($brightness : 100%, $contrast : 100%, $grayscale: 0) {
+    filter: brightness($brightness) contrast($contrast) grayscale($grayscale);
+    -webkit-filter: brightness($brightness) contrast($contrast) grayscale($grayscale);
+    -moz-filter: brightness($brightness) contrast($contrast) grayscale($grayscale);
+    -o-filter: brightness($brightness) contrast($contrast) grayscale($grayscale);
+	-ms-filter: brightness($brightness) contrast($contrast) grayscale($grayscale);
+}
+
+  /* ==========================================================================
+   Global radius
+   ========================================================================== */
+
+@mixin borderRadius($radius: $globalRadius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+	overflow: hidden;
+}
+
+@mixin hover-state {
+    &:hover, &:focus {
+        @content;
+    }
+}

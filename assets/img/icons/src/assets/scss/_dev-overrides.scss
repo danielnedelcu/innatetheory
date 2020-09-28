@@ -1,0 +1,189 @@
+/* 
+ * -----------------------------------------
+ *  Dev Overrides
+ * ----------------------------------------- 
+ */
+ *:focus {
+   outline: none;
+}
+body {
+   margin-top: 60px;
+
+   @include md {
+      margin-top: 100px;
+   }
+}
+
+strong {
+   font-weight: normal;
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+ ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+       margin: 0;
+
+       ul {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+         
+         li {
+            margin: 0;
+         }
+       }
+    }
+ }
+
+
+
+
+ /* ----------------------------------------------------
+   Preset layout styles
+------------------------------------------------------- */
+ .table-layout {
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    .table-cell-layout {
+       display: block;
+       vertical-align: middle;
+       height: 100%;
+    }
+
+    @include md {
+      display: table;
+      height: 100%;
+      width: 100%;
+             
+      .table-cell-layout {
+         display: table-cell;
+         vertical-align: middle;
+         height: 100%;
+      }       
+    }
+ }
+
+
+
+
+ /* ----------------------------------------------------
+   Arrows used
+------------------------------------------------------- */
+ .arrow {
+   border: solid black;
+   border-width: 0 2px 2px  0;
+   display: inline-block;
+   padding: 3px;        
+
+   &.left {
+       transform: rotate(135deg);
+       -webkit-transform: rotate(135deg);
+   }
+   &.right {
+       transform: rotate(-45deg);
+       -webkit-transform: rotate(-45deg);
+   }
+}
+
+
+
+
+/* ----------------------------------------------------
+   Augmentation
+------------------------------------------------------- */
+
+ .m-t-b-50 {
+    margin-top: 50px;
+   //  margin-bottom: 50px;
+
+    @include md {
+
+    }
+ }
+
+ .m-r-15 {
+    margin-right: auto;
+
+   @include md {
+      margin-right: 15px;
+   }
+    
+ }
+
+ .m-0{
+    margin: 0;
+ }
+
+ .w-50 {
+    width: 100%;
+
+    @include md {
+      width: 50%;
+   }    
+ }
+
+ .p-b-m-40 {
+   padding-bottom: 40px;
+
+   @include md {
+      padding-bottom: 0;
+   }        
+ }
+
+ /* ----------------------------------------------------
+   Hero custom grid
+------------------------------------------------------- */
+
+.container-modified {
+   margin-right: auto;
+   margin-left: auto;
+   padding-left: 15px;
+   padding-right: 15px;
+   max-width: 1170px;
+
+   @media (min-width: 992px) {
+      width: 100%;
+   }      
+}
+
+.container-alt {
+   margin-right: auto;
+   margin-left: auto;
+   padding-left: 15px;
+   padding-right: 15px;   
+
+   @include md {
+      max-width: 970px;
+   }     
+   
+   @include lg {
+      max-width: 1170px;
+   }      
+}
+
+
+ /* ----------------------------------------------------
+   Bootstrap alers override
+------------------------------------------------------- */
+
+.close {
+   opacity: 1;
+
+   &:hover {
+      opacity: 1;
+   }
+}

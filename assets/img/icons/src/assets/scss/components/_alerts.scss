@@ -1,0 +1,51 @@
+.alerts__section {
+    color: $white;
+
+    @include md {
+        margin-left: 150px;
+    }    
+
+    .alert {
+        color: $white;
+        font-family: $font-gilroy-regular;
+        padding: 28px;
+        border-radius: 0;
+
+        @include md {
+            font-size: 18px;
+            letter-spacing: 0.55px;
+            line-height: 21px;
+            text-align: center;
+        }
+
+        .alert__wrapper {
+            margin: 0 auto;
+            display: inline-block;
+                        
+            .alert__message {
+                float: left;
+                display: inline-block;                
+            }
+        }
+    }
+    .alert-warning {
+        background-color: $alert-warning;
+    }
+
+    .alert-info {
+        background-color: $alert-info
+    }
+
+    .alert-other {
+        background-color: $alert-other
+    }    
+
+    .fade {
+        opacity: 0;
+        @include Transition;
+      
+        &.show {
+          opacity: 1;
+        }
+    }
+}

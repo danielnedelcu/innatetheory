@@ -1,0 +1,444 @@
+@@include('../partials/head.html')
+
+<body>
+	@@include('../partials/modal.html')
+	@@include('../partials/header.html')
+    @@include('../partials/navbar.html')
+
+    <!-- Alerts banner -->
+    @@include('../partials/alerts.html')
+
+	<!-- Hero section -->
+	<section class="comp__hero"> <!-- Add class "secondary" for the alternative hero style -->
+		<div class="container-modified">
+			<div class="comp__hero-image" style="background-image: url('/dist/assets/img/hero_image.jpg');">
+				<div class="comp__hero-image-content">
+					<h1>
+						Feel at home with<br>
+						<strong>your mortgage.</strong>
+					</h1>
+					<div class="comp__hero-half">
+						<p>We know what it means to own a home. It’s time to get smarter—combining the best of the mortgage and technology worlds.</p>
+					</div>
+				</div>
+			</div>
+
+            <!-- Hero cta list -->
+            @@include('./hero-cta-list.html')
+		</div>
+	</section>
+
+	<!-- Minimalist banner section -->
+	<section class="minimalist__section m-t-b-50">
+		<img src="/dist/assets/img/shapes/Blue_Circle_Vector.svg" class="shape__half-blue"/>
+		<div class="container-fluid">
+			<div class="container-modified">
+                <!-- Banner header label -->
+				@@include('./banner-label.html')
+				
+				<!-- Slider main container -->
+				<div class="swiper-container swiper-basic">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="two_column-media table-layout">
+								<div class="col-md-12">
+									<div class="row">	
+										<div class="table-cell-layout w-50 p-b-m-40">
+											<div class="col-md-12">
+												<div class="row">		
+													<h5 class="two_column-media-label">our vision</h5>										
+													<h2>
+														Saving both your<br>
+														<strong>time and money.</strong>
+													</h2>
+
+													<div class="two_column-media-body">
+														<p>Explore personalized home recommendations inspired by the benefits you love. </p>
+													</div>
+													
+													<div class="two_column-media-cta">
+															<a href="" class="btn-primary">learn more<i class="arrow right"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="table-cell-layout w-50 p-b-m-40">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="two_column-media-video m-r-15">
+														<img src="/dist/assets/img/video_image.jpg" />
+														<button class="video__play-btn" data-embed="X1VzzNbfPaM">
+															<i class="play"></i>
+														</button>
+													</div>
+												</div>
+											</div>	
+										</div>		
+									</div>
+								</div>		
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="two_column-media table-layout">
+								<div class="col-md-12">
+									<div class="row">									
+										<div class="table-cell-layout w-50 p-b-m-40">
+											<div class="col-md-12">
+												<div class="row">
+													<h5 class="two_column-media-label">our vision two</h5>	
+													<h2>
+														Second slider<br>
+														<strong>distance and space</strong>
+													</h2>
+
+													<div class="two_column-media-body">
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+													</div>
+
+													<div class="two_column-media-cta">
+															<a href="" class="btn-primary">learn more<i class="arrow right"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="table-cell-layout w-50 p-b-m-40">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="two_column-media-video m-r-15">
+														<img src="/dist/assets/img/video_image_alt.jpg" />
+														<button class="video__play-btn" data-embed="DEsx5wWKcA4">
+															<i class="play"></i>
+														</button>
+													</div>
+												</div>
+											</div>	
+										</div>				
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+
+					<div class="comp__pagination">
+						<div class="swiper-button-prev"><i class="arrow left"></i></div>						
+						<div class="swiper-pagination"></div>	
+						<div class="swiper-button-next"><i class="arrow right"></i></div>
+					</div>						
+				</div>		
+							
+					
+			</div>
+		</div>
+	</section>
+	<!-- Banner section -->
+	<section class="banner__section">
+			<div class="container-fluid">
+				<div class="container-modified">
+					<div class="banner__section-wrapper">
+                        <!-- Banner header label -->
+						@@include('./banner-label-alt.html')
+						
+						<div class="banner__section-headline">
+							
+							<h2 class="h1">
+								We've had your back<br>
+								<strong>since 2007</strong>
+							</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+		<!-- Minimalist banner section -->
+	<section class="minimalist__section box-shadow ">
+		<img src="/dist/assets/img/shapes/Gray_Circle_Vector.svg" class="shape__half-gray" />
+		<div class="container-fluid">
+				<div class="container-modified">
+                        <!-- Banner header label -->
+                        @@include('./banner-label.html')
+
+					<div class="minimalist__section-headline">
+						<h2>
+							Our family<br>
+							<strong>is your family.</strong>
+						</h2>
+					</div>		
+					
+					<div class="comp__stories">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="comp__stories-images">
+									<div class="col-xs-6">
+										<div class="row">
+											<div class="comp__stories-item" data-value="nav-home" style="background-image: url('/dist/assets/img/banner_image.jpg');">
+												
+											</div>
+										</div>
+									</div>
+
+									<div class="col-xs-6">
+										<div class="row">
+											<div class="comp__stories-item"  data-value="nav-profile" style="background-image: url('/dist/assets/img/banner_image.jpg');">
+												
+											</div>
+										</div>
+									</div>	
+								</div>
+								<div class="comp__stories-tabs">
+	
+										<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+											<a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+												<i class="arrow left"></i>
+												<span>Home<span>
+											</a>
+											<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+												<span>Profile</span>
+												<i class="arrow right"></i>
+											</a>
+										</div>
+									
+										<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+											<div class="tab-pane show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+												<p>“I recently applied for and received a recast of my home loan through RoundPoint Mortgage Servicing. It was an easy and very positive experience. Erica B was courteous, professional and very knowledgeable regarding my questions.”</p>
+											</div>
+											<div class="tab-pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+												<p>“Excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim.”</p>
+											</div>
+										</div>	
+										
+										<div class="comp__stories-cta">
+											<a class="btn-primary">about us<i class="arrow right"></i></a>
+										</div>
+
+										<img class="quotes-mobile" src="dist/assets/img/shapes/Quotes_Blue_Mobile.svg" />
+										<img class="quotes-desktop" src="dist/assets/img/shapes/Quotes_Blue.svg" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Slider main container -->
+					<div class="swiper-container swiper-basic">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="two_column-media table-layout">
+									<div class="col-md-12">
+										<div class="row">									
+											<div class="table-cell-layout w-50 p-b-m-40">
+												<div class="col-md-12">
+													<div class="two_column-media-video  m-r-15">
+														<img src="/dist/assets/img/video_image.jpg" />
+														<button class="video__play-btn" data-embed="DEsx5wWKcA4">
+															<i class="play"></i>
+														</button>
+													</div>
+												</div>	
+											</div>	
+
+											<div class="table-cell-layout w-50 p-b-m-40">
+												<div class="col-md-12">
+													<h5 class="two_column-media-label">join our team</h5>	
+													<h2>
+														All in.<br>
+														<strong>All win.</strong>
+													</h2>
+			
+													<div class="two_column-media-body">
+														<p>We’re proud of our culture. RoundPointers are committed to the relentless pursuit of excellence on all fronts. We’re all in, all win. We’re never satisfied with the status quo.
+														</p>
+													</div>
+													
+													<div class="two_column-media-cta">
+														<a href="" class="btn-primary">come on in<i class="arrow right"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+				
+								</div>
+							</div>		
+							
+							<div class="swiper-slide">
+								<div class="two_column-media table-layout">
+										<div class="col-md-12">
+											<div class="row">									
+												<div class="table-cell-layout w-50 p-b-m-40">
+													<div class="col-md-12">
+														<div class="two_column-media-video  m-r-15">
+															<img src="/dist/assets/img/video_image_alt.jpg" />
+															<button class="video__play-btn" data-embed="DEsx5wWKcA4">
+																<i class="play"></i>
+															</button>
+														</div>
+													</div>	
+												</div>	
+	
+												<div class="table-cell-layout w-50 p-b-m-40">
+													<div class="col-md-12">
+														<h5 class="two_column-media-label">join our team two</h5>	
+														<h2>
+															headline two.<br>
+															<strong>Sunheadline two.</strong>
+														</h2>
+				
+														<div class="two_column-media-body">
+															<p>RoundPointers are committed to the relentless pursuit of excellence on all fronts. We’re all in, all win. We’re never satisfied with the status quo.
+															</p>
+														</div>
+														
+														<div class="two_column-media-cta">
+																<a href="" class="btn-primary">come on in<i class="arrow right"></i></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+				
+								</div>
+							</div>									
+						</div>
+						<div class="comp__pagination">
+							<div class="swiper-button-prev"><i class="arrow left"></i></div>						
+							<div class="swiper-pagination"></div>	
+							<div class="swiper-button-next"><i class="arrow right"></i></div>
+						</div>		
+					</div>		
+						
+					
+			</div>
+		</div>
+	</section>
+	<section class="banner__section banner__section-image" style="background-image: url('/dist/assets/img/banner_image.jpg');">
+			<div class="container-fluid">
+				<div class="container-modified">
+					<div class="banner__center">
+						<div class="banner__section-wrapper">
+							<!-- Banner header label -->
+							@@include('./banner-label-alt.html')
+						
+							<div class="banner__section-headline">
+								<h2 class="h1">
+									We've had your back<br>
+									<strong>since 2007</strong>
+								</h2>
+							</div>
+							<div class="banner__section-body">
+									<p>Fill out a few key pieces of information and start saving on homeownership services.</p>						
+							</div>
+
+							<a href="" class="btn-primary">get started<i class="arrow right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>	
+
+	<section class="banner__generic gray">
+		<img src="/dist/assets/img/shapes/Blue_Circle_Vector.svg" class="shape__half-blue"/>
+		<div class="container-fluid">
+			<div class="container-modified">
+				<div class="banner__generic-wrapper">	
+					<div class="two_column-generic table-layout">
+
+							<div class="col-md-12">
+								<div class="row">	
+									<div class="table-cell-layout w-50">
+										<div class="col-md-12">
+											<div class="row">		
+												<h5 class="two_column-generic-label">currently serving</h5>										
+												<h2>
+													$70 billion total<br>
+													<strong>funded loans.</strong>
+												</h2>
+
+												<div class="two_column-generic-body">
+													<p>Thousands of our customers have benefited from our low pricing and great customer service.</p>
+												</div>
+												<div class="two_column-generic-cta">
+													<a href="" class="btn-primary">learn more<i class="arrow right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>	
+									
+									<div class="table-cell-layout w-50">
+										<div class="col-md-12">
+											<div class="row">
+												<div class="two_column-generic-grid">
+													<div class="col-xs-6">
+														<div class="two_column-generic-grid-item">
+															<img src="/dist/assets/img/thumbnail3.jpg" />
+														</div>
+													</div>
+													<div class="col-xs-6">
+														<div class="two_column-generic-grid-item">
+															<img src="/dist/assets/img/thumbnail3.jpg" />
+														</div>
+													</div>	
+													
+													<div class="col-xs-6">
+														<div class="two_column-generic-grid-item">
+															<img src="/dist/assets/img/thumbnail3.jpg" />
+														</div>
+													</div>
+													<div class="col-xs-6">
+														<div class="two_column-generic-grid-item">
+															<img src="/dist/assets/img/thumbnail3.jpg" />
+														</div>
+													</div>	
+												</div>												
+
+											</div>
+										</div>
+									</div>
+												
+								</div>
+							</div>
+
+					</div>
+				</div>	
+			</div>
+		</div>
+	</section>
+
+	<section class="banner__section">
+			<div class="container-fluid">
+				<div class="container-modified">
+					<div class="banner__section-wrapper">
+                        <!-- Banner header label -->
+						@@include('./banner-label-alt.html')
+						
+						<div class="banner__section-headline">
+							<h2 class="h1">
+								Want to<br>
+								<strong>talk to us?</strong>
+							</h2>
+						</div>
+
+						<div class="banner__section-body">
+								<p>Our offices are open Monday - Friday from 8am until 9pm and Saturday from 10am until 3pm EST.</p>						
+						</div>	
+						
+						<div class="banner__cta">
+								<a href="" class="btn-primary">live chat<i class="arrow right"></i></span></a>
+								<a href="" class="btn-primary">support<i class="arrow right"></i></a>
+								<a href="" class="btn-primary">email<i class="arrow right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>	
+
+	
+	<!-- Footer -->
+    @@include('../partials/footer.html')     
+    <!-- Javascript assets -->
+    @@include('../partials/assets.html') 
+</body>
+
+</html>

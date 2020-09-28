@@ -1,0 +1,75 @@
+.two_column-media {
+    padding: 10px 0;
+    // background-color: $white; 
+
+    @include md {
+        padding: 40px 0;
+    }    
+
+    &-label {
+        font-size: 10px;
+        line-height: 27px;
+        letter-spacing: 1.43px;
+        color: $r;
+        text-align: center;
+        font-family: $font-gilroy-extra-bold;
+
+        @include md {
+            text-align: left;
+        }
+    }
+
+    h2 {
+        text-align: center;
+
+        @include md {
+            text-align: left;
+        }        
+    }
+
+    &-body {
+        padding: 30px 0;
+        width: 100%;
+        text-align: center;
+        
+        @include md {
+            width: 40%;
+            text-align: left;
+        }           
+    }
+    
+    &-video {
+        width: 60%;
+        min-width: 230px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+        @include ShadowCircle;
+
+        img {
+            width: 100%;
+        }
+
+        @include md {
+            width: 300px;
+            float: left;
+        }
+
+        @include xl {
+            width: 440px;
+        }            
+
+        .video__play-btn {
+            @include btn--video-play;
+        }
+    }
+
+    &-cta {
+        text-align: center;
+
+        @include md {
+            text-align: left;
+        }            
+    }
+}

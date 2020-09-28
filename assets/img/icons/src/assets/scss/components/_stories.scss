@@ -1,0 +1,116 @@
+.comp__stories {
+    margin-bottom: 100px;
+    @include clearfix;
+    &-images{
+        display: table;
+        width: 100%;        
+        @include ShadowRectangle;
+    }
+
+    &-item{
+        background-repeat: no-repeat;
+        background-position: center center;
+        -ms-background-size: inherit;
+        background-size: cover;     
+        height: 220px;  
+        padding: 0;
+        @include Transition;
+
+        @include md {
+            height: 540px;  
+        }
+
+        &.active {
+            @include Filter(100%, 70%, 80%);
+        }
+    }
+
+    &-tabs{
+        width: 90%;
+        margin: 0 auto;
+        background-color: white;    
+        margin-top: -100px;    
+        z-index: 1;
+        position: relative;
+        @include clearfix;
+        @include ShadowRectangle;
+
+        @include md {
+            width: 60%;  
+            margin-top: -170px;  
+        }        
+
+        .nav-tabs {
+            border: none;
+            .nav-item {
+                float: left;
+                width: 50%;
+                padding: 20px;
+                @include btn-tabs;
+                 
+                &:first-child {
+                    border-right: 1px solid $q;
+                }
+            }
+        }
+
+        .tab-content  {
+            padding: 10px 20px;
+
+            @include md {
+                padding: 10px 80px;
+            }   
+
+            .tab-pane {
+                text-align: center;
+
+                p {
+                    font-family: $font-gilroy-light;
+                    font-size: 10px;
+                    line-height: 1.75;
+                    letter-spacing: 0.02px;
+
+                    @include md {
+                        font-size: 18px; 
+                        line-height: 28px;
+                        letter-spacing: 0.5px;                        
+                    }                      
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            bottom: 60px;            
+
+            &.quotes-mobile {
+                display: block;
+                width: 160px;
+
+                @include md {
+                    display: none;
+                }    
+            }
+
+            &.quotes-desktop {
+                display: none;
+                width: 40%;
+
+                @include md {
+                    display: block;
+                }                   
+            }            
+
+            @include md {
+                bottom: 0;
+                width: 40%;
+            }                
+        }
+    }
+
+    &-cta {
+        margin: 0 auto;
+        padding: 30px 0;
+        text-align: center;
+    }
+}

@@ -1,0 +1,101 @@
+/*
+ * -----------------------------------------
+ *  Modal
+ * -----------------------------------------
+ */
+
+ .modal-open {
+    // position: fixed;
+    width: 100%;
+    overflow: hidden;
+
+
+    .modal {
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        
+    }
+ }
+ .modal {
+    display: block;
+    opacity: 0;
+    visibility: hidden;     
+    bottom: 0;
+    left: 0;
+    outline: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #000;
+    transition: 700ms ease opacity;
+    // transition-delay: 1s;
+    -webkit-overflow-scrolling: auto;
+    z-index: 1050;   
+
+    .modal-wrapper {
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -ms-flex-align: center;
+        align-items: center;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 100%;
+        position: relative;        
+
+        .modal-container {
+            background-clip: padding-box;
+            outline: 0;
+            width: 60%;
+            background-color: #000;
+            position: relative;
+
+            .close-modal {
+                background: none;
+                border: none;
+                outline: none;
+                position: absolute;
+                right: 0;
+                z-index: 1000;
+                margin-right: -50px;
+
+                @media (min-width: 320px) and (max-width:991px) {
+                    margin-top: -45px;
+                    right: 15px;
+                }                      
+            }
+
+            .modal-body {
+                padding: 0;
+                margin-top: 0;
+
+                @media (min-width: 320px) and (max-width:767px) {
+                    margin-top: 90px;
+                }
+
+                .video-wrapper {
+                    display: block;
+
+                    .video {
+                        height: 0;
+                        overflow: hidden;
+                        padding-bottom: 56.25%;
+                        position: relative;
+
+                        iframe  {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+ }

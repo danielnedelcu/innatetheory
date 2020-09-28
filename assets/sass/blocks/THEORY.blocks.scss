@@ -1,0 +1,89 @@
+
+.#{$container-class} {
+	margin: 0 auto;
+	width: percentage(0.9);
+	max-width: $container-max-width;
+	z-index: 1;
+	position: relative;
+	@include clearfix;
+	
+
+	@include breakpoint(sm){
+		width: percentage(0.95);
+		z-index: 3;
+	}
+
+	@include breakpoint(md){
+		width: percentage(0.9);
+		z-index: 4;
+	}
+
+	@include breakpoint(lg){
+		width: percentage(.85);
+		z-index: 5;
+	}
+
+}
+
+.#{$container-class}--content {
+	margin: 0 auto;
+	width: percentage(0.9);
+	z-index: 1;
+	@include clearfix;
+
+	@include breakpoint(md){
+		// max-width: 60rem;
+	}
+	@include breakpoint(lg){
+		width: percentage(.65);
+		z-index: 5;
+	}
+	@include breakpoint(xl){
+		width: percentage(.65);
+		z-index: 5;
+	}
+}
+
+.#{$container-class}--bloglist {
+	margin: 0 auto;
+	width: percentage(0.9);
+	z-index: 1;
+	@include clearfix;
+
+	@include breakpoint(md){
+		// max-width: 60rem;
+	}
+	@include breakpoint(lg){
+		width: percentage(.45);
+		z-index: 5;
+	}
+	@include breakpoint(xl){
+		width: percentage(.45);
+		z-index: 5;
+	}
+}
+
+.#{$container-class}--content-wide {
+	max-width: 85rem;
+	@include breakpoint(lg){
+		max-width: 95rem;
+	}
+	@include breakpoint(xl){
+		// max-width: 126.6rem;
+		max-width: percentage(1266 / 2354);
+	}
+}
+
+.#{$container-class}--content-x-wide {
+	max-width: 90rem;
+}
+
+.#{$container-class}--full-bleed {
+	width: 100%;
+	max-width: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;	
+}

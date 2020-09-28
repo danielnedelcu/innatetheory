@@ -1,0 +1,56 @@
+.search__section-pagination {
+    display: block;
+
+    .search__section-pagination-ul {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        display: -ms-flexbox;
+        display: flex;
+        padding-left: 0;
+        list-style: none;
+        border-radius: .25rem;
+        align-items: center;
+        justify-content: center;        
+
+        .page-item {
+            display: inline;
+
+            &.active {
+                .page-link {
+                    background-color: $i;
+                    color: $white;
+                    border-radius: 50%;
+                }
+            }
+
+            .page-link {
+                position: relative;
+                display: block;
+                padding: .5rem .75rem;
+                letter-spacing: 1.88px;
+                line-height: 11px;
+                font-size: 10px;
+                color: $p;
+                background-color: #fff;
+                margin: 0 3px;
+                text-transform: uppercase;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &.ellipsis {
+                .page-link {
+                    margin: 0;
+                }
+            }
+
+            &:last-child {
+                .page-link {
+                    font-family: $font-gilroy-extra-bold;
+                }
+            }
+        }
+    }
+}
