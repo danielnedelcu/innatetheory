@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Inview from 'vueinview'
 import { gsap } from 'gsap'
 import { Power4 } from 'gsap/gsap-core.js'
-import { SplitText } from 'gsap/SplitText'
+//import { SplitText } from 'gsap/SplitText'
+import { SplitText } from '../utils/SplitText'
 import { CSSPlugin } from 'gsap/CSSPlugin'
 
 gsap.registerPlugin(SplitText)
