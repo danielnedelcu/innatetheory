@@ -8,7 +8,7 @@ export default {
   head: {
     script: [
       { src: 'https://unpkg.com/swiper/js/swiper.min.js', body: true },
-      { src: 'script/SplitText.min.js', body: true },
+      { src: 'script/SplitText.js', body: true },
       { src: 'script/inview.js', body: true }
     ],
     title: 'Innate Theory',
