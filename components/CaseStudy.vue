@@ -66,7 +66,7 @@ export default {
         margin: 20px 0;
         display: flex;
         flex-flow: column;
-        padding: 20px 0 100px;
+        padding: 20px 0 140px;
 
         @include breakpoint(lg){
           display: block;
