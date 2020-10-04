@@ -47,17 +47,20 @@ export default {
     background-position: center center;
     -ms-background-size: inherit;
     background-size: cover;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 
+    @include breakpoint(lg){
+      height: 100vh;
+    }
+
     &-content {
       position: relative;
-      padding-bottom: percentage(100 / 840);
+      padding-bottom: 66.66668%;
 
       @include breakpoint(sm){
-        padding-bottom: percentage(100 / 150);
+        padding-bottom: 6%;
 
         @media screen and (orientation: portrait){
           padding-top: 30vw

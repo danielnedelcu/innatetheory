@@ -4,8 +4,13 @@
 }
 
 .p-t-b-150 {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include breakpoint(lg){
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
 }
 .p-t-b-50 {
     padding-top: 50px;
@@ -85,14 +90,26 @@
     &:after {
         content: '';
         position: absolute;
-        top: 50%;
-        left: 0px;
-        height: 120%;
         width: 100%;
         background-color: #FFF;
         -webkit-transform: translateY(-50%)translateX(0%);
         -ms-transform: translateY(-50%)translateX(0%);
         transform: translateY(-50%)translateX(0%);
+    }
+
+    @include breakpoint(lg){
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            height: 120%;
+            width: 100%;
+            background-color: #FFF;
+            -webkit-transform: translateY(-50%)translateX(0%);
+            -ms-transform: translateY(-50%)translateX(0%);
+            transform: translateY(-50%)translateX(0%);
+        }
     }
 
     &.in-view {

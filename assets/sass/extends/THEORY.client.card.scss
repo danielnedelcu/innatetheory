@@ -9,6 +9,7 @@
     background-color: $a;
     width: calc(50% - 2rem);
     opacity: 0;
+    margin: 1rem;
     @include Transition;
 
 	@include breakpoint(sm){
@@ -16,16 +17,15 @@
 	}
 
 	@include breakpoint(md){
-        margin: 1rem;
-        width: calc(33.333% - 4rem);
+        width: calc(50% - 2rem);
 	}
 
 	@include breakpoint(lg){
-		width: calc(25% - 2rem);
+		width: calc(33.333% - 2rem);
 	}
 
 	@include breakpoint(xl){
-		
+		width: calc(25% - 2rem);
     }
 
     &:before {

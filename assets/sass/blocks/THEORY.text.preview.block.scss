@@ -1,9 +1,7 @@
 .text__preview-block {
-	position: absolute;
-	top: 50px;
-    z-index: 3;    
-    margin-left: 90px;
-    margin-right: 0;
+	position: relative;
+	z-index: 3;    
+	margin-top: 50px;
 
 	@include breakpoint(sm){
 
@@ -14,6 +12,8 @@
 	}
 
 	@include breakpoint(lg){
+		position: absolute;
+		margin-left: 90px;
 		margin-right: 150px;
 	}
 

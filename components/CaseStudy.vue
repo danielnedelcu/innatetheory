@@ -60,18 +60,24 @@ export default {
     .project-item {
         position: relative;
         overflow: hidden;
-        padding: 150px;
+        padding: 20px 0;
         width: 100%;
-        height: 650px;
-        margin: 100px 0;
-
+        height: auto;
+        margin: 20px 0;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: flex-end;
+        flex-flow: column;
+
+        @include breakpoint(lg){
+          display: block;
+          margin: 100px 0;
+          padding: 150px 0;
+          height: 650px;
+          display: flex;
+          align-items: flex-end;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: flex-end;
+        }
 
         &:nth-child(odd) {
             .project-item-wrapper {
@@ -86,56 +92,73 @@ export default {
             }
 
             .project-description {
-                -webkit-box-ordinal-group: 3;
-                -ms-flex-order: 2;
-                order: 2;
-                margin-left: 0;
+              -webkit-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+              order: 2;
+              margin-left: 15px;
+              margin-right: 15px;
+              width: 100%;
+              
+              @include breakpoint(lg){
+                width: 30%;
                 margin-right: 100px;
+              }
             }
         }
 
         &:nth-child(even) {
           justify-content: space-between;
 
-            .project-item-wrapper {
-                right: 0;
+          .project-item-wrapper {
+            right: 0;
 
-                &.in-view {
-
-                        &:after {
-                            animation: slideIlluLeft 1s forwards;
-                            -webkit-animation: slideIlluLeft 1s forwards;
-
-                        }
-
-                }
+            &.in-view {
+              &:after {
+                animation: slideIlluLeft 1s forwards;
+                -webkit-animation: slideIlluLeft 1s forwards;
+              }
             }
+          }
 
-            .device-wrapper {
-                -webkit-box-ordinal-group: 3;
-                -ms-flex-order: 2;
-                order: 2;
-                margin-right: 250px;
-            }
+          .device-wrapper {
+              -webkit-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+              order: 2;
+              margin-right: 250px;
+          }
 
-            .project-description {
-                -webkit-box-ordinal-group: 2;
-                -ms-flex-order: 1;
-                order: 1;
-                margin-left: 100px;
+          .project-description {
+            width: 100%;
+            -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+            order: 1;
+            margin-left: 15px;
+            margin-right: 15px;
+
+            @include breakpoint(lg){
+              width: 30%;
+              margin-left: 100px;
             }
+          }
         }
 
         &-wrapper {
-            position: absolute;
+            position: relative;
             top: 0px;
             height: 100%;
-            width: 50%;
+            width: 100%;
             overflow: hidden;
             background-color: rgba(0, 0, 0, 0.1);
 
+            @include breakpoint(lg){
+              position: absolute;
+              width: 50%;
+            }
+
             .bg {
-                position: absolute;
+                position: relative;
+                padding-bottom: 66%;
+                
                 height: 100%;
                 width: 100%;
                 left: 0px;
@@ -144,7 +167,11 @@ export default {
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
-                // @include TransitionBezier;
+
+                @include breakpoint(lg){
+                  position: absolute;
+                  padding-bottom: 0;
+                }
             }
         }
 
@@ -159,16 +186,17 @@ export default {
             padding-bottom: 60px;
             float: right;
             flex-direction: column;
-            // -webkit-box-align: center;
-            // -ms-flex-align: center;
-            // align-items: center;
-            // -webkit-box-pack: center;
-            // -ms-flex-pack: center;
-            // justify-content: center;
+            margin-left: 15px;
+            margin-right: 15px;
 
             a {
                 position: absolute;
                 bottom: 0;
+            }
+
+            @include breakpoint(lg){
+              margin-left: 0;
+              margin-right: 0;
             }
         }
 

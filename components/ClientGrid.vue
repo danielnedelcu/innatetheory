@@ -720,49 +720,47 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import '~/assets/sass/base/_index.scss';
-    @import '~/assets/sass/extends/_index.scss';
+  @import '~/assets/sass/base/_index.scss';
+  @import '~/assets/sass/extends/_index.scss';
 
-    .section__clients {
-        .copy {
-            width: 55%;
-        }
-
-        .client__grid {
-            &-ul {
-
-                -webkit-box-align: stretch;
-                -ms-flex-align: stretch;
-                align-items: stretch;
-                -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-
-                margin: 0 -1rem;
-
-                @include breakpoint(sm){
-
-                }
-
-                @include breakpoint(md){
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                }
-
-                @include breakpoint(lg){
-                    // margin-top: -2rem;
-                }
-
-                @include breakpoint(xl){
-
-                }
-            }
-
-            &-li {
-
-                @extend %clientcard;
-            }
-        }
-
+  .section__clients {
+    .copy {
+        width: 55%;
     }
+
+    .client__grid {
+      &-ul {
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0 -1rem;
+        display: flex;
+
+        @include breakpoint(sm){
+
+        }
+
+        @include breakpoint(md){
+          display: -webkit-box;
+          display: -ms-flexbox;
+        }
+
+        @include breakpoint(lg){
+            // margin-top: -2rem;
+        }
+
+        @include breakpoint(xl){
+
+        }
+      }
+
+      &-li {
+
+        @extend %clientcard;
+      }
+    }
+
+  }
 </style>

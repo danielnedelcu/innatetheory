@@ -55,21 +55,17 @@
 
 @mixin btn-banner-large {
     line-height: 1;
-    font-size: 7.25vw;
+    font-size: 80px;
     letter-spacing: -0.04em;
 	font-family: $font-avalon-bold;
     color: $white;
 
-	@include breakpoint(sm){
-		font-size: 3.71094vw;
-	}
-
 	@include breakpoint(md){
-		font-size: 5.76126vw;
+		font-size: 90px;
 	}
 
 	@include breakpoint(lg){
-		font-size: 7.76126vw;
+		font-size: 130px;
 	}
 
 	@include breakpoint(xl){
