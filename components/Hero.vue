@@ -57,21 +57,13 @@ export default {
 
     &-content {
       position: relative;
-      padding-bottom: 66.66668%;
+      padding-bottom: 6%;
+      padding-top: 50vw;
 
       @include breakpoint(sm){
-        padding-bottom: 6%;
 
-        @media screen and (orientation: portrait){
-          padding-top: 30vw
-        }
-        @media screen and (orientation: landscape){
-          padding-top: 20vw
-        }
       }
-      @include breakpoint(md){
-        padding-top: 30vw;
-      }
+   
       @include breakpoint(lg){
         padding-top: 5.5vw;
         padding-bottom: 9vw;
