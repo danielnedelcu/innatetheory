@@ -188,7 +188,6 @@ export default {
             display: flex;
             width: 30%;
             padding-bottom: 60px;
-            float: right;
             flex-direction: column;
             margin-left: 15px;
             margin-right: 15px;
