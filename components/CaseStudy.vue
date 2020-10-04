@@ -183,11 +183,9 @@ export default {
             position: relative;
             z-index: 1;
             margin-top: 40px;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
             width: 30%;
-            padding-bottom: 60px;
+            padding-bottom: 20px;
             flex-direction: column;
             margin-left: 15px;
             margin-right: 15px;
@@ -202,6 +200,7 @@ export default {
             @include breakpoint(lg){
               margin-left: 0;
               margin-right: 0;
+              padding-bottom: 60px;
 
               a {
                 position: absolute;
