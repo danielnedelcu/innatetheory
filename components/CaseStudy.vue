@@ -60,17 +60,18 @@ export default {
     .project-item {
         position: relative;
         overflow: visible;
-        padding: 20px 0;
+        // padding: 20px 0;
         width: 100%;
         height: auto;
         margin: 20px 0;
         display: flex;
         flex-flow: column;
+        padding: 20px 0 100px;
 
         @include breakpoint(lg){
           display: block;
           margin: 100px 0;
-          padding: 150px 0;
+          padding: 150px 0 150px;
           height: 650px;
           display: flex;
           align-items: flex-end;
