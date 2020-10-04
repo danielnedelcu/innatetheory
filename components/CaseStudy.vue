@@ -59,7 +59,7 @@ export default {
 
     .project-item {
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         padding: 20px 0;
         width: 100%;
         height: auto;
