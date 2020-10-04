@@ -95,9 +95,11 @@ export default {
               -webkit-box-ordinal-group: 3;
               -ms-flex-order: 2;
               order: 2;
-              margin-left: 15px;
-              margin-right: 15px;
               width: 100%;
+              padding-left: 15px;
+              padding-right: 15px;
+              margin-left: 0;
+              margin-right: 0;
               
               @include breakpoint(lg){
                 width: 30%;
@@ -132,8 +134,10 @@ export default {
             -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
             order: 1;
-            margin-left: 15px;
-            margin-right: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 0;
+            margin-right: 0;
 
             @include breakpoint(lg){
               width: 30%;
@@ -190,13 +194,21 @@ export default {
             margin-right: 15px;
 
             a {
-                position: absolute;
+                position: relative;
                 bottom: 0;
+                text-align: center;
+                width: 70%;
             }
 
             @include breakpoint(lg){
               margin-left: 0;
               margin-right: 0;
+
+              a {
+                position: absolute;
+                bottom: 0;
+                width: auto;
+              }
             }
         }
 

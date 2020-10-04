@@ -16,7 +16,6 @@
     font-family: $font-avalon-medium;
     position: relative;
     opacity:1;
-    
 
     &:before {
         background-color:$hover;
@@ -131,12 +130,15 @@
     @include button;
     color: $black ;
     font-family: $font-graphik-light;
-    font-size: 16px;
+    font-size: 1.1rem;
     position: relative;
     display: inline-block;
     padding: 0 0 15px;
-
     @include Transition;
+
+    @include breakpoint(lg){
+		font-size: 1.25rem;
+	}
     
 
 } //9726993040 liza
@@ -145,12 +147,15 @@
     @include button;
     color: $black;
     font-family: $font-graphik-light;
-    font-size: 16px;    
+    font-size: 1.1rem;    
     position: relative;
     display: inline-block;    
     padding: 0 0 15px;
-
     @include Transition;
+
+    @include breakpoint(lg){
+		font-size: 1.25rem;
+	}
 }
 
 @mixin btn-underline-effect($color: $primary-color) {
