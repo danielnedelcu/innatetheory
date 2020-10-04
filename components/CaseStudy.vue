@@ -182,7 +182,7 @@ export default {
         .project-description {
             position: relative;
             z-index: 1;
-            margin-top: 40px;
+            padding-top: 40px;
             display: flex;
             width: 30%;
             padding-bottom: 20px;
@@ -200,6 +200,7 @@ export default {
             @include breakpoint(lg){
               margin-left: 0;
               margin-right: 0;
+              padding-top: 40px;
               padding-bottom: 60px;
 
               a {
