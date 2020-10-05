@@ -109,7 +109,7 @@
         transform: translateY(-50%)translateX(0%);
     }
 
-    @include breakpoint(lg){
+    @include breakpoint(xs){
         &:after {
             content: '';
             position: absolute;
