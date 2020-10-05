@@ -16,11 +16,12 @@
                 background-position: center center;
                 -ms-background-size: inherit;
                 background-size: cover;
-                height: 400px;
+                height: 300px;
                 position: relative;
                 margin-bottom: 20px;
 
                 @include breakpoint(lg){
+                    height: 400px;
                     margin-bottom: 80px;
                 }
             }
