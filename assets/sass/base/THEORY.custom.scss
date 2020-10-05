@@ -36,6 +36,18 @@
     padding-right: 100px;
 }
 
+.row-mobile {
+    @include breakpoint(xs){
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @include breakpoint(lg){ 
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 .section__line-wrapper {
     position: relative;
     padding: 100px 0;

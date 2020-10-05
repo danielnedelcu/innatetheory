@@ -1,7 +1,27 @@
 <template>
   <section class="section__banner p-t-b-150">
     <div class="wrapper">
-      <div v-inview:once.enter="inviewImageEnter" v-bind:style="{ backgroundImage: `url(${data.image})` }" class="section__banner-wrapper anim-image">
+      <div class="text-black d-lg-none">
+        <div class="table-cell">
+          <div class="">
+            <div class="">
+              <h5 class="animated__l">
+                {{ data.label }}
+              </h5>
+              <div v-inview:once.enter="inviewEnter" class="animated__h">
+                <h2 class="split__headline">
+                  {{ data.title }}
+                </h2>
+              </div>
+              <a v-bind:href="data.url" class="btn--primary" title="PGA Tour Professional, Sam Ryder">
+                <span>{{ data.cta }}e</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div v-inview:once.enter="inviewImageEnter" v-bind:style="{ backgroundImage: `url(${data.image})` }" class="section__banner-wrapper anim-image row-mobile d-none d-lg-flex">
         <div class="section__banner-theme" />
 
         <div class="hero__content--center table-content">
