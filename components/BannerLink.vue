@@ -35,7 +35,11 @@ export default {
 
     .banner__link {
         background-color: $primary-color;
-        padding: 300px 0;
+        padding: 150px 0;
+
+        @include breakpoint(lg){
+            padding: 300px 0;
+        }
 
         &-category {
             margin-top: 0;
