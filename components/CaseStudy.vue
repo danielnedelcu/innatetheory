@@ -143,6 +143,8 @@ export default {
             @include breakpoint(lg){
               width: 30%;
               margin-left: 100px;
+              position: absolute;
+              left: 0;
             }
           }
         }
