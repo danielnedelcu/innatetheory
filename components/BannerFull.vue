@@ -39,7 +39,7 @@
                     </h2>
                   </div>
                   <a v-bind:href="data.url" class="btn--primary" title="PGA Tour Professional, Sam Ryder">
-                    <span>{{ data.cta }}e</span>
+                    <span>{{ data.cta }}</span>
                   </a>
                 </div>
               </div>
