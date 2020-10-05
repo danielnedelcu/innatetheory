@@ -54,7 +54,7 @@
 
 @mixin btn-banner-large {
     line-height: 1;
-    font-size: 80px;
+    font-size: 14vw;
     letter-spacing: -0.04em;
 	font-family: $font-avalon-bold;
     color: $white;
@@ -65,11 +65,7 @@
 
 	@include breakpoint(lg){
 		font-size: 130px;
-	}
-
-	@include breakpoint(xl){
-		
-    }    
+	} 
     
     &:hover {
         color: $white !important;
