@@ -5,7 +5,8 @@
         <div class="table-cell">
           <div class="">
             <div class="">
-              <h5 class="animated__l">
+              <h5 class="section__headline-category animated__l">
+                <hr class="dash">
                 {{ data.label }}
               </h5>
               <div v-inview:once.enter="inviewEnter" class="animated__h">
@@ -70,6 +71,20 @@ export default {
 <style scoped lang="scss">
     @import '~/assets/sass/base/_index.scss';
     @import '~/assets/sass/extends/_index.scss';
+
+    .section__headline-category {
+      .dash {
+        position: absolute;
+        margin-top: -10px;
+        margin-bottom: 0;
+        width: 3rem;
+        height: 0;
+        display: inline-block;
+        vertical-align: middle;
+        border-top: .2rem solid;
+        top: -.1rem;
+      }
+    }
 
     .section__banner {
         &-wrapper{
