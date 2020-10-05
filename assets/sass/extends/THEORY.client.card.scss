@@ -7,21 +7,17 @@
     background-clip: content-box;
     white-space: normal;    
     background-color: $a;
-    width: calc(50% - 2rem);
+    width: calc(50% - 1.65rem);
     opacity: 0;
     margin: 1rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
     @include Transition;
 
-	@include breakpoint(sm){
-        width: calc(50% - 2rem);
-	}
-
-	@include breakpoint(md){
-        width: calc(50% - 2rem);
-	}
-
 	@include breakpoint(lg){
-		width: calc(33.333% - 2rem);
+        width: calc(33.333% - 2rem);
+        margin-right: 1rem;
+        margin-bottom: 1rem;
 	}
 
 	@include breakpoint(xl){
