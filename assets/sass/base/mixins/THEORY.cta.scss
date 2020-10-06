@@ -101,9 +101,13 @@
     color: $black ;
     position: relative;
     display: inline-block;
-    padding: 0 0 15px;
+    margin: 0 0 10px;
     width: 100%;
     @include Transition;  
+
+    @include breakpoint(lg){
+        margin: 0 0 15px;
+    }
     
     .post-title {
         @include Transition;
@@ -129,10 +133,11 @@
     font-size: 0.8rem;
     position: relative;
     display: inline-block;
-    padding: 0 0 15px;
+    padding: 0 0 10px;
     @include Transition;
 
     @include breakpoint(lg){
+        padding: 0 0 15px;
 		font-size: 1.25rem;
 	}
     

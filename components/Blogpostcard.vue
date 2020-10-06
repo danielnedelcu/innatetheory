@@ -134,10 +134,12 @@ export default {
 
   .post-title {
     padding-left: 0;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin-bottom: 0;
+    line-height: 1;
 
     @include breakpoint(lg){
+      font-size: 2.5rem;
       padding-left: 5.5rem;
     }
   }
