@@ -8,7 +8,9 @@
         <div class="blog__description">
           <div class="meta-categories">
             <ul class="post-categories">
-              <li><a href="http://clapat.ro/themes/nerduck-wordpress/category/inspiration/" rel="category tag" class="btn-blog-category button-animated">{{ blog.content.category }}</a></li>
+              <li>
+                <div rel="category tag" class="btn-blog-category">{{ blog.content.category }}</div>
+              </li>
             </ul>
           </div>
 
@@ -23,9 +25,9 @@
               <span class="btn-meta">{{ blog.content.date }}</span>
             </li>
             <li class="entry-author">
-              <n-link :to="blog.full_slug" class="btn-meta button-animated" rel="author">
+              <div class="btn-meta" rel="author">
                 by {{ authorData.name }}
-              </n-link>
+              </div>
             </li>
           </ul>
         </div>
