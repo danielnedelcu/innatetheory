@@ -1,6 +1,11 @@
 .p-t-b-250 {
-    padding-top: 250px;
-    padding-bottom: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include breakpoint(lg){
+        padding-top: 250px;
+        padding-bottom: 250px;
+    }
 }
 
 .p-t-b-150 {
@@ -50,6 +55,26 @@
     @include breakpoint(lg){ 
         margin-left: 0;
         margin-right: 0;
+    }
+}
+
+.p-r-l-15-m {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include breakpoint(lg){ 
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.cw-100 {
+    @include breakpoint(xs){ 
+       width: 100%;
+    }
+
+    @include breakpoint(lg){ 
+        
     }
 }
 

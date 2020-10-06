@@ -52,23 +52,15 @@ export default {
     justify-content: center;
     align-items: flex-end;
 
+    @include breakpoint(lg){
+      height: 750px;
+    }
+
     &-content {
       position: relative;
-      padding-bottom: percentage(100 / 840);
+      padding-bottom: 46%;
+      padding-top: 50vw;
 
-      @include breakpoint(sm){
-        padding-bottom: percentage(100 / 150);
-
-        @media screen and (orientation: portrait){
-          padding-top: 30vw
-        }
-        @media screen and (orientation: landscape){
-          padding-top: 20vw
-        }
-      }
-      @include breakpoint(md){
-        padding-top: 30vw;
-      }
       @include breakpoint(lg){
         padding-top: 5.5vw;
         padding-bottom: 9vw;

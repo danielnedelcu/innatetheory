@@ -4,7 +4,7 @@
       <n-link :to="blog.full_slug" class="btn-blog-headline">
         <div v-inview:once.enter="inviewImageEnter" v-bind:style="{ backgroundImage: `url(${blog.content.preview_image})` }" class="blog__image anim-image" />
       </n-link>
-      <div v-inview:once.enter="inviewEnter" class="animated__h">
+      <div v-inview:once.enter="inviewEnter" class="p-r-l-15-m animated__h">
         <div class="blog__description">
           <div class="meta-categories">
             <ul class="post-categories">
@@ -24,7 +24,7 @@
             </li>
             <li class="entry-author">
               <n-link :to="blog.full_slug" class="btn-meta button-animated" rel="author">
-                {{ authorData.name }}
+                by {{ authorData.name }}
               </n-link>
             </li>
           </ul>
@@ -61,14 +61,22 @@ export default {
 
 .blogs-blog-article {
   float: left;
-  width: 50%;
+  width: 100%;
+
+  @include breakpoint(lg){
+    width: 50%;
+  }
 
   .blog-card {
     // margin: 0 3.26305%;
     margin-bottom: 13.26305%;
 
     .blog__description {
-      padding-right: 50px;
+      padding-right: 0;
+
+      @include breakpoint(lg){
+        padding-right: 50px;
+      }
     }
   }
 
@@ -78,14 +86,27 @@ export default {
     background-position: center center;
     -ms-background-size: inherit;
     background-size: cover;
-    height: 500px;
+    height: 300px;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @include breakpoint(lg){
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 30px;
+      height: 500px;
+    }
   }
 
   .meta-categories {
-    padding-left: 5.5rem;
+    padding-left: 0;
     color: $black;
+
+    @include breakpoint(lg){
+      padding-left: 5.5rem;
+    }
 
     .post-categories {
       margin: 0;
@@ -112,16 +133,24 @@ export default {
   }
 
   .post-title {
-    // font-family: $font-avalon-medium;
+    padding-left: 0;
     font-size: 2.2rem;
-    padding-left: 5.5rem;
+    margin-bottom: 0;
+
+    @include breakpoint(lg){
+      padding-left: 5.5rem;
+    }
   }
 
   .entry-meta {
     display: block;
     margin-bottom: 0;
     margin-top: 0;
-    padding-left: 5.5rem;
+    padding-left: 0;
+
+    @include breakpoint(lg){
+      padding-left: 5.5rem;
+    }
 
     li {
       display: inline-block;

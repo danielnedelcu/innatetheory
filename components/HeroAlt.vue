@@ -59,14 +59,22 @@ export default {
     align-items: center;
     color: $white;
     overflow: hidden;
-    margin-top: 100px;
+    margin-top: 50px;
+
+    @include breakpoint(lg){
+      margin-top: 100px;
+    }
 
     &-image {
       background-repeat: no-repeat;
       background-position: center center;
       -ms-background-size: inherit;
       background-size: cover;
-      height: 850px;
+      height: 450px;
+
+      @include breakpoint(lg){
+        height: 850px;
+      }
     }
 
     &-content {

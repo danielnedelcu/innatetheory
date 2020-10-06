@@ -2,13 +2,15 @@
   <section class="section__blog-grid p-t-b-150">
     <div class="wrapper--full-bled">
       <div class="wrapper">
-        <div class="blogs">
-          <div class="blogs-blog">
-            <Blogpostcard
-              v-for="(blog, key) in data"
-              :key="key"
-              :blog="blog"
-            />
+        <div class="">
+          <div class="blogs">
+            <div class="blogs-blog">
+              <Blogpostcard
+                v-for="(blog, key) in data"
+                :key="key"
+                :blog="blog"
+              />
+            </div>
           </div>
         </div>
       </div>

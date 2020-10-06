@@ -48,7 +48,11 @@ export default {
       @include Transition;
 
       .process__wrapper {
-        padding: 40px 0;
+        padding: 20px 0 0;
+
+        @include breakpoint(lg){
+          padding: 40px 0;
+        }
 
         .counter {
           font-size: 6rem;
@@ -56,11 +60,18 @@ export default {
         }
 
         .label-l {
-          font-size: 3.6vw;
+          font-size: 30px;
           font-family: $font-graphik-extra-light;
           line-height: 1;
-          padding-right: 80px;
+          padding-right: 0;
           display: block;
+          margin-bottom: 40px;
+
+          @include breakpoint(lg){
+            font-size: 60px;
+            margin-bottom: 0;
+            padding-right: 80px;
+          }
         }
       }
     }
