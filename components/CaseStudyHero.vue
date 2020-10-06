@@ -30,7 +30,7 @@ export default {
     background-position: center center;
     -ms-background-size: inherit;
     background-size: cover;
-    height: 800px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,13 +38,21 @@ export default {
     overflow: hidden;
     margin-top: 0;
 
+    @include breakpoint(lg) {
+      height: 800px;
+    }
+
     &-image {
         background-repeat: no-repeat;
         background-position: center center;
         -ms-background-size: inherit;
         background-size: cover;
         width: 100%;
-        height: 800px;
+        height: 450px;
+
+        @include breakpoint(lg) {
+          height: 800px;
+        }
     }
   }
 

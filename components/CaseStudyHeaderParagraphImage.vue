@@ -8,7 +8,7 @@
           </h2>
         </div>
       </div>
-      <div class="section__simple-text col-6">
+      <div class="section__simple-text col-lg-6 col-xs-12">
         <div class="row">
           <div v-inview:once.enter="inviewEnter" class="animated__h">
             <p class="split__paragraph">
