@@ -4,7 +4,7 @@
       <n-link :to="blog.full_slug" class="btn-blog-headline">
         <div v-inview:once.enter="inviewImageEnter" v-bind:style="{ backgroundImage: `url(${blog.content.preview_image})` }" class="blog__image anim-image" />
       </n-link>
-      <div v-inview:once.enter="inviewEnter" class="wrapper p-r-l-15-m animated__h">
+      <div v-inview:once.enter="inviewEnter" class="wrapper animated__h">
         <div class="blog__description">
           <div class="meta-categories">
             <ul class="post-categories">
