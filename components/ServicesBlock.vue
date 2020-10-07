@@ -5,17 +5,19 @@
     </div>
     <div class="wrapper">
       <div class="q-container container-inner d-flex">
-        <div class="col-md-4">
+        <div class="col-md-4 d-none d-lg-block">
           <img v-bind:src="service.icon.filename" alt="">
         </div>
         <div class="services-block col-md-8">
-          <ServicesBlockItem
-            v-for="(block, index) in service.servicePlaceholder"
-            :key="block._uid"
-            :block="block"
-            :delay="index"
-            class="columns col-md-6"
-          />
+          <div class="row">
+            <ServicesBlockItem
+              v-for="(block, index) in service.servicePlaceholder"
+              :key="block._uid"
+              :block="block"
+              :delay="index"
+              class="columns col-md-6"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -1,12 +1,14 @@
 <template>
   <div>
-    <div class="work_caption">
-      <span class="client font_caps">{{ block.label }}</span>
-      <span class="line_sep" />
+    <div class="row-mobile">
+      <div class="work_caption">
+        <span class="client font_caps">{{ block.label }}</span>
+        <span class="line_sep" />
+      </div>
+      <p class="desc">
+        {{ block.description }}
+      </p>
     </div>
-    <p class="desc">
-      {{ block.description }}
-    </p>
   </div>
 </template>
 
@@ -19,12 +21,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '~/assets/sass/base/_index.scss';
+  
   .columns {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     float: left;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+
+    @include breakpoint(lg){
+      margin-bottom: 60px;
+    }
 
     .lead {
       margin-top: 30px;
