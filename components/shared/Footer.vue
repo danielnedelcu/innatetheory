@@ -22,7 +22,7 @@
             Say Hi
           </dt>
           <dd>
-            <a href="mailto:hello@razorfish.com" class="contact-link light contact-content">
+            <a href="mailto:hello@innatetheory.com" class="contact-link light contact-content">
               hello@innatetheory.com
             </a>
           </dd>
@@ -37,22 +37,22 @@
             </p>
           </dt>
           <dd class="contact-social-item">
-            <a aria-label="Facebook" href="https://www.facebook.com/razorfish" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
+            <a aria-label="Facebook" href="https://www.facebook.com/innatetheory" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               Fb
             </a>
           </dd>
           <dd class="contact-social-item">
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/company/razorfish/" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/company/innatetheory/" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               In
             </a>
           </dd>
           <dd class="contact-social-item">
-            <a aria-label="Twitter" href="https://twitter.com/WeAreRazorfish" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
+            <a aria-label="Twitter" href="https://twitter.com/innatetheory" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               Tw
             </a>
           </dd>
           <dd class="contact-social-item">
-            <a aria-label="Instagram" href="https://www.instagram.com/razorfish/" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
+            <a aria-label="Instagram" href="https://www.instagram.com/innatetheory/" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               Ig
             </a>
           </dd>
