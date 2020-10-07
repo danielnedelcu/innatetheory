@@ -1,26 +1,19 @@
 
 .#{$container-class} {
 	margin: 0 auto;
-	width: percentage(0.9);
+	width: auto;
 	max-width: $container-max-width;
 	z-index: 1;
 	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
 	@include clearfix;
-	
-
-	@include breakpoint(sm){
-		width: percentage(0.95);
-		z-index: 3;
-	}
-
-	@include breakpoint(md){
-		width: percentage(0.9);
-		z-index: 4;
-	}
 
 	@include breakpoint(lg){
-		width: percentage(.85);
+		width: percentage(0.85);
 		z-index: 5;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 }

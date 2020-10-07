@@ -43,7 +43,11 @@
 }
 
 .p-r-100 {
-    padding-right: 100px;
+    padding-right: 0;
+
+    @include breakpoint(lg){ 
+        padding-right: 100px;
+    }
 }
 
 .row-mobile {

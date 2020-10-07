@@ -99,6 +99,8 @@ export default {
   .component--site-footer {
     padding-top: 50px;
     padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     background: $black;
     color: $white;
     position: relative;

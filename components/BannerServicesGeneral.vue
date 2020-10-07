@@ -1,7 +1,7 @@
 <template>
   <section class="section__banner p-t-b-150">
     <div class="wrapper">
-      <div v-bind:style="{ backgroundImage: `url(${data.image.filename})` }" class="section__banner-wrapper">
+      <div v-bind:style="{ backgroundImage: `url(${data.image.filename})` }" class="section__banner-wrapper row-mobile">
         <div class="section__banner-wrapper-content">
           <div class="col-md-5">
             <div class="p-r-100">
@@ -91,24 +91,45 @@ export default {
             }
 
           &-content {
-            margin: 6rem 0;
+            margin: 1rem 0;
             height: 100%;
             display: flex;
-            // background-color: $g;
+            flex-flow: column;
             color: $white;
-            padding: 90px;
+            padding: 10px;
 
-            .content-wrapper {
-              -webkit-column-count: 2;
-                  -moz-column-count: 2;
-                        column-count: 2;
+            @include breakpoint(lg){
+              flex-flow: row;
+              padding: 70px;
+              margin: 3rem 0;
+
+              h3 {
+                font-size: 45px;
+                margin-top: 0;
+                margin-bottom: 40px;
+              }
             }
 
             h3 {
               // font-family:  $font-graphik-light;
               font-family: $font-avalon-bold;
-              font-size: 45px;
-              margin-bottom: 40px;
+              font-size: 35px;
+              margin-bottom: 30px;
+              margin-top: 20px;
+            }
+
+            .content-wrapper {
+              margin-top: 40px;
+              -webkit-column-count: 1;
+                  -moz-column-count: 1;
+                        column-count: 1;
+
+              @include breakpoint(lg){
+                margin-top: 0;
+                -webkit-column-count: 2;
+                    -moz-column-count: 2;
+                          column-count: 2;
+              }
             }
 
             p {
