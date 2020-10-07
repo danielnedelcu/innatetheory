@@ -60,6 +60,7 @@ export default {
     color: $white;
     overflow: hidden;
     margin-top: 50px;
+    margin-bottom: 50px;
 
     @include breakpoint(lg){
       margin-top: 100px;

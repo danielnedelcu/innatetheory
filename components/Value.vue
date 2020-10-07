@@ -51,8 +51,16 @@ export default {
       .section__values-li-wrapper {
         padding: 2.5rem 1rem 1.5rem;
 
+        p {
+          margin-top: 20px;
+        }
+
         @include breakpoint(lg) {
           padding: 2.5rem 3.5rem;
+
+          p {
+            margin-top: 10px;
+          }
         }
       }
     }

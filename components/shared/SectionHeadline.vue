@@ -63,7 +63,11 @@ export default {
         }
 
       .section__hero-content {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
+
+        @include breakpoint(lg){
+          margin-bottom: 50px;
+        }
       }
     }
 </style>
