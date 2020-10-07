@@ -47,6 +47,11 @@ export default {
       opacity: 0;
       @include Transition;
 
+      .dash {
+        width: 20%;
+        border-top: 1px solid $g;
+      }
+
       .process__wrapper {
         padding: 20px 0 0;
 
