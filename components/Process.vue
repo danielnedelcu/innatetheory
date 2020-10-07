@@ -60,15 +60,16 @@ export default {
         }
 
         .label-l {
-          font-size: 30px;
-          font-family: $font-graphik-extra-light;
+          font-size: 15px;
+          text-transform: uppercase;
+          font-family: $font-graphik-bold;
           line-height: 1;
           padding-right: 0;
           display: block;
-          margin-bottom: 40px;
+          margin-bottom: 20px;
 
           @include breakpoint(lg){
-            font-size: 60px;
+            font-size: 20px;
             margin-bottom: 0;
             padding-right: 80px;
           }
