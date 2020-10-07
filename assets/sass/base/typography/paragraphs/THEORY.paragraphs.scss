@@ -4,6 +4,7 @@ p {
     font-size: 1.1rem;
     margin-bottom: 20px;
     font-family: $font-graphik-light;
+    color: $black;
  
     @include breakpoint(md) {       
     }

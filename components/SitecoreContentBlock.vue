@@ -5,7 +5,7 @@
         <div class="col-md-6">
           <h2>{{ block.title }}</h2>
 
-          <div class="sitecore-list">
+          <div v-if="block.servicesPlaceholder.length" class="sitecore-list bordered row-mobile">
             <ul>
               <SitecoreBlockService
                 v-for="(service, index) in block.servicesPlaceholder"
@@ -46,13 +46,28 @@ export default {
   @import '~/assets/sass/base/_index.scss';
 
   .section__sitecore {
-    padding: 70px 0;
+    padding: 70px 0 50px;
 
     @include breakpoint(lg){
       padding: 220px 0;
     }
 
     .sitecore-wrapper { 
+      .bordered {
+        background-color: $primary-color;
+        padding: 30px 40px;
+        margin-bottom: 20px;
+        color: $white;
+
+        @include breakpoint(lg){
+          background-color: transparent;
+          padding: 0;
+          margin-bottom: 0;
+          color: $black;
+
+        }
+      }
+      
       .bulleted {
         ul {
           list-style: disc;

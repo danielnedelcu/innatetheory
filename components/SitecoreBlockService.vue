@@ -17,6 +17,6 @@ export default {
   
   li {
     padding: 5px 0;
-    font-family: $font-graphik-light;
+    font-family: $font-graphik-regular;
   }
 </style>
