@@ -52,7 +52,7 @@ export default {
       padding: 220px 0;
     }
 
-    .sitecore-wrapper {
+    .sitecore-wrapper { 
       .bulleted {
         ul {
           list-style: disc;
