@@ -46,7 +46,11 @@ export default {
   @import '~/assets/sass/base/_index.scss';
 
   .section__sitecore {
-    padding: 220px 0;
+    padding: 70px 0;
+
+    @include breakpoint(lg){
+      padding: 220px 0;
+    }
 
     .sitecore-wrapper {
       .bulleted {
