@@ -95,12 +95,17 @@ export default {
   @import '~/assets/sass/base/_index.scss';
   @import '~/assets/sass/extends/_index.scss';
 
+
   .component--site-footer {
-    padding-top: 93px;
+    padding-top: 50px;
     padding-bottom: 15px;
     background: $black;
     color: $white;
     position: relative;
+
+    @include breakpoint(lg){
+      padding-top: 93px;
+    }
 
     .global--container {
       padding: 0;
@@ -146,7 +151,12 @@ export default {
     }
 
     .desk\:tw--grid {
-      display: grid;
+      display: flex;
+      flex-flow: column;
+
+      @include breakpoint(lg){
+        display: grid;
+      }
     }
 
     .desk\:tw--col-span-7 {
@@ -217,10 +227,16 @@ export default {
     }
 
     .footer-headline {
-      margin-bottom: 140px;
+      margin-bottom: 40px;
+
+      @include breakpoint(lg){
+        margin-bottom: 140px;
+      }
     }
 
     .footer-legal {
+      flex-flow: column;
+
       p {
         font-size: 14px;
       }
@@ -229,9 +245,21 @@ export default {
         font-size: 14px;
       }
 
+      @include breakpoint(lg){
+        flex-flow: row;
+      }
+
       .component--site-logo {
         img {
           width: 180px;
+        }
+      }
+
+      .legal-content {
+        margin: 20px 0;
+
+        @include breakpoint(lg){
+          margin: 0;
         }
       }
     }
