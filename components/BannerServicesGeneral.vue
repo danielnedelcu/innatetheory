@@ -6,7 +6,7 @@
           <div class="col-md-5">
             <div class="p-r-100">
               <h3>{{ data.headline }}</h3>
-              <p>
+              <p class="text-white">
                 Take a look at what the Sitecore as a Content Management System (CMS) can do for your business needs.
               </p>
               <n-link :to="ctaData.url.cached_url" class="btn--primary-reverse">
@@ -15,7 +15,7 @@
             </div>
           </div>
           <div class="col-md-7">
-            <div class="content-wrapper">
+            <div class="content-wrapper text-white">
               <div v-html="richtext" />
             </div>
           </div>
@@ -129,6 +129,14 @@ export default {
                 -webkit-column-count: 2;
                     -moz-column-count: 2;
                           column-count: 2;
+              }
+
+              div {
+                color: $white;
+
+                p {
+                  color: $white;
+                }
               }
             }
 

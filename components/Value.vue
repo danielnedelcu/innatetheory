@@ -5,7 +5,7 @@
         <h4 class="split__headline">
           {{ value.title }}
         </h4>
-        <p class="split__paragraph">
+        <p class="split__paragraph text-white">
           {{ value.description }}
         </p>
       </div>
