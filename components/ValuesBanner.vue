@@ -4,7 +4,7 @@
       <SectionHeadline :label="data.label" :title="data.title" />
     </div>
     <div class="wrapper">
-      <div class="section__banner-wrapper">
+      <div class="section__banner-wrapper row-mobile">
         <div class="section__values">
           <ul class="section__values-ul">
             <Value
