@@ -64,6 +64,18 @@
     }
 }
 
+.mobile-position-bottom {
+    @include breakpoint(xs){
+        align-items: flex-end !important;
+        padding-bottom: 40px !important;
+    }
+
+    @include breakpoint(lg){ 
+        align-items: center !important;
+        padding-bottom: 0 !important;
+    }
+}
+
 .p-r-l-15-m {
     padding-left: 15px;
     padding-right: 15px;

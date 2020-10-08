@@ -5,7 +5,7 @@
         <div class="project__teaser-wrapper">
           <div v-inview:once.enter="inviewImageEnter" v-bind:style="{ backgroundImage: `url(${project.image})` }" class="section__hero-project-image anim-image" />
           <div class="pos-abs">
-            <div class="va">
+            <div class="mobile-position-bottom va">
               <div class="wrapper--bloglist">
                 <div v-inview:once.enter="inviewEnter" class="project__teaser-content animated__h">
                   <a :href="project.external_link.cached_url" target="_blank" class="button-animated-white">
