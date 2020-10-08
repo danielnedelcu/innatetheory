@@ -60,7 +60,7 @@ export default {
       position: relative;
       // padding-bottom: 46%;
       // padding-top: 50vw;
-      padding-top: 250px;
+      padding-top: 200px;
       padding-bottom: 0;
 
       @include breakpoint(lg){
