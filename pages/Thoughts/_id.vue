@@ -51,7 +51,7 @@
               </figure> -->
 
               <div class="blog-footer">
-                <p>Innate Theory, LLC is a boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results.</p>
+                <p>InnateTheory, LLC is a boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results.</p>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@
       </article>
     </section>
 
-    <section class="section__blog-previews">
+    <!-- <section class="section__blog-previews">
       <div class="wrapper--full-bleed">
         <div class="wrapper--bloglist">
           <ul class="blog__list-ul">
@@ -89,14 +89,20 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
+    <BannerLink label="All Posts" url="/thoughts" />
   </div>
 </template>
 
 <script>
+import BannerLink from '~/components/BannerLink.vue'
 import Services from '~/services/services.js'
 
 export default {
+  components: {
+    BannerLink
+  },
+
   data () {
     return {
       inviewEnter: this.$inviewEnter,
