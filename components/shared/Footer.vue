@@ -63,7 +63,7 @@
           <Logo />
         </a>
         <div class="legal-content">
-          <p class="footer-copyright desk:tw--inline">
+          <p class="footer-copyright desk:tw--inline text-white">
             ©2020 InnateTheory ·&nbsp;All rights reserved
           </p>
           <span class="tw--hidden desk:tw--inline">·</span> <a href="/privacy-policy" class="legal-link component--base-link global--cta secondary light">
