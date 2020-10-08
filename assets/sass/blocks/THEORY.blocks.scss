@@ -39,20 +39,12 @@
 
 .#{$container-class}--bloglist {
 	margin: 0 auto;
-	width: percentage(0.9);
+	width: 100%;
 	z-index: 1;
 	@include clearfix;
 
-	@include breakpoint(md){
-		// max-width: 60rem;
-	}
 	@include breakpoint(lg){
-		width: percentage(.45);
-		z-index: 5;
-	}
-	@include breakpoint(xl){
-		width: percentage(.45);
-		z-index: 5;
+		width: percentage(0.4);
 	}
 }
 

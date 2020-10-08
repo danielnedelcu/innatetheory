@@ -153,13 +153,17 @@ export default {
     background-position: center center;
     -ms-background-size: inherit;
     background-size: cover;
-    height: 80vh;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: $white;
     overflow: hidden;
     margin-top: 0;
+
+    @include breakpoint(lg){
+      height: 80vh;
+    }
 
     &-image {
         background-repeat: no-repeat;
@@ -186,12 +190,23 @@ export default {
       right: 0;
       bottom: 0;
       left: 0;
-      height: 80vh;
+      height: 500px;
       width: 100%;
+
+      @include breakpoint(lg){
+        height: 80vh;
+      }
 
       &-h {
         .split__headline {
             margin-top: 0;
+            font-size: 10vw;
+            line-height: 1;
+
+            @include breakpoint(lg){
+              font-size: 3vw;
+              line-height: 1.22222;
+            }
         }
 
         .meta {
