@@ -49,17 +49,20 @@ export default {
     background-size: cover;
     height: 750px;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-start;
+    // align-items: flex-end;
 
     @include breakpoint(lg){
       height: 750px;
+      align-items: flex-end;
     }
 
     &-content {
       position: relative;
-      padding-bottom: 46%;
-      padding-top: 50vw;
+      // padding-bottom: 46%;
+      // padding-top: 50vw;
+      padding-top: 250px;
+      padding-bottom: 0;
 
       @include breakpoint(lg){
         padding-top: 5.5vw;
