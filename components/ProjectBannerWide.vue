@@ -121,13 +121,13 @@ export default {
           left: 0;
           width: 100%;
           height: 100%;
-          padding-right: 15px;
-          padding-left: 15px;
+          // padding-right: 15px;
+          // padding-left: 15px;
 
-          @include breakpoint(lg){
-            padding-right: 0;
-            padding-left: 0;
-          }
+          // @include breakpoint(lg){
+          //   padding-right: 0;
+          //   padding-left: 0;
+          // }
 
           .va {
             display: table;
