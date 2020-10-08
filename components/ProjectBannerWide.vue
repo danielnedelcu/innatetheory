@@ -1,5 +1,5 @@
 <template>
-  <section class="section__hero-project">
+  <section class="section__hero-project row-mobile">
     <div class="wrapper banner-dimmer">
       <div class="project__teaser">
         <div class="project__teaser-wrapper">
@@ -77,8 +77,12 @@ export default {
       background-position: center center;
       -ms-background-size: inherit;
       background-size: cover;
-      height: 700px;
+      height: 450px;
       @include Transition(5s);
+
+      @include breakpoint(lg){
+        height: 700px;
+      }
     }
 
     &:hover {
