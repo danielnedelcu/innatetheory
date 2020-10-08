@@ -50,7 +50,6 @@ export default {
     height: 750px;
     display: flex;
     justify-content: flex-start;
-    // align-items: flex-end;
 
     @include breakpoint(lg){
       height: 750px;
