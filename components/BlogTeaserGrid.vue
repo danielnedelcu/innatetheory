@@ -1,13 +1,15 @@
 <template>
   <section class="section__blog-grid p-t-b-150">
     <div class="wrapper--full-bleed">
-      <div class="blogs">
-        <div class="blogs-blog">
-          <Blogpostcard
-            v-for="(blog, key) in data"
-            :key="key"
-            :blog="blog"
-          />
+      <div class="wrapper">
+        <div class="blogs row-mobile">
+          <div class="blogs-blog">
+            <Blogpostcard
+              v-for="(blog, key) in data"
+              :key="key"
+              :blog="blog"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -35,5 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .blogs {
+    flex-flow: column;
+  }
 </style>
