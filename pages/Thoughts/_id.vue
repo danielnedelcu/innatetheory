@@ -51,7 +51,7 @@
               </figure> -->
 
               <div class="blog-footer">
-                <p>InnateTheory, LLC is a boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results.</p>
+                <p>Innate Theory, LLC is a boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results.</p>
               </div>
             </div>
           </div>
