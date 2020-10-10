@@ -1,7 +1,7 @@
 <template>
   <footer role="contentinfo" class="component--site-footer site-footer">
     <div class="global--container desk:tw--grid desk:tw--gap-1 desk:tw--grid-cols-12 wrapper">
-      <div class="component--site-footer-easter-egg footer-headline desk:tw--col-span-7">
+      <div class="b-corp footer-headline desk:tw--col-span-7">
         <div title="Certified B Corporation®" rel="noopener noreferrer">
           <BCoprLogo />
         </div>
@@ -32,7 +32,7 @@
             <div class="contact-heading h5">
               Social
             </div>
-            <p class="contact-content">
+            <p class="contact-content text-white">
               You can always find us on social.
             </p>
           </dt>
@@ -66,10 +66,10 @@
           <p class="footer-copyright desk:tw--inline text-white">
             ©2020 InnateTheory ·&nbsp;All rights reserved
           </p>
-          <span class="tw--hidden desk:tw--inline">·</span> <a href="/privacy-policy" class="legal-link component--base-link global--cta secondary light">
+          
+          <a href="/privacy-policy" class="legal-link component--base-link global--cta secondary light">
             Privacy
           </a>
-          ·
           <a href="/terms-and-conditions" class="legal-link component--base-link global--cta secondary light">
             Terms &amp; Conditions
           </a>
@@ -245,6 +245,7 @@ export default {
 
       a {
         font-size: 14px;
+
       }
 
       @include breakpoint(lg){
@@ -259,9 +260,21 @@ export default {
 
       .legal-content {
         margin: 20px 0;
+        display: flex;
+        flex-flow: column;
 
         @include breakpoint(lg){
           margin: 0;
+          display: block;
+        }
+
+        .footer-copyright {
+          margin: 0;
+
+          @include breakpoint(lg){
+            margin-right: 20px;
+            margin-bottom: 20px;
+          }
         }
       }
     }

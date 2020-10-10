@@ -3,17 +3,24 @@
     <img src="~assets/img/B-Corp-Logo.png" class="logo">
   </div>
 </template>
-<style scoped>
-.logo {
-  animation: 1s appear;
-}
+<style scoped lang="scss">
+  @import '~/assets/sass/base/_index.scss';
 
-@keyframes appear {
-  0% {
-    opacity: 0;
+  .logo {
+    width: 60px;
+    animation: 1s appear;
+
+    @include breakpoint(lg){
+      width: auto;
+    }
   }
-  100% {
-    opacity: 1;
-  }
-}
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }         
 </style>
