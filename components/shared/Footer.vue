@@ -70,9 +70,9 @@
           <a href="/privacy-policy" class="legal-link component--base-link global--cta secondary light">
             Privacy
           </a>
-          <a href="/terms-and-conditions" class="legal-link component--base-link global--cta secondary light">
+          <n-link to="/termsandconditions" class="legal-link component--base-link global--cta secondary light">
             Terms &amp; Conditions
-          </a>
+          </n-link>
         </div>
       </div>
     </div>
