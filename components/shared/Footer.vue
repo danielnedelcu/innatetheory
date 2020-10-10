@@ -66,10 +66,7 @@
           <p class="footer-copyright desk:tw--inline text-white">
             ©2020 InnateTheory ·&nbsp;All rights reserved
           </p>
-          
-          <a href="/privacy-policy" class="legal-link component--base-link global--cta secondary light">
-            Privacy
-          </a>
+        
           <n-link to="/termsandconditions" class="legal-link component--base-link global--cta secondary light">
             Terms &amp; Conditions
           </n-link>
