@@ -269,6 +269,7 @@ export default {
 
     .blogs {
         margin-top: 150px;
+        flex-flow: column;
     }
   }
 </style>
