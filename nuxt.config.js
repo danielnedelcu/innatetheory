@@ -20,12 +20,12 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: '~assets/img/share.jpg'
+        content: 'img/share.jpg'
       },
       {
         hid: 'ogimage',
         name: 'og:image',
-        content: '~assets/img/share.jpg'
+        content: 'img/share.jpg'
       },
       { name: 'keywords', content: 'digital marketing agency, Innate Theory, Innnate Theory agency, Sitecore agency, web content management system' },
       ...createSEOMeta({
