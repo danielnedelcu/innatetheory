@@ -5,10 +5,10 @@
   "author": "Innate Theory",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
+    "dev": "NODE_ENV=dev nuxt",
+    "build": "nNODE_ENV=dev uxt build",
     "start": "nuxt start",
-    "generate": "NODE_ENV=production nuxt generate",
+    "generate": "NODE_ENV=dev nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
