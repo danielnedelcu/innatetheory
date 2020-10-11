@@ -2,9 +2,9 @@
   <header class="header fullscreen-menu ">
     <div class="wrapper">
       <div class="header-wrapper">
-        <a class="logo">
+        <n-link to="/" class="logo">
           <logo />
-        </a>
+        </n-link>
         <div id="nav-menu" v-on:click="onMenuClick" v-bind:class="{'active' : showModal}">
           <span class="btn_menu_line" />
           <span class="btn_menu_line" />

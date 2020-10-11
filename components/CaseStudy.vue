@@ -49,6 +49,12 @@ export default {
       inviewEnter: this.$inviewEnter,
       inviewImageEnter: this.$inviewImageEnter
     }
+  },
+
+  created () {
+      // eslint-disable-next-line no-console
+      console.log('*************', this.project)
+
   }
 }
 </script>

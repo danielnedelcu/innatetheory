@@ -59,9 +59,9 @@
         </div>
       </dl>
       <div class="footer-legal desk:tw--col-span-12 desk:tw--flex desk:tw--justify-between">
-        <a href="/" class="component--site-logo">
+        <n-link to="/" class="component--site-logo">
           <Logo />
-        </a>
+        </n-link>
         <div class="legal-content">
           <p class="footer-copyright desk:tw--inline text-white">
             ©2020 InnateTheory ·&nbsp;All rights reserved
