@@ -17,6 +17,11 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { author: 'Innate Theory' },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: '~assets/img/share.jpg'
+      },
       { name: 'keywords', content: 'digital marketing agency, Innate Theory, Innnate Theory agency, Sitecore agency, web content management system' },
       ...createSEOMeta({
         description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results"
