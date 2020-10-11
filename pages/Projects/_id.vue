@@ -80,7 +80,7 @@ export default {
   },
 
   created () {
-    this.title = `Innate Theory | Case study for ${this.cl}`
+    this.title = `${this.cl}`
     // eslint-disable-next-line no-console
     // console.log('PROJECT PAGE', this.cl)
 
