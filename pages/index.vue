@@ -64,7 +64,7 @@ export default {
     const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
-    // console.log(context.env.baseUrl)
+    console.log(context.env.baseUrl)
 
     /**
      * Blog data is another request which is unrelated from the
