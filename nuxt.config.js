@@ -99,7 +99,7 @@ export default {
     baseUrl: 
       process.env.NODE_ENV !== 'dev'
         ? 'http://localhost:3000'
-        : 'https://innatetheory.netlify.app/' 
+        : 'https://innatetheory.netlify.app' 
     // process.env.BASE_URL || 'http://localhost:3000'
   }
 }
