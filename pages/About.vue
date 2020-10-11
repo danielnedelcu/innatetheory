@@ -89,7 +89,8 @@ export default {
       meta: [
         ...createSEOMeta({
           description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results",
-          title: this.title
+          title: this.title,
+          url: this.url
         })
       ]
     }
@@ -101,9 +102,10 @@ export default {
      */
     const response = await Services.getData('who-we-are')
     const contentArrr = response.data.stories[0].content.body
+    const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
-    console.dir(contentArrr)
+    //console.log(context.env.baseUrl + context.route.path)
     // /**
     //  * Blog data is another request which is unrelated from the
     //  * homepage data
@@ -115,6 +117,7 @@ export default {
       // eslint-disable-next-line no-sequences
       array.reduce((obj, item) => ((obj = item), obj), {})
     return {
+      url: fullUrl,
       heroSimpleObj: convertArrayToObject(contentArrr.filter(e => e.component === 'hero-simple')),
       heroObj: convertArrayToObject(contentArrr.filter(e => e.component === 'hero-alt')),
       // twoColumnObj: convertArrayToObject(contentArrr.filter(e => e.component === 'two-column')),
@@ -128,6 +131,8 @@ export default {
   },
 
   mounted () {
+    // eslint-disable-next-line no-console
+    console.log(this.url)
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
 

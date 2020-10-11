@@ -44,6 +44,7 @@ export default {
       author: this.author,
       meta: [
         ...createSEOMeta({
+          url: this.url,
           description: 'We have the opportunity to work with many brands across different industries. Explore some of the work we are proud of',
           title: this.title
         })
@@ -54,11 +55,13 @@ export default {
   async asyncData (context) {
     const response = await Services.getData('projects')
     const contentArr = response.data.stories
+    const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
     console.dir(contentArr)
 
     return {
+      url: fullUrl,
       projectObj: contentArr
     }
   },

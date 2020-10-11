@@ -34,6 +34,18 @@ export default {
     }
   },
 
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        ...createSEOMeta({
+          url: this.url,
+          description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results"
+        })
+      ]
+    }
+  },
+
   computed: {
     richtext () {
       return this.$storyapi.richTextResolver.render(this.richTextObj.content)
@@ -46,6 +58,7 @@ export default {
        */
       const response = await Services.getData('terms-and-conditions')
       const contentArr = response.data.stories[0].content
+      const fullUrl = context.env.baseUrl + context.route.path
 
       // eslint-disable-next-line no-console
       console.dir(contentArr)
@@ -54,6 +67,7 @@ export default {
       // eslint-disable-next-line no-sequences
         array.reduce((obj, item) => ((obj = item), obj), {})
       return {
+        url: fullUrl,
         richTextObj: convertArrayToObject(contentArr.body.filter(e => e.component === 'rich-text')),
       }
     },

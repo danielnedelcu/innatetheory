@@ -41,6 +41,8 @@ export default {
       title: this.title,
       meta: [
         ...createSEOMeta({
+          title: this.title,
+          url: this.url,
           description: 'Case study for Roundpoint Servicing Mortgage'
         })
       ]
@@ -56,6 +58,7 @@ export default {
   async asyncData (context) {
     const response = await Services.getPost('projects/' + context.params.id)
     const contentArr = response.data.story
+    const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
     console.dir(contentArr)
@@ -63,6 +66,7 @@ export default {
       // eslint-disable-next-line no-sequences
       array.reduce((obj, item) => ((obj = item), obj), {})
     return {
+      url: fullUrl,
       projectData: contentArr,
       routerId: context.params.id,
       heroObj: convertArrayToObject(contentArr.content.hero.filter(e => e.component === 'case-study-hero')),

@@ -95,6 +95,7 @@
 </template>
 
 <script>
+import { createSEOMeta } from '~/utils/seo'
 import BannerLink from '~/components/BannerLink.vue'
 import Services from '~/services/services.js'
 
@@ -115,7 +116,10 @@ export default {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'Thoughts' }
+        ...createSEOMeta({
+          url: this.url,
+          description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results"
+        })
       ]
     }
   },
@@ -129,8 +133,10 @@ export default {
   async asyncData (context) {
     const response = await Services.getPost('thoughts/' + context.params.id)
     const contentArr = response.data.story
+    const fullUrl = context.env.baseUrl + context.route.path
 
     return {
+      url: fullUrl,
       blogData: contentArr
     }
   },

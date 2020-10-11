@@ -49,6 +49,7 @@ export default {
       author: this.author,
       meta: [
         ...createSEOMeta({
+          url: this.url,
           description: 'We help our clients navigate the digital and competitive landscape to deliver concrete results',
           title: this.title
         })
@@ -62,6 +63,7 @@ export default {
      */
     const response = await Services.getData('what-we-do/what-we-do')
     const contentArr = response.data.stories[0].content
+    const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
     console.dir(contentArr)
@@ -70,6 +72,7 @@ export default {
     // eslint-disable-next-line no-sequences
       array.reduce((obj, item) => ((obj = item), obj), {})
     return {
+      url: fullUrl,
       heroSimpleObj: convertArrayToObject(contentArr.contentPlaceholder.filter(e => e.component === 'hero-simple')),
       bannerGeneralObj: convertArrayToObject(contentArr.contentPlaceholder.filter(e => e.component === 'banner-services-general')),
       servicesObj: contentArr.servicesBlockPlaceholder

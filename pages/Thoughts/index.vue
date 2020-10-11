@@ -54,6 +54,7 @@
 </template>
 
 <script>
+import { createSEOMeta } from '~/utils/seo'
 import Blogpostcard from '~/components/Blogpostcard.vue'
 import HeroSimple from '~/components/HeroSimple.vue'
 import Services from '~/services/services.js'
@@ -82,7 +83,10 @@ export default {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'Thoughts' }
+        ...createSEOMeta({
+          url: this.url,
+          description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results"
+        })
       ]
     }
   },
@@ -90,11 +94,13 @@ export default {
   async asyncData (context) {
     const response = await Services.getData('thoughts')
     const contentArrr = response.data.stories
+    const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
     console.dir(contentArrr.filter((item, index) => (index !== 0)))
 
     return {
+      url: fullUrl,
       blogData: contentArrr.filter((item, index) => (index !== 0)),
       firstBlogItem: contentArrr.filter((item, index) => (index === 0))[0]
     }
