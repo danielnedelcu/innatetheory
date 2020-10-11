@@ -132,7 +132,7 @@ export default {
 
   mounted () {
     // eslint-disable-next-line no-console
-    console.log(this.url)
+    // console.log(this.url)
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
 

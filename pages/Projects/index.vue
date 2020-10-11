@@ -28,7 +28,7 @@ export default {
 
   data () {
     return {
-      title: 'Our Work',
+      title: 'Innte Theory | Our Work',
       heroSimpleObj: {
         headline: "Here's some work we're really proud of and want to share",
         description: ''
@@ -58,7 +58,7 @@ export default {
     const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
-    console.dir(contentArr)
+    // console.dir(contentArr)
 
     return {
       url: fullUrl,
@@ -68,7 +68,7 @@ export default {
 
   mounted () {
     // eslint-disable-next-line no-console
-    console.dir('projects page loaded')
+    // console.dir('projects page loaded')
   }
 }
 </script>

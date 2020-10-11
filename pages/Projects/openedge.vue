@@ -35,7 +35,7 @@ export default {
 
   data () {
     return {
-      title: this.routerId
+      title: 'Innate Theory | Case study for Global Payments Integrated'// this.routerId
     }
   },
 
@@ -46,7 +46,7 @@ export default {
         ...createSEOMeta({
           title: this.title,
           url: this.url,
-          description: 'Case study for Roundpoint Servicing Mortgage'
+          description: 'Case study for Global Payments Integrated'
         })
       ]
     }
@@ -64,7 +64,7 @@ export default {
     const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
-    console.dir(contentArr)
+    // console.dir(contentArr)
     const convertArrayToObject = (array, key) =>
       // eslint-disable-next-line no-sequences
       array.reduce((obj, item) => ((obj = item), obj), {})
@@ -83,7 +83,7 @@ export default {
 
   created () {
     // eslint-disable-next-line no-console
-    console.dir('PROJECT PAGE')
+    // console.dir('PROJECT PAGE')
 
     // this.hero = this.convertArrayToObject(this.projectData.content.hero)
     // this.caseStudyPlaceholder = this.convertArrayToObject(this.projectData.content.caseStudyPlaceholder.filter(e => e.component === 'case-study-header-paragraph-image'))

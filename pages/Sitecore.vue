@@ -57,7 +57,7 @@ export default {
     const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
-    console.dir(contentArrr)
+    // console.dir(contentArrr)
 
     const convertArrayToObject = (array, key) =>
       // eslint-disable-next-line no-sequences

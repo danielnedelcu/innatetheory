@@ -107,18 +107,19 @@ export default {
   data () {
     return {
       inviewEnter: this.$inviewEnter,
-      title: 'Our Thoughts',
+      title: '',
       authorData: {}
     }
   },
 
   head () {
     return {
-      title: this.title,
+      title: `Innate Theory | ${this.bn}`,
       meta: [
         ...createSEOMeta({
+          title: this.title,
           url: this.url,
-          description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results"
+          description: `${this.title}`
         })
       ]
     }
@@ -134,16 +135,19 @@ export default {
     const response = await Services.getPost('thoughts/' + context.params.id)
     const contentArr = response.data.story
     const fullUrl = context.env.baseUrl + context.route.path
+    const blogName = contentArr.content.title
 
     return {
+      bn: blogName,
       url: fullUrl,
       blogData: contentArr
     }
   },
 
   created () {
+    this.title = `${this.bn}`
     // eslint-disable-next-line no-console
-    console.dir(this.blogData)
+    // console.dir(this.blogData)
 
     this.authorData = this.convertArrayToObject(this.blogData.content.author)
   },

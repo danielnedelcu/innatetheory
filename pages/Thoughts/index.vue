@@ -67,7 +67,7 @@ export default {
 
   data () {
     return {
-      title: 'Our Thoughts',
+      title: 'Innate Theory | Our Thoughts',
       heroSimpleObj: {
         headline: 'Perspectives on the business of technology and all things digital',
         description: ''
@@ -84,6 +84,7 @@ export default {
       title: this.title,
       meta: [
         ...createSEOMeta({
+          title: this.title,
           url: this.url,
           description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results"
         })
@@ -97,7 +98,7 @@ export default {
     const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
-    console.dir(contentArrr.filter((item, index) => (index !== 0)))
+    // console.dir(contentArrr.filter((item, index) => (index !== 0)))
 
     return {
       url: fullUrl,
