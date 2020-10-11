@@ -22,6 +22,11 @@ export default {
         name: 'twitter:image',
         content: '~assets/img/share.jpg'
       },
+      {
+        hid: 'ogimage',
+        name: 'og:image',
+        content: '~assets/img/share.jpg'
+      },
       { name: 'keywords', content: 'digital marketing agency, Innate Theory, Innnate Theory agency, Sitecore agency, web content management system' },
       ...createSEOMeta({
         description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results"
