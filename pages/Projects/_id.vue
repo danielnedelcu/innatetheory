@@ -41,7 +41,7 @@ export default {
       title: `Innate Theory | Case study for ${this.cl}`,
       meta: [
         ...createSEOMeta({
-          title: this.title,
+          title: `Innate Theory | Case study for ${this.cl}`,
           url: this.url,
           description: `Case study for ${this.title}`
         })
