@@ -1,12 +1,17 @@
 export const createSEOMeta = data => [
   {
     hid: 'description',
-    name: 'decription',
+    name: 'description',
     content: data.description
   },
   {
     hid: 'og:description',
-    name: 'og:decription',
+    name: 'og:description',
+    content: data.description
+  },
+  {
+    hid: 'twitter:description',
+    name: 'twitter:description',
     content: data.description
   },
   {
