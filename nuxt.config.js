@@ -23,7 +23,7 @@ export default {
         content: 'img/share.jpg'
       },
       {
-        hid: 'ogimage',
+        hid: 'og:image',
         name: 'og:image',
         content: 'img/share.jpg'
       },
