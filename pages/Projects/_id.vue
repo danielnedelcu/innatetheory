@@ -39,6 +39,7 @@ export default {
   head () {
     return {
       title: `Innate Theory | Case study for ${this.cl}`,
+      author: this.author,
       meta: [
         ...createSEOMeta({
           title: `Innate Theory | Case study for ${this.cl}`,

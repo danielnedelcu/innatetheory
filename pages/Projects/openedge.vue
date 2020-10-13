@@ -42,6 +42,7 @@ export default {
   head () {
     return {
       title: this.title,
+      author: this.author,
       meta: [
         ...createSEOMeta({
           title: this.title,
