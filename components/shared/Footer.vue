@@ -12,7 +12,7 @@
             Location
           </dt>
           <dd class="contact-content">
-            3340 Peachtree Road NE
+            3344 Peachtree Rd NE Suite 800
             <br>
             Atlanta, GA 30326
           </dd>
