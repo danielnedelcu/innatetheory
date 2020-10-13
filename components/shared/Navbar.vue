@@ -41,24 +41,24 @@
 
       <ul class="social-nav__ul">
         <li class="social-nav__li">
-          <a href="" class="social-nav__a btn-social">
+          <a href="https://www.instagram.com/innatetheory" class="social-nav__a btn-social" target="_blank">
             Ig
           </a>
         </li>
         <li class="social-nav__li">
-          <a href="" class="social-nav__a btn-social">
+          <a href="https://www.facebook.com/innatetheory" class="social-nav__a btn-social" target="_blank">
             Fb
           </a>
         </li>
 
         <li class="social-nav__li">
-          <a href="" class="social-nav__a btn-social">
+          <a href="https://twitter.com/innatetheory" class="social-nav__a btn-social" target="_blank">
             Tw
           </a>
         </li>
 
         <li class="social-nav__li">
-          <a href="" class="social-nav__a btn-social">
+          <a href="https://www.linkedin.com/company/innatetheory" class="social-nav__a btn-social" target="_blank">
             In
           </a>
         </li>
