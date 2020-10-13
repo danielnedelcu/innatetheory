@@ -37,10 +37,12 @@ export default {
   head () {
     return {
       title: this.title,
+      author: this.author,
       meta: [
         ...createSEOMeta({
-          url: this.url,
-          description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results"
+          description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results",
+          title: this.title,
+          url: this.url
         })
       ]
     }
