@@ -26,7 +26,7 @@ export default {
 
   data () {
     return {
-      title: 'Terms and Conditions',
+      title: 'Innate Theory | Terms and Conditions',
       heroSimpleObj: {
         headline: "Innate Theory",
         description: 'Website Terms & Conditions'
