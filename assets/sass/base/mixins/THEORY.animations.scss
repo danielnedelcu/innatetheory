@@ -1,7 +1,9 @@
 $speeds:  .3s, .4s, .5s, .6s, .7s, .8s, .9s; 
 $speedsSocial:  .7s, .8s, .9s, 1.1s; 
+$speedContact: .9s;
 $counter: 1;
 $counterSocial: 1;
+$counterContact: 1;
 
 @-webkit-keyframes footer-link-hover {
 	0% {
@@ -315,7 +317,17 @@ $counterSocial: 1;
      will-change: opacity;
      @include Transition;    
 
-     content: $type;
+		 content: $type;
+		 
+	@if $type == "contact" {
+		@each $speed in $speedContact {		
+
+			@include delay($counterContact, $speed);  
+			
+			$counterContact : $counterContact + 1;
+
+		}
+	}
 
 	@if $type == "social" {
 

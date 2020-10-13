@@ -9,7 +9,7 @@
         :delay="index"
       />
     </div>
-    <BannerLink label="Lets Talk Sitecore" url="/contact" />
+    <BannerLink label="Lets Talk Sitecore" url="mailto:hello@innatetheory.com" />
   </section>
 </template>
 

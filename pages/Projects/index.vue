@@ -8,7 +8,7 @@
         :project="project.content"
       />
     </div>
-    <BannerLink label="Say Hello" url="/contact" />
+    <BannerLink label="Say Hello" url="mailto:hello@innatetheory.com" />
   </div>
 </template>
 
