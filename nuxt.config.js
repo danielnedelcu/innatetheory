@@ -25,6 +25,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
+        property: 'og:image',
         content: '/img/share.jpg'
       },
       { name: 'keywords', content: 'digital marketing agency, Innate Theory, Innnate Theory agency, Sitecore agency, web content management system' },
