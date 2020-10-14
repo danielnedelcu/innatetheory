@@ -154,8 +154,8 @@ export default {
       }
 
       .bordered {
-        background-color: $primary-color;
-        padding: 30px 40px;
+        background-color: $black;
+        padding: 30px 15px;
         margin-bottom: 20px;
         color: $white;
         flex-flow: column;
