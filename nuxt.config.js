@@ -2,6 +2,11 @@ import { createSEOMeta } from './utils/seo'
 
 export default {
   mode: 'universal',
+
+  // router: {
+  //   mode: 'static'
+  // },
+
   /*
   ** Headers of the page
   */
@@ -66,7 +71,8 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/google-analytics'
   ],
   /*
   ** Nuxt.js modules
@@ -83,6 +89,11 @@ export default {
   */
   axios: {
   },
+
+  googleAnalytics: {
+    id: 'G-4JWJ500DKK'
+  },
+
   /*
   ** Build configuration
   */

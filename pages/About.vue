@@ -75,7 +75,7 @@ export default {
     BlogTeaserGrid
   },
 
-  data () {
+  data () { 
     return {
       inviewEnter: this.$inviewEnter,
       title: 'Innate Theory | Who We Are'
