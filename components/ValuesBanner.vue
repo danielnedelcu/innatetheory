@@ -4,7 +4,7 @@
       <SectionHeadline :label="data.label" :title="data.title" />
     </div>
     <div class="wrapper">
-      <div class="section__banner-wrapper">
+      <div class="section__banner-wrapper row-mobile">
         <div class="section__values">
           <ul class="section__values-ul">
             <Value
@@ -56,7 +56,7 @@ export default {
             background-position: center center;
             -ms-background-size: inherit;
             background-size: cover;
-            height: 65vw;
+            height: auto;
             position: relative;
 
             @include breakpoint(xs){
@@ -74,15 +74,23 @@ export default {
         }
 
         .section__values {
-          margin: 6rem 0;
+          margin: 2rem 0 0;
           height: 100%;
           display: flex;
           background-color: $g;
 
+          @include breakpoint(lg){
+            margin: 6rem 0;
+          }
+
           ul {
             list-style: none;
             display: flex;
-            flex-flow: row;
+            flex-flow: column;
+
+            @include breakpoint(lg){
+              flex-flow: row;
+            }
           }
         }
     }

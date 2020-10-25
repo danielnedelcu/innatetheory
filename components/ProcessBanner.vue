@@ -74,9 +74,13 @@ export default {
         }
 
         .section__process {
-          margin: 6rem 0;
+          margin: 0;
           height: 100%;
           display: flex;
+
+          @include breakpoint(lg){
+            margin: 6rem 0;
+          }
 
           ul {
             list-style: none;

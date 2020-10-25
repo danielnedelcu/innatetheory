@@ -8,7 +8,7 @@
             <div class="meta-categories">
               <ul class="post-categories">
                 <li>
-                  <a href="#" rel="category tag" class="btn-blog-category button-animated">{{ category }}</a>
+                  <div rel="category tag" class="btn-blog-category">{{ category }}</div>
                 </li>
               </ul>
             </div>
@@ -22,9 +22,13 @@
                 <span class="btn-meta">{{ date }}</span>
               </li>
               <li class="entry-author">
-                <a class="btn-meta button-animated" href="#" rel="author">
+                <div class="btn-meta">
+                  by {{ authorData.name }}
+                </div>
+
+                <!-- <a class="btn-meta button-animated" href="#" rel="author">
                   {{ authorData.name }}
-                </a>
+                </a> -->
               </li>
             </ul>
 

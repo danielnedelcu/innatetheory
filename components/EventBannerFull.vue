@@ -8,23 +8,21 @@
             <div class="p-t-b-50">
               <div class="table-cell">
                 <div class="col-xs-12 col-md-12">
-                  <div class="row">
-                    <h5 class="text-white horizontal-center animated__l">
-                      {{ data.date }} <br> {{ data.location }}
-                    </h5>
-                    <div v-inview:once.enter="inviewEnter" class="p-t-b-50 animated__h">
-                      <h2 class="text-white split__headline">
-                        {{ data.title }}
-                      </h2>
+                  <h5 class="text-white horizontal-center animated__l">
+                    {{ data.date }} <br> {{ data.location }}
+                  </h5>
+                  <div v-inview:once.enter="inviewEnter" class="p-t-b-50 animated__h">
+                    <h2 class="text-white split__headline">
+                      {{ data.title }}
+                    </h2>
 
-                      <p class="split__paragraph">
-                        {{ data.description }}
-                      </p>
-                    </div>
-                    <n-link :to="data.link" class="btn--primary horizontal-center">
-                      <span>{{ data.cta }}</span>
-                    </n-link>
+                    <p class="split__paragraph">
+                      {{ data.description }}
+                    </p>
                   </div>
+                  <a :href="data.link.url" class="btn--primary horizontal-center" target="_blank">
+                    <span>{{ data.cta }}</span>
+                  </a>
                 </div>
               </div>
             </div>

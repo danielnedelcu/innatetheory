@@ -47,28 +47,22 @@ export default {
     background-position: center center;
     -ms-background-size: inherit;
     background-size: cover;
-    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-start;
+
+    @include breakpoint(lg){
+      height: 100vh;
+      align-items: flex-end;
+    }
 
     &-content {
       position: relative;
-      padding-bottom: percentage(100 / 840);
+      // padding-bottom: 6%;
+      // padding-top: 50vw;
+      padding-top: 200px;
+      padding-bottom: 0;
 
-      @include breakpoint(sm){
-        padding-bottom: percentage(100 / 150);
-
-        @media screen and (orientation: portrait){
-          padding-top: 30vw
-        }
-        @media screen and (orientation: landscape){
-          padding-top: 20vw
-        }
-      }
-      @include breakpoint(md){
-        padding-top: 30vw;
-      }
       @include breakpoint(lg){
         padding-top: 5.5vw;
         padding-bottom: 9vw;

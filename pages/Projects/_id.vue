@@ -32,16 +32,19 @@ export default {
 
   data () {
     return {
-      title: this.routerId
+      title: ''// this.routerId
     }
   },
 
   head () {
     return {
-      title: this.title,
+      title: `Innate Theory | Case study for ${this.cl}`,
+      author: this.author,
       meta: [
         ...createSEOMeta({
-          description: 'Case study for Roundpoint Servicing Mortgage'
+          title: `Innate Theory | Case study for ${this.cl}`,
+          url: this.url,
+          description: `Case study for ${this.title}`
         })
       ]
     }
@@ -56,13 +59,17 @@ export default {
   async asyncData (context) {
     const response = await Services.getPost('projects/' + context.params.id)
     const contentArr = response.data.story
+    const fullUrl = context.env.baseUrl + context.route.path
+    const clientName = contentArr.content.title
 
     // eslint-disable-next-line no-console
-    console.dir(contentArr)
+    // console.dir(clientName)
     const convertArrayToObject = (array, key) =>
       // eslint-disable-next-line no-sequences
       array.reduce((obj, item) => ((obj = item), obj), {})
     return {
+      cl: clientName,
+      url: fullUrl,
       projectData: contentArr,
       routerId: context.params.id,
       heroObj: convertArrayToObject(contentArr.content.hero.filter(e => e.component === 'case-study-hero')),
@@ -74,8 +81,9 @@ export default {
   },
 
   created () {
+    this.title = `${this.cl}`
     // eslint-disable-next-line no-console
-    console.dir('PROJECT PAGE')
+    // console.log('PROJECT PAGE', this.cl)
 
     // this.hero = this.convertArrayToObject(this.projectData.content.hero)
     // this.caseStudyPlaceholder = this.convertArrayToObject(this.projectData.content.caseStudyPlaceholder.filter(e => e.component === 'case-study-header-paragraph-image'))

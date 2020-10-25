@@ -1,11 +1,11 @@
 <template>
-  <section class="section__hero-project">
+  <section class="section__hero-project row-mobile">
     <div class="wrapper banner-dimmer">
       <div class="project__teaser">
         <div class="project__teaser-wrapper">
           <div v-inview:once.enter="inviewImageEnter" v-bind:style="{ backgroundImage: `url(${project.image})` }" class="section__hero-project-image anim-image" />
           <div class="pos-abs">
-            <div class="va">
+            <div class="mobile-position-bottom va">
               <div class="wrapper--bloglist">
                 <div v-inview:once.enter="inviewEnter" class="project__teaser-content animated__h">
                   <a :href="project.external_link.cached_url" target="_blank" class="button-animated-white">
@@ -77,8 +77,12 @@ export default {
       background-position: center center;
       -ms-background-size: inherit;
       background-size: cover;
-      height: 700px;
+      height: 450px;
       @include Transition(5s);
+
+      @include breakpoint(lg){
+        height: 700px;
+      }
     }
 
     &:hover {
@@ -117,6 +121,13 @@ export default {
           left: 0;
           width: 100%;
           height: 100%;
+          // padding-right: 15px;
+          // padding-left: 15px;
+
+          // @include breakpoint(lg){
+          //   padding-right: 0;
+          //   padding-left: 0;
+          // }
 
           .va {
             display: table;

@@ -2,6 +2,11 @@ import { createSEOMeta } from './utils/seo'
 
 export default {
   mode: 'universal',
+
+  // router: {
+  //   mode: 'static'
+  // },
+
   /*
   ** Headers of the page
   */
@@ -17,6 +22,17 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { author: 'Innate Theory' },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'img/share.jpg'
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        property: 'og:image',
+        content: '/img/share.jpg'
+      },
       { name: 'keywords', content: 'digital marketing agency, Innate Theory, Innnate Theory agency, Sitecore agency, web content management system' },
       ...createSEOMeta({
         description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results"
@@ -55,7 +71,8 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/google-analytics'
   ],
   /*
   ** Nuxt.js modules
@@ -72,6 +89,11 @@ export default {
   */
   axios: {
   },
+
+  googleAnalytics: {
+    id: 'G-4JWJ500DKK'
+  },
+
   /*
   ** Build configuration
   */
@@ -83,5 +105,13 @@ export default {
    
     extend (config, ctx) {
     }
+  },
+
+  env: {
+    baseUrl: 
+      process.env.NODE_ENV !== 'dev'
+        ? 'http://localhost:3000'
+        : 'https://innatetheory.netlify.app' 
+    // process.env.BASE_URL || 'http://localhost:3000'
   }
 }

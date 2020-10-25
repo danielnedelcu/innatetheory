@@ -1,13 +1,12 @@
 p {
-    line-height: 1.8;
+    line-height: 1.6;
     letter-spacing: 0;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
     font-family: $font-graphik-light;
+    color: $black;
  
-    @include breakpoint(md) {
-        letter-spacing: 0;
-        font-size: 1.25rem;        
+    @include breakpoint(md) {       
     }
         
     @include breakpoint(lg) {

@@ -16,7 +16,6 @@
     font-family: $font-avalon-medium;
     position: relative;
     opacity:1;
-    
 
     &:before {
         background-color:$hover;
@@ -55,26 +54,18 @@
 
 @mixin btn-banner-large {
     line-height: 1;
-    font-size: 7.25vw;
+    font-size: 14vw;
     letter-spacing: -0.04em;
 	font-family: $font-avalon-bold;
     color: $white;
 
-	@include breakpoint(sm){
-		font-size: 3.71094vw;
-	}
-
 	@include breakpoint(md){
-		font-size: 5.76126vw;
+		font-size: 90px;
 	}
 
 	@include breakpoint(lg){
-		font-size: 7.76126vw;
-	}
-
-	@include breakpoint(xl){
-		
-    }    
+		font-size: 130px;
+	} 
     
     &:hover {
         color: $white !important;
@@ -110,9 +101,13 @@
     color: $black ;
     position: relative;
     display: inline-block;
-    padding: 0 0 15px;
+    margin: 0 0 10px;
     width: 100%;
     @include Transition;  
+
+    @include breakpoint(lg){
+        margin: 0 0 15px;
+    }
     
     .post-title {
         @include Transition;
@@ -135,12 +130,16 @@
     @include button;
     color: $black ;
     font-family: $font-graphik-light;
-    font-size: 16px;
+    font-size: 0.8rem;
     position: relative;
     display: inline-block;
-    padding: 0 0 15px;
-
+    padding: 0 0 10px;
     @include Transition;
+
+    @include breakpoint(lg){
+        padding: 0 0 15px;
+		font-size: 1.25rem;
+	}
     
 
 } //9726993040 liza
@@ -149,12 +148,15 @@
     @include button;
     color: $black;
     font-family: $font-graphik-light;
-    font-size: 16px;    
+    font-size: 0.8rem;    
     position: relative;
     display: inline-block;    
     padding: 0 0 15px;
-
     @include Transition;
+
+    @include breakpoint(lg){
+		font-size: 1.25rem;
+	}
 }
 
 @mixin btn-underline-effect($color: $primary-color) {

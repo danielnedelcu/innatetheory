@@ -5,7 +5,7 @@
         <h4 class="split__headline">
           {{ value.title }}
         </h4>
-        <p class="split__paragraph">
+        <p class="split__paragraph text-white">
           {{ value.description }}
         </p>
       </div>
@@ -32,7 +32,7 @@ export default {
     @import '~/assets/sass/extends/_index.scss';
 
     li {
-      width: 33.3339%;
+      width: 100%;
       margin:0;
       color: $white;
       display: flex;
@@ -43,8 +43,25 @@ export default {
         border-right: none;
       }
 
+      @include breakpoint(lg){
+        margin: 6rem 0;
+        width: 33.3339%;
+      }
+
       .section__values-li-wrapper {
-        padding: 2.5rem 3.5rem;
+        padding: 2.5rem 1rem 1.5rem;
+
+        p {
+          margin-top: 20px;
+        }
+
+        @include breakpoint(lg) {
+          padding: 2.5rem 3.5rem;
+
+          p {
+            margin-top: 10px;
+          }
+        }
       }
     }
 </style>

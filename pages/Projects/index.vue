@@ -8,7 +8,7 @@
         :project="project.content"
       />
     </div>
-    <BannerLink label="Say Hello" url="/contact" />
+    <BannerLink label="Say Hello" url="mailto:hello@innatetheory.com" />
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
 
   data () {
     return {
-      title: 'Our Work',
+      title: 'Innte Theory | Our Work',
       heroSimpleObj: {
         headline: "Here's some work we're really proud of and want to share",
         description: ''
@@ -44,6 +44,7 @@ export default {
       author: this.author,
       meta: [
         ...createSEOMeta({
+          url: this.url,
           description: 'We have the opportunity to work with many brands across different industries. Explore some of the work we are proud of',
           title: this.title
         })
@@ -54,18 +55,20 @@ export default {
   async asyncData (context) {
     const response = await Services.getData('projects')
     const contentArr = response.data.stories
+    const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
-    console.dir(contentArr)
+    // console.dir(contentArr)
 
     return {
+      url: fullUrl,
       projectObj: contentArr
     }
   },
 
   mounted () {
     // eslint-disable-next-line no-console
-    console.dir('projects page loaded')
+    // console.dir('projects page loaded')
   }
 }
 </script>

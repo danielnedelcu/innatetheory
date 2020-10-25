@@ -7,25 +7,21 @@
     background-clip: content-box;
     white-space: normal;    
     background-color: $a;
-    width: calc(50% - 2rem);
+    width: calc(50% - 1.65rem);
     opacity: 0;
+    margin: 1rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
     @include Transition;
 
-	@include breakpoint(sm){
-        width: calc(50% - 2rem);
-	}
-
-	@include breakpoint(md){
-        margin: 1rem;
-        width: calc(33.333% - 4rem);
-	}
-
 	@include breakpoint(lg){
-		width: calc(25% - 2rem);
+        width: calc(33.333% - 2rem);
+        margin-right: 1rem;
+        margin-bottom: 1rem;
 	}
 
 	@include breakpoint(xl){
-		
+		width: calc(25% - 2rem);
     }
 
     &:before {
@@ -52,11 +48,20 @@
         
         .client__grid-li-content {
             width: 100%;
-            padding: 2rem;      
+            padding: 1rem;  
+            
+            @include breakpoint(lg){
+                padding: 2rem;
+            }
             
             &-logo {
-                margin: 1rem auto 1rem;
-                width: 50%;
+                margin: 0.5rem auto 0.5rem;
+                width: 70%;
+
+                @include breakpoint(lg){
+                    width: 50%;
+                    margin: 1rem auto 1rem;
+                }
 
                 svg {
                     width: 100%;

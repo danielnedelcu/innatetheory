@@ -38,7 +38,7 @@
     <section class="section__blog-grid section-text">
       <div class="wrapper--full-bled p-t-b-50">
         <div class="wrapper">
-          <div class="blogs">
+          <div class="blogs row-mobile">
             <div class="blogs-blog">
               <Blogpostcard
                 v-for="(blog, key) in blogData"
@@ -54,6 +54,7 @@
 </template>
 
 <script>
+import { createSEOMeta } from '~/utils/seo'
 import Blogpostcard from '~/components/Blogpostcard.vue'
 import HeroSimple from '~/components/HeroSimple.vue'
 import Services from '~/services/services.js'
@@ -66,7 +67,7 @@ export default {
 
   data () {
     return {
-      title: 'Our Thoughts',
+      title: 'Innate Theory | Our Thoughts',
       heroSimpleObj: {
         headline: 'Perspectives on the business of technology and all things digital',
         description: ''
@@ -82,7 +83,11 @@ export default {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'Thoughts' }
+        ...createSEOMeta({
+          title: this.title,
+          url: this.url,
+          description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results"
+        })
       ]
     }
   },
@@ -90,11 +95,13 @@ export default {
   async asyncData (context) {
     const response = await Services.getData('thoughts')
     const contentArrr = response.data.stories
+    const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
-    console.dir(contentArrr.filter((item, index) => (index !== 0)))
+    // console.dir(contentArrr.filter((item, index) => (index !== 0)))
 
     return {
+      url: fullUrl,
       blogData: contentArrr.filter((item, index) => (index !== 0)),
       firstBlogItem: contentArrr.filter((item, index) => (index === 0))[0]
     }
@@ -124,7 +131,7 @@ export default {
     background-position: center center;
     -ms-background-size: inherit;
     background-size: cover;
-    height: 700px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,12 +139,20 @@ export default {
     overflow: hidden;
     margin-top: 0;
 
+    @include breakpoint(lg){
+      height: 700px;
+    }
+
     &-image {
         background-repeat: no-repeat;
         background-position: center center;
         -ms-background-size: inherit;
         background-size: cover;
-        height: 700px;
+        height: 450px;
+
+        @include breakpoint(lg){
+          height: 700px;
+        }
     }
 
     &-content {
@@ -158,19 +173,36 @@ export default {
       right: 0;
       bottom: 0;
       left: 0;
-      height: 700px;
+      height: 450px;
       width: 100%;
+
+      @include breakpoint(lg){
+        height: 700px;
+      }
 
       &-h {
         span {
-          font-size: 2rem;
+          font-size: 1.4rem;
           display: block;
-          margin-bottom: 50px;
+          margin-bottom: 20px;
           font-family: $font-graphik-extra-light;
+
+          @include breakpoint(lg){
+            font-size: 2rem;
+            margin-bottom: 50px;
+
+          }
         }
 
         .split__headline {
             margin-top: 0;
+            font-size: 10vw;
+            line-height: 1;
+
+            @include breakpoint(lg){
+              font-size: 3vw;
+              line-height: 1.22222;
+            }
         }
 
         .meta {
@@ -193,7 +225,7 @@ export default {
             }
 
             &-description {
-                margin-left: 10px;
+                margin-left: 0;
                 -webkit-box-flex: 1;
                 -ms-flex: 1 1 auto;
                 flex: 1 1 auto;
@@ -201,6 +233,9 @@ export default {
 
                 &-sublabel {
                     margin-top: .2rem;
+                }
+
+                @include breakpoint(lg){
                 }
             }
         }
@@ -241,6 +276,7 @@ export default {
 
     .blogs {
         margin-top: 150px;
+        flex-flow: column;
     }
   }
 </style>

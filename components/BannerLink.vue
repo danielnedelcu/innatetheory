@@ -7,9 +7,12 @@
           next section
         </div>
 
-        <nuxt-link :to="url" v-inview:once.enter="inviewEnter" class="btn-banner-large animated__h">
+        <nuxt-link :to="url" v-if="!isMailto" v-inview:once.enter="inviewEnter" class="btn-banner-large animated__h">
           <span class="split__headline">{{ label }}</span>
         </nuxt-link>
+        <a :href="url" v-else v-inview:once.enter="inviewEnter" class="btn-banner-large animated__h">
+          <span class="split__headline">{{ label }}</span>
+        </a>
       </div>
     </div>
   </section>
@@ -24,7 +27,17 @@ export default {
 
   data () {
     return {
-      inviewEnter: this.$inviewEnter
+      inviewEnter: this.$inviewEnter,
+
+    }
+  },
+
+  computed : {
+    isMailto () {
+      let regex = new RegExp('mailto', 'g')
+      if (regex.test(this.url)) {
+        return true
+      }
     }
   }
 }
@@ -35,7 +48,11 @@ export default {
 
     .banner__link {
         background-color: $primary-color;
-        padding: 300px 0;
+        padding: 150px 0;
+
+        @include breakpoint(lg){
+            padding: 300px 0;
+        }
 
         &-category {
             margin-top: 0;

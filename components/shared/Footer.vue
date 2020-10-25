@@ -1,7 +1,7 @@
 <template>
   <footer role="contentinfo" class="component--site-footer site-footer">
     <div class="global--container desk:tw--grid desk:tw--gap-1 desk:tw--grid-cols-12 wrapper">
-      <div class="component--site-footer-easter-egg footer-headline desk:tw--col-span-7">
+      <div class="b-corp footer-headline desk:tw--col-span-7">
         <div title="Certified B Corporation®" rel="noopener noreferrer">
           <BCoprLogo />
         </div>
@@ -12,7 +12,7 @@
             Location
           </dt>
           <dd class="contact-content">
-            3340 Peachtree Road NE
+            3344 Peachtree Rd NE Suite 800
             <br>
             Atlanta, GA 30326
           </dd>
@@ -22,7 +22,7 @@
             Say Hi
           </dt>
           <dd>
-            <a href="mailto:hello@razorfish.com" class="contact-link light contact-content">
+            <a href="mailto:hello@innatetheory.com" class="contact-link light contact-content">
               hello@innatetheory.com
             </a>
           </dd>
@@ -32,47 +32,44 @@
             <div class="contact-heading h5">
               Social
             </div>
-            <p class="contact-content">
+            <p class="contact-content text-white">
               You can always find us on social.
             </p>
           </dt>
           <dd class="contact-social-item">
-            <a aria-label="Facebook" href="https://www.facebook.com/razorfish" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
+            <a aria-label="Facebook" href="https://www.facebook.com/innatetheory" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               Fb
             </a>
           </dd>
           <dd class="contact-social-item">
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/company/razorfish/" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/company/innatetheory/" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               In
             </a>
           </dd>
           <dd class="contact-social-item">
-            <a aria-label="Twitter" href="https://twitter.com/WeAreRazorfish" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
+            <a aria-label="Twitter" href="https://twitter.com/innatetheory" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               Tw
             </a>
           </dd>
           <dd class="contact-social-item">
-            <a aria-label="Instagram" href="https://www.instagram.com/razorfish/" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
+            <a aria-label="Instagram" href="https://www.instagram.com/innatetheory/" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               Ig
             </a>
           </dd>
         </div>
       </dl>
       <div class="footer-legal desk:tw--col-span-12 desk:tw--flex desk:tw--justify-between">
-        <a href="/" class="component--site-logo">
+        <n-link to="/" class="component--site-logo">
           <Logo />
-        </a>
+        </n-link>
         <div class="legal-content">
-          <p class="footer-copyright desk:tw--inline">
+          <p class="footer-copyright desk:tw--inline text-white">
             ©2020 InnateTheory ·&nbsp;All rights reserved
           </p>
-          <span class="tw--hidden desk:tw--inline">·</span> <a href="/privacy-policy" class="legal-link component--base-link global--cta secondary light">
-            Privacy
-          </a>
-          ·
-          <a href="/terms-and-conditions" class="legal-link component--base-link global--cta secondary light">
+        
+          <n-link to="/termsandconditions" class="legal-link component--base-link global--cta secondary light">
             Terms &amp; Conditions
-          </a>
+          </n-link>
         </div>
       </div>
     </div>
@@ -95,12 +92,19 @@ export default {
   @import '~/assets/sass/base/_index.scss';
   @import '~/assets/sass/extends/_index.scss';
 
+
   .component--site-footer {
-    padding-top: 93px;
+    padding-top: 50px;
     padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     background: $black;
     color: $white;
     position: relative;
+
+    @include breakpoint(lg){
+      padding-top: 93px;
+    }
 
     .global--container {
       padding: 0;
@@ -146,7 +150,12 @@ export default {
     }
 
     .desk\:tw--grid {
-      display: grid;
+      display: flex;
+      flex-flow: column;
+
+      @include breakpoint(lg){
+        display: grid;
+      }
     }
 
     .desk\:tw--col-span-7 {
@@ -217,21 +226,52 @@ export default {
     }
 
     .footer-headline {
-      margin-bottom: 140px;
+      margin-bottom: 40px;
+
+      @include breakpoint(lg){
+        margin-bottom: 140px;
+      }
     }
 
     .footer-legal {
+      flex-flow: column;
+
       p {
         font-size: 14px;
       }
 
       a {
         font-size: 14px;
+
+      }
+
+      @include breakpoint(lg){
+        flex-flow: row;
       }
 
       .component--site-logo {
         img {
           width: 180px;
+        }
+      }
+
+      .legal-content {
+        margin: 20px 0;
+        display: flex;
+        flex-flow: column;
+
+        @include breakpoint(lg){
+          margin: 0;
+          display: block;
+        }
+
+        .footer-copyright {
+          margin: 0;
+
+          @include breakpoint(lg){
+            margin-right: 20px;
+            margin-bottom: 20px;
+          }
         }
       }
     }

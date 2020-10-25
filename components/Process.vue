@@ -47,8 +47,17 @@ export default {
       opacity: 0;
       @include Transition;
 
+      .dash {
+        width: 20%;
+        border-top: 1px solid $g;
+      }
+
       .process__wrapper {
-        padding: 40px 0;
+        padding: 20px 0 0;
+
+        @include breakpoint(lg){
+          padding: 40px 0;
+        }
 
         .counter {
           font-size: 6rem;
@@ -56,11 +65,19 @@ export default {
         }
 
         .label-l {
-          font-size: 3.6vw;
-          font-family: $font-graphik-extra-light;
+          font-size: 15px;
+          text-transform: uppercase;
+          font-family: $font-graphik-bold;
           line-height: 1;
-          padding-right: 80px;
+          padding-right: 0;
           display: block;
+          margin-bottom: 20px;
+
+          @include breakpoint(lg){
+            font-size: 20px;
+            margin-bottom: 0;
+            padding-right: 80px;
+          }
         }
       }
     }

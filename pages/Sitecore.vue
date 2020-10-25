@@ -9,7 +9,7 @@
         :delay="index"
       />
     </div>
-    <BannerLink label="Lets Talk Sitecore" url="/contact" />
+    <BannerLink label="Lets Talk Sitecore" url="mailto:hello@innatetheory.com" />
   </section>
 </template>
 
@@ -40,6 +40,7 @@ export default {
       author: this.author,
       meta: [
         ...createSEOMeta({
+          url: this.url,
           description: "Find out how Sitecore’s customer experience systems enhance business strategies.",
           title: this.title
         })
@@ -53,6 +54,7 @@ export default {
      */
     const response = await Services.getData('sitecore')
     const contentArrr = response.data.stories[0].content.body
+    const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
     console.dir(contentArrr)
@@ -61,6 +63,7 @@ export default {
       // eslint-disable-next-line no-sequences
       array.reduce((obj, item) => ((obj = item), obj), {})
     return {
+      url: fullUrl,
       heroSimpleObj: convertArrayToObject(contentArrr.filter(e => e.component === 'hero-simple')),
       sitecoreServicesObj: convertArrayToObject(contentArrr.filter(e => e.component === 'sitecore-block-container'))
     }
@@ -76,7 +79,7 @@ export default {
       background-color: $white;
 
       &:nth-child(odd) {
-        background-color: $i;
+        // background-color: $i;
       }
     }
   }
