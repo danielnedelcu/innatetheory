@@ -74,6 +74,9 @@ export default {
     const blogData = await Services.getData('thoughts')
     const blogResponse = blogData.data.stories
 
+    // eslint-disable-next-line no-sequences
+    console.log('contentArrr', contentArrr)
+
     const convertArrayToObject = (array, key) =>
       // eslint-disable-next-line no-sequences
       array.reduce((obj, item) => ((obj = item), obj), {})

@@ -20,9 +20,9 @@
                       {{ data.description }}
                     </p>
                   </div>
-                  <n-link :to="data.link" class="btn--primary horizontal-center">
+                  <a :href="data.link.url" class="btn--primary horizontal-center" target="_blank">
                     <span>{{ data.cta }}</span>
-                  </n-link>
+                  </a>
                 </div>
               </div>
             </div>
