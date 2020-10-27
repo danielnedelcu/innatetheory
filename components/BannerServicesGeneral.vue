@@ -7,7 +7,7 @@
             <div class="p-r-100">
               <h3>{{ data.headline }}</h3>
               <p class="text-white">
-                Take a look at what the Sitecore as a Comsumer Experience Platform can do for your business needs.
+                Take a look at what the Sitecore as a Digital Experience Platform can do for your business needs.
               </p>
               <n-link :to="ctaData.url.cached_url" class="btn--primary-reverse">
                 <span>{{ ctaData.label }}</span>
