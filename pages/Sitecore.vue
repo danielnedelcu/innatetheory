@@ -8,6 +8,9 @@
         :block="block"
         :delay="index"
       />
+
+      <SitecoreContentBlockColumns :block="sitecoreServicesColumnsObj" />
+
     </div>
     <BannerLink label="Lets Talk Sitecore" url="mailto:hello@innatetheory.com" />
   </section>
@@ -18,13 +21,15 @@ import { createSEOMeta } from '../utils/seo'
 import HeroSimple from '~/components/HeroSimple.vue'
 import BannerLink from '~/components/BannerLink.vue'
 import SitecoreContentBlock from '~/components/SitecoreContentBlock.vue'
+import SitecoreContentBlockColumns from '~/components/SitecoreContentBlockColumns.vue'
 import Services from '~/services/services.js'
 
 export default {
   components: {
     HeroSimple,
     BannerLink,
-    SitecoreContentBlock
+    SitecoreContentBlock,
+    SitecoreContentBlockColumns
   },
 
   data () {
@@ -53,19 +58,20 @@ export default {
      * Rtrieves all homepage data from Storyblok
      */
     const response = await Services.getData('sitecore')
-    const contentArrr = response.data.stories[0].content.body
+    const contentArr = response.data.stories[0].content.body
     const fullUrl = context.env.baseUrl + context.route.path
 
     // eslint-disable-next-line no-console
-    console.dir(contentArrr)
+    console.dir(contentArr)
 
     const convertArrayToObject = (array, key) =>
       // eslint-disable-next-line no-sequences
       array.reduce((obj, item) => ((obj = item), obj), {})
     return {
       url: fullUrl,
-      heroSimpleObj: convertArrayToObject(contentArrr.filter(e => e.component === 'hero-simple')),
-      sitecoreServicesObj: convertArrayToObject(contentArrr.filter(e => e.component === 'sitecore-block-container'))
+      heroSimpleObj: convertArrayToObject(contentArr.filter(e => e.component === 'hero-simple')),
+      sitecoreServicesObj: convertArrayToObject(contentArr.filter(e => e.component === 'sitecore-block-container')),
+      sitecoreServicesColumnsObj: convertArrayToObject(contentArr.filter(e => e.component === 'sitecore-column-block-container'))
     }
   }
 }
