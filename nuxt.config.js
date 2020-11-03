@@ -71,8 +71,8 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/eslint-module'
+    // '@nuxtjs/google-analytics'
   ],
   /*
   ** Nuxt.js modules
@@ -81,8 +81,15 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/gtm',
     ['storyblok-nuxt', { accessToke: 'L47YFTFClMjlR9yQTxVPVwtt', cacheProvider: 'memory' }]
   ],
+
+  gtm: {
+    id: 'GTM-TBXX9HH',
+    enabled: true
+  },
+
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
