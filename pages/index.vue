@@ -2,7 +2,7 @@
   <div class="">
     <Hero :data="heroObj" />
     <TwoColumn :data="twoColumnObj" />
-    <!-- <SitecoreTeaserBanner :data="sitecoreTeaserObj"/> -->
+    <SitecoreTeaserBanner :data="sitecoreTeaserObj"/>
     <EventBannerFull :data="eventBannerObj" />
     <ClientGrid :data="clientsGridObj" />
     <CaseStudies :data="caseStudyPreview" />

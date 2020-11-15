@@ -14,6 +14,7 @@
               <div class="services">
                 <h5 class="capabilities-label">Capabilities</h5>
                 <swiper class="swiper ul" :options="swiperOption">
+                  <div class="swiper-scrollbar" slot="scrollbar"></div>
                   <Capability
                     v-for="(item, index) in data.placeholder"
                     :key="item._uid"
@@ -66,16 +67,17 @@ export default {
         spaceBetween: 1,
         grabCursor: true,
         centeredSlides: false,
-        // scrollbar: {
-        //   el: '.swiper-scrollbar',
-        //   hide: true
-        // },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          hide: false
+        },
         breakpoints: {
           768: {
             slidesPerView: 'auto',
             spaceBetween: 1,
             centeredSlides: false,
-            grabCursor: false
+            grabCursor: false,
+            scrollbar: false
           }
         }
       }
@@ -179,6 +181,19 @@ export default {
 
             @include breakpoint(lg){
               overflow: unset !important;
+            }
+
+            .swiper-scrollbar {
+                display: block;
+                background: rgba(255, 255, 255, 0.2);
+
+                .swiper-scrollbar-drag {
+                  background: rgba(255, 255, 255, 0.5);
+                }                
+
+                @include breakpoint(lg){
+                    display: none;
+                }
             }
 
           }

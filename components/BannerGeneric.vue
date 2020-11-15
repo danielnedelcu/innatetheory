@@ -12,19 +12,20 @@
         </div>
         <div class="services">
           <h5 class="capabilities-label">Capabilities</h5>
-          <swiper class="swiper ul" :options="swiperOption">
-            <Capability
-              v-for="(item, index) in data.placeholder"
-              :key="item._uid"
-              :data="item"
-              :textColor="textColor"
-              :backgroundColor="backgroundColor"
-              :boxWidth="boxWidth"
-              :delay="index"
-            />
-            <!-- <div class="swiper-scrollbar" slot="scrollbar"></div> -->
-          </swiper>
-      
+          <client-only>
+            <swiper class="swiper ul" :options="swiperOption">
+              <div class="swiper-scrollbar" slot="scrollbar"></div>
+              <Capability
+                v-for="(item, index) in data.placeholder"
+                :key="item._uid"
+                :data="item"
+                :textColor="textColor"
+                :backgroundColor="backgroundColor"
+                :boxWidth="boxWidth"
+                :delay="index"
+              />
+            </swiper>
+          </client-only>
         </div>
       </div>
     </div>
@@ -33,7 +34,7 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import 'swiper/swiper.scss'
+import 'swiper/css/swiper.min.css'
 import SectionHeadline from '~/components/shared/SectionHeadline.vue'
 import Capability from '~/components/Capability.vue'
 
@@ -62,16 +63,17 @@ export default {
         spaceBetween: 1,
         grabCursor: true,
         centeredSlides: false,
-        // scrollbar: {
-        //   el: '.swiper-scrollbar',
-        //   hide: true
-        // },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          hide: false
+        },
         breakpoints: {
           768: {
             slidesPerView: 'auto',
             spaceBetween: 1,
             centeredSlides: false,
-            grabCursor: false
+            grabCursor: false,
+            scrollbar: false
           }
         }
       }
@@ -154,8 +156,12 @@ export default {
                 overflow: unset !important;
               }
 
-              .swiper-wrapper {
-                flex-wrap: wrap;
+              .swiper-scrollbar {
+                  display: block;
+
+                  @include breakpoint(lg){
+                      display: none;
+                  }
               }
             }
           }
