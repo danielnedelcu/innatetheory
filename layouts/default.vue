@@ -1,12 +1,12 @@
 <template>
   <div class="default-layout page-content">
-    <script>
+    <!-- <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
     
       gtag('config', 'G-4JWJ500DKK');
-    </script>
+    </script> -->
     <Header />
     <nuxt />
     <Footer />
