@@ -2,12 +2,15 @@
   <section>
     <HeroSimple :data="heroSimpleObj" />
     <div class="sitecore__blocks">
+      <BannerGenericWithBackground :data="sitecoreDevObj" />
       <SitecoreContentBlock
         v-for="(block, index) in sitecoreServicesObj.sitecoreBlock"
         :key="block._uid"
         :block="block"
         :delay="index"
       />
+
+      <BannerGeneric :data="personalizationContentbj" />
 
       <SitecoreContentBlockColumns :block="sitecoreServicesColumnsObj" />
 
@@ -22,6 +25,8 @@ import HeroSimple from '~/components/HeroSimple.vue'
 import BannerLink from '~/components/BannerLink.vue'
 import SitecoreContentBlock from '~/components/SitecoreContentBlock.vue'
 import SitecoreContentBlockColumns from '~/components/SitecoreContentBlockColumns.vue'
+import BannerGeneric from '~/components/BannerGeneric.vue'
+import BannerGenericWithBackground from '~/components/BannerGenericWithBackground.vue'
 import Services from '~/services/services.js'
 
 export default {
@@ -29,7 +34,9 @@ export default {
     HeroSimple,
     BannerLink,
     SitecoreContentBlock,
-    SitecoreContentBlockColumns
+    SitecoreContentBlockColumns,
+    BannerGeneric,
+    BannerGenericWithBackground
   },
 
   data () {
@@ -70,6 +77,8 @@ export default {
     return {
       url: fullUrl,
       heroSimpleObj: convertArrayToObject(contentArr.filter(e => e.component === 'hero-simple')),
+      personalizationContentbj: convertArrayToObject(contentArr.filter(e => e.component === 'banner-generic')),
+      sitecoreDevObj: convertArrayToObject(contentArr.filter(e => e.component === 'banner-generic-image')),
       sitecoreServicesObj: convertArrayToObject(contentArr.filter(e => e.component === 'sitecore-block-container')),
       sitecoreServicesColumnsObj: convertArrayToObject(contentArr.filter(e => e.component === 'sitecore-column-block-container'))
     }

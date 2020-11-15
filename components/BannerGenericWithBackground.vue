@@ -139,7 +139,7 @@ export default {
 
         &-center {
           position: relative;
-          z-index: 9;
+          z-index: 2;
 
           @include breakpoint(lg){
               position: absolute;
