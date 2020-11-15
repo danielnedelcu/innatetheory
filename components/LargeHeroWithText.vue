@@ -52,9 +52,11 @@ export default {
     color: $white;
     overflow: hidden;
     margin-top: 0;
+    margin-bottom: 50px;
 
     @include breakpoint(lg) {
       height: 800px;
+      margin-bottom: 0;
     }
 
     .banner-dimmer {
