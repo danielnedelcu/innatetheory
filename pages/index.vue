@@ -2,6 +2,7 @@
   <div class="">
     <Hero :data="heroObj" />
     <TwoColumn :data="twoColumnObj" />
+    <!-- <SitecoreTeaserBanner :data="sitecoreTeaserObj"/> -->
     <EventBannerFull :data="eventBannerObj" />
     <ClientGrid :data="clientsGridObj" />
     <CaseStudies :data="caseStudyPreview" />
@@ -22,6 +23,7 @@ import CaseStudies from '~/components/CaseStudies.vue'
 import BannerFull from '~/components/BannerFull.vue'
 import BlogTeaserWideParent from '~/components/BlogTeaserWideParent.vue'
 import BannerLink from '~/components/BannerLink.vue'
+import SitecoreTeaserBanner from '~/components/SitecoreTeaserBanner'
 import Services from '~/services/services.js'
 
 export default {
@@ -33,7 +35,8 @@ export default {
     CaseStudies,
     BannerFull,
     BlogTeaserWideParent,
-    BannerLink
+    BannerLink,
+    SitecoreTeaserBanner
   },
 
   data () {
@@ -84,6 +87,7 @@ export default {
       url: fullUrl,
       heroObj: convertArrayToObject(contentArrr.filter(e => e.component === 'hero')),
       twoColumnObj: convertArrayToObject(contentArrr.filter(e => e.component === 'two-column')),
+      sitecoreTeaserObj: convertArrayToObject(contentArrr.filter(e => e.component === 'sitecore-teaser-container')),
       eventBannerObj: convertArrayToObject(contentArrr.filter(e => e.component === 'event-banner')),
       clientsGridObj: convertArrayToObject(contentArrr.filter(e => e.component === 'client-grid')),
       caseStudyPreview: convertArrayToObject(contentArrr.filter(e => e.component === 'case-study-preview')),

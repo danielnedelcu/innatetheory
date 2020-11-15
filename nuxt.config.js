@@ -1,6 +1,9 @@
 import { createSEOMeta } from './utils/seo'
 
+// const { resolve } = require('path')
+
 export default {
+  // rootDir: resolve(__dirname, './evergreen/'),
   mode: 'universal',
 
   // router: {
@@ -12,6 +15,7 @@ export default {
   */
   head: {
     script: [
+      { src: 'https://www.googletagmanager.com/gtag/js?id=G-4JWJ500DKK', body: true },
       { src: 'https://unpkg.com/swiper/js/swiper.min.js', body: true },
       { src: 'script/SplitText.min.js', body: true },
       { src: 'script/inview.js', body: true }
@@ -85,10 +89,10 @@ export default {
     ['storyblok-nuxt', { accessToke: 'L47YFTFClMjlR9yQTxVPVwtt', cacheProvider: 'memory' }]
   ],
 
-  gtm: {
-    id: 'GTM-TBXX9HH',
-    enabled: true
-  },
+  // gtm: {
+  //   id: 'GTM-TBXX9HH',
+  //   enabled: true
+  // },
 
   /*
   ** Axios module configuration
@@ -97,9 +101,9 @@ export default {
   axios: {
   },
 
-  googleAnalytics: {
-    id: 'G-4JWJ500DKK'
-  },
+  // googleAnalytics: {
+  //   id: 'G-4JWJ500DKK'
+  // },
 
   /*
   ** Build configuration
