@@ -1,7 +1,7 @@
 <template>
   <section class="section__sitecore-teaser section__banner p-t-b-150">
     <div class="wrapper--full-bleed">
-      <div class="section__sitecore-teaser-wrapper row-mobile">
+      <div class="section__sitecore-teaser-wrapper">
 
         <SitecoreTeaserItem
           v-for="item in data.placeholder"
@@ -30,5 +30,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '~/assets/sass/base/_index.scss';
 
+  .section__sitecore-teaser {
+    &-wrapper {
+      display: flex;
+      flex-flow: column;
+
+      @include breakpoint(xl){
+        flex-flow: row;
+      }
+    }
+  }
 </style>

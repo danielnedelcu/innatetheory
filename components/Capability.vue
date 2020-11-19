@@ -36,6 +36,7 @@ export default {
     padding: 50px;
     // color: this.textColor;
     margin-right: 1px;
+    margin-bottom: 1px;
     // width: 20%; //calc(25% - 2rem);
     flex: 0 0 auto;
     align-items: center;

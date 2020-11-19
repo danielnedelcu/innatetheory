@@ -145,7 +145,7 @@
 }
 
 .anim-image {
-        overflow: hidden;
+    overflow: hidden;
 
     &:after {
         content: '';
@@ -285,4 +285,9 @@
 
 .swiper-wrapper {
     margin-bottom: 15px !important;
+    flex-flow: nowrap;
+
+    @include breakpoint(lg){ 
+        flex-flow: wrap;
+    }
 }

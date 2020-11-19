@@ -1,5 +1,5 @@
 <template>
-  <div class="col">
+  <div class="column">
     <div class="section__sitecore-teaser-wrapper-item">
       <div class="section__headline-category h5 animated__l"><hr class="dash">
         {{ item.label }}
@@ -37,7 +37,27 @@ export default {
 <style scoped lang="scss">
   @import '~/assets/sass/base/_index.scss';
 
+  .column {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include breakpoint(xl){
+      width: 33.33339%
+    }
+  }
+
   .section__sitecore-teaser-wrapper-item {
+    margin-bottom: 70px;
+
+    @include breakpoint(xl){
+      margin-bottom: 0;
+    }
+
     .section__headline-category {
       margin-top: 0;
       position: relative;

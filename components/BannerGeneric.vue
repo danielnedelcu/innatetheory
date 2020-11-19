@@ -11,7 +11,7 @@
           <p v-html="data.description" class="split__paragraph" />
         </div>
         <div class="services">
-          <h5 class="capabilities-label">Capabilities</h5>
+          <h5 v-if="data.placeholder.length" class="capabilities-label">Capabilities</h5>
           <client-only>
             <swiper class="swiper ul" :options="swiperOption">
               <div class="swiper-scrollbar" slot="scrollbar"></div>

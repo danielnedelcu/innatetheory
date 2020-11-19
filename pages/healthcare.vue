@@ -2,8 +2,9 @@
   <section>
       <LargeHeroWithText :data="heroObj" />
       <BannerGeneric :data="consultingContentbj" />
-      <BannerGenericWithBackground :data="contentWithIamgeObj" />
-      <BannerGeneric :data="cloudContentbj" />
+      <BannerGenericWithBackground :data="experienceObj" />
+      <BannerGenericWithBackground :data="cloudContentObj" />
+      <BannerGeneric :data="marketingContentObj" />
       <BannerLink label="Our Work" url="/projects" />
   </section>
 </template>
@@ -62,8 +63,10 @@ export default {
       // routerId: context.params.id,
       heroObj: convertArrayToObject(contentArr.hero.filter(e => e.component === 'large-hero')),
       consultingContentbj: contentArr.placeholder[0],
-      contentWithIamgeObj: convertArrayToObject(contentArr.placeholder.filter(e => e.component === 'banner-generic-image')),
-      cloudContentbj: contentArr.placeholder[2],
+      experienceObj: convertArrayToObject(contentArr.placeholder.filter(e => e.label === 'digital experience')),
+      // cloudContentObj: contentArr.placeholder[2],
+      cloudContentObj: convertArrayToObject(contentArr.placeholder.filter(e => e.label === 'cloud infrastructure')),
+      marketingContentObj: convertArrayToObject(contentArr.placeholder.filter(e => e.label === 'healthcare marketing'))
       // caseStudyHeaderParagraphImageObj: convertArrayToObject(contentArr.content.caseStudyPlaceholder.filter(e => e.component === 'case-study-header-paragraph-image')),
       // caseStudyHeaderParagraphObj: convertArrayToObject(contentArr.content.caseStudyPlaceholder.filter(e => e.component === 'case-study-header-paragraph')),
       // caseStudyFullWidthImageObj: convertArrayToObject(contentArr.content.caseStudyPlaceholder.filter(e => e.component === 'case-study-full-width-image')),
