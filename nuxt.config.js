@@ -86,8 +86,17 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/gtm',
-    ['storyblok-nuxt', { accessToke: 'L47YFTFClMjlR9yQTxVPVwtt', cacheProvider: 'memory' }]
+    ['storyblok-nuxt', { accessToke: 'L47YFTFClMjlR9yQTxVPVwtt', cacheProvider: 'memory' }],
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    hostname: process.env.BASE_URL || 'https://innatetheory.com',
+    // routes: async () => {},
+    path: '/sitemap.xml',
+    gzip: true,
+    generate: false
+  },
 
   // gtm: {
   //   id: 'GTM-TBXX9HH',
@@ -122,7 +131,7 @@ export default {
     baseUrl: 
       process.env.NODE_ENV !== 'dev'
         ? 'http://localhost:3000'
-        : 'https://innatetheory.netlify.app' 
+        : 'https://innatetheory.com' 
     // process.env.BASE_URL || 'http://localhost:3000'
   }
 }
