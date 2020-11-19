@@ -36,21 +36,21 @@
               You can always find us on social.
             </p>
           </dt>
-          <dd class="contact-social-item">
+          <!-- <dd class="contact-social-item">
             <a aria-label="Facebook" href="https://www.facebook.com/innatetheory" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               Fb
             </a>
-          </dd>
+          </dd> -->
           <dd class="contact-social-item">
             <a aria-label="LinkedIn" href="https://www.linkedin.com/company/innatetheory/" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               In
             </a>
           </dd>
-          <dd class="contact-social-item">
+          <!-- <dd class="contact-social-item">
             <a aria-label="Twitter" href="https://twitter.com/innatetheory" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               Tw
             </a>
-          </dd>
+          </dd> -->
           <dd class="contact-social-item">
             <a aria-label="Instagram" href="https://www.instagram.com/innatetheory/" rel="noreferrer" target="_blank" class="component--social-icon light contact-social-icon">
               Ig
