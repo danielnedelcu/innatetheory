@@ -1,5 +1,5 @@
 <template>
-  <section class="section__banner p-t-b-250">
+  <section class="section__banner p-b-250">
     <div class="wrapper--content">
       <SectionHeadline :label="data.label" :title="data.title" />
     </div>

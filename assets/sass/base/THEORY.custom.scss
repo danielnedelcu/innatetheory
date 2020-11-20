@@ -8,6 +8,27 @@
     }
 }
 
+.p-t-250 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include breakpoint(lg){
+        padding-top: 250px;
+        padding-bottom: 0;
+    }
+}
+
+.p-b-250 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include breakpoint(lg){
+        padding-bottom: 250px;
+        padding-top: 0;
+    }
+}
+
+
 .p-t-b-150 {
     padding-top: 50px;
     padding-bottom: 80px;

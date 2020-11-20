@@ -1,5 +1,5 @@
 <template>
-  <section class="section__banner p-t-b-250">
+  <section class="section__banner p-b-250">
     <div class="wrapper--full-bleed section__banner-wrapper banner-dimmer">
       <div v-inview:once.enter="inviewImageEnter" v-bind:style="{ backgroundImage: `url(${data.image.filename})` }" class="section__banner-wrapper-image anim-image">
         <div class="section__banner-wrapper-center table-content">

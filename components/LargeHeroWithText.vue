@@ -56,7 +56,7 @@ export default {
 
     @include breakpoint(lg) {
       height: 800px;
-      margin-bottom: 0;
+      margin-bottom: 250px;
     }
 
     .banner-dimmer {
