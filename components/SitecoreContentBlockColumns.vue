@@ -1,6 +1,6 @@
 <template>
    <section class="section__sitecore_columns">
-      <div class="sitecore-wrapper d-flex justify-between wrapper--content">
+      <div class="sitecore-wrapper d-flex justify-between wrapper">
    
           <div v-inview:once.enter="inviewEnter" class="sitecore-wrapper-content animated__h">
             <hr class="dash" />
@@ -9,14 +9,16 @@
             </h2>
 
             <div class="sitecore-list bordered row-mobile">
-              <ul class="row">
-                <SitecoreContentBlockColumnsItem
-                  v-for="(item, index) in block.placeholder"
-                  :key="item._uid"
-                  :block="item"
-                  :delay="index"                
-                />
-              </ul>
+              <div class="wrapper">
+                <ul class="row">
+                  <SitecoreContentBlockColumnsItem
+                    v-for="(item, index) in block.placeholder"
+                    :key="item._uid"
+                    :block="item"
+                    :delay="index"                
+                  />
+                </ul>
+              </div>
             </div>
           </div>
       </div>
@@ -63,6 +65,9 @@ export default {
     }
 
     .sitecore-wrapper { 
+      background-color: $g;
+      color: $white;
+
       &-content {
         position: relative;
 

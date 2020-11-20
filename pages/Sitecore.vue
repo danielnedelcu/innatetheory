@@ -12,7 +12,7 @@
 
       <BannerGeneric :data="personalizationContentbj" />
 
-      <SitecoreContentBlockColumns :block="sitecoreServicesColumnsObj" />
+      <BannerGenericWithNoImage :data="sitecoreSupportObj" />
 
     </div>
     <BannerLink label="Lets Talk Sitecore" url="mailto:hello@innatetheory.com" />
@@ -27,6 +27,7 @@ import SitecoreContentBlock from '~/components/SitecoreContentBlock.vue'
 import SitecoreContentBlockColumns from '~/components/SitecoreContentBlockColumns.vue'
 import BannerGeneric from '~/components/BannerGeneric.vue'
 import BannerGenericWithBackground from '~/components/BannerGenericWithBackground.vue'
+import BannerGenericWithNoImage from '~/components/BannerGenericWithNoImage.vue'
 import Services from '~/services/services.js'
 
 export default {
@@ -36,7 +37,8 @@ export default {
     SitecoreContentBlock,
     SitecoreContentBlockColumns,
     BannerGeneric,
-    BannerGenericWithBackground
+    BannerGenericWithBackground,
+    BannerGenericWithNoImage
   },
 
   data () {
@@ -80,7 +82,7 @@ export default {
       personalizationContentbj: convertArrayToObject(contentArr.filter(e => e.component === 'banner-generic')),
       sitecoreDevObj: convertArrayToObject(contentArr.filter(e => e.component === 'banner-generic-image')),
       sitecoreServicesObj: convertArrayToObject(contentArr.filter(e => e.component === 'sitecore-block-container')),
-      sitecoreServicesColumnsObj: convertArrayToObject(contentArr.filter(e => e.component === 'sitecore-column-block-container'))
+      sitecoreSupportObj: convertArrayToObject(contentArr.filter(e => e.component === 'banner-generic-background'))
     }
   }
 }
