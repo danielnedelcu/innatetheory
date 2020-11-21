@@ -3,7 +3,8 @@
       <LargeHeroWithText :data="heroObj" />
       <BannerGeneric :data="consultingContentbj" />
       <BannerGenericWithBackground :data="experienceObj" />
-      <BannerGenericWithBackground :data="cloudContentObj" />
+      <!-- <BannerGenericWithBackground :data="cloudContentObj" /> -->
+      <BannerGenericWithNoImage :data="cloudContentObj" />
       <BannerGeneric :data="marketingContentObj" />
       <BannerLink label="Our Work" url="/projects" />
   </section>
@@ -15,6 +16,7 @@ import Services from '~/services/services.js'
 import LargeHeroWithText from '~/components/LargeHeroWithText.vue'
 import BannerGeneric from '~/components/BannerGeneric.vue'
 import BannerGenericWithBackground from '~/components/BannerGenericWithBackground.vue'
+import BannerGenericWithNoImage from '~/components/BannerGenericWithNoImage.vue'
 import BannerLink from '~/components/BannerLink.vue'
 
 export default {
@@ -22,7 +24,8 @@ export default {
     LargeHeroWithText,
     BannerGeneric,
     BannerGenericWithBackground,
-    BannerLink
+    BannerLink,
+    BannerGenericWithNoImage
   },
 
   data () {
