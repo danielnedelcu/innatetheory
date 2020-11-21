@@ -1,17 +1,23 @@
 <template>
   <section>
       <LargeHeroWithText :data="heroObj" />
+      <BannerGeneric :data="cloudStrategyContentbj" />
+      <BannerGenericWithNoImage :data="roadmapObj" />
   </section>
 </template>
 
 <script>
 import { createSEOMeta } from '../utils/seo'
 import Services from '~/services/services.js'
+import BannerGeneric from '~/components/BannerGeneric.vue'
+import BannerGenericWithNoImage from '~/components/BannerGenericWithNoImage.vue'
 import LargeHeroWithText from '~/components/LargeHeroWithText.vue'
 
 export default {
   components: {
-    LargeHeroWithText
+    LargeHeroWithText,
+    BannerGeneric,
+    BannerGenericWithNoImage
   },
 
   data () {
@@ -51,6 +57,8 @@ export default {
       // projectData: contentArr,
       // routerId: context.params.id,
       heroObj: convertArrayToObject(contentArr.hero.filter(e => e.component === 'large-hero')),
+      cloudStrategyContentbj: convertArrayToObject(contentArr.placeholder.filter(e => e.label === 'sitecore on azure')),
+      roadmapObj: convertArrayToObject(contentArr.placeholder.filter(e => e.label === 'migration accelerator'))
       // caseStudyHeaderParagraphImageObj: convertArrayToObject(contentArr.content.caseStudyPlaceholder.filter(e => e.component === 'case-study-header-paragraph-image')),
       // caseStudyHeaderParagraphObj: convertArrayToObject(contentArr.content.caseStudyPlaceholder.filter(e => e.component === 'case-study-header-paragraph')),
       // caseStudyFullWidthImageObj: convertArrayToObject(contentArr.content.caseStudyPlaceholder.filter(e => e.component === 'case-study-full-width-image')),
