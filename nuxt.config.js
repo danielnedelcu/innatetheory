@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { createSEOMeta } from './utils/seo'
 
 // const { resolve } = require('path')
@@ -92,10 +93,33 @@ export default {
 
   sitemap: {
     hostname: process.env.BASE_URL || 'https://innatetheory.com',
-    // routes: async () => {},
+    routes: [
+      '/thoughts/the-shift-to-cloud-computing',                                                                               
+      '/projects/roundpoint',                                                                                                                     
+      '/thoughts/8-reasons-to-work-with-innate-theory',                                                                                    
+      '/thoughts/the-digital-holiday-season' 
+    ],
     path: '/sitemap.xml',
     gzip: true,
     generate: false
+    // sitemaps: [
+    //   {
+    //     path: '/thoughts/sitemap.xml',
+    //     exclude: [],
+    //     routes: [
+    //       '/thoughts/the-shift-to-cloud-computing',                                                                               
+    //       '/projects/roundpoint',                                                                                                                     
+    //       '/thoughts/8-reasons-to-work-with-innate-theory',                                                                                    
+    //       '/thoughts/the-digital-holiday-season' 
+    //     ]
+    //     // routes: async () => {
+    //     //     let apiUrl = 'https://innatetheory.com/' // or API url
+    //     //     const { data } = await axios.get(`${apiUrl}thoughts`)
+    //     //     console.log('data', data.data)
+    //     //     return data.data.map(v => `/${v.id}`)
+    //     //   }
+    //   }
+    // ]
   },
 
   // gtm: {
