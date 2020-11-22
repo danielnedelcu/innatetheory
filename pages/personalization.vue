@@ -3,7 +3,7 @@
       <LargeHeroWithText :data="heroObj" />
       <BannerGeneric :data="experienceObj" />
       <BannerGenericWithBackground :data="leadGenerationObj" />
-      <BannerLink label="Sitecore Offerings" url="/sitcore" />
+      <BannerLink label="Sitecore Offerings" url="/sitecore" />
   </section>
 </template>
 
