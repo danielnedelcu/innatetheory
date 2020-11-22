@@ -3,6 +3,7 @@
       <LargeHeroWithText :data="heroObj" />
       <BannerGeneric :data="cloudStrategyContentbj" />
       <BannerGenericWithNoImage :data="roadmapObj" />
+      <BannerLink label="What We Do" url="/services" />
   </section>
 </template>
 
@@ -12,12 +13,14 @@ import Services from '~/services/services.js'
 import BannerGeneric from '~/components/BannerGeneric.vue'
 import BannerGenericWithNoImage from '~/components/BannerGenericWithNoImage.vue'
 import LargeHeroWithText from '~/components/LargeHeroWithText.vue'
+import BannerLink from '~/components/BannerLink.vue'
 
 export default {
   components: {
     LargeHeroWithText,
     BannerGeneric,
-    BannerGenericWithNoImage
+    BannerGenericWithNoImage,
+    BannerLink
   },
 
   data () {

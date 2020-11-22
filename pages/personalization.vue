@@ -3,6 +3,7 @@
       <LargeHeroWithText :data="heroObj" />
       <BannerGeneric :data="experienceObj" />
       <BannerGenericWithBackground :data="leadGenerationObj" />
+      <BannerLink label="Sitecore Offerings" url="/sitcore" />
   </section>
 </template>
 
@@ -12,12 +13,14 @@ import Services from '~/services/services.js'
 import BannerGeneric from '~/components/BannerGeneric.vue'
 import BannerGenericWithBackground from '~/components/BannerGenericWithBackground.vue'
 import LargeHeroWithText from '~/components/LargeHeroWithText.vue'
+import BannerLink from '~/components/BannerLink.vue'
 
 export default {
   components: {
     LargeHeroWithText,
     BannerGeneric,
-    BannerGenericWithBackground
+    BannerGenericWithBackground,
+    BannerLink
   },
 
   data () {
