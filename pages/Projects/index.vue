@@ -28,7 +28,7 @@ export default {
 
   data () {
     return {
-      title: 'Innte Theory | Our Work',
+      title: 'Innate Theory | Our Work',
       heroSimpleObj: {
         headline: "Here's some work we're really proud of and want to share",
         description: ''
