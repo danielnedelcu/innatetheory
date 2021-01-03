@@ -64,7 +64,7 @@
         </n-link>
         <div class="legal-content">
           <p class="footer-copyright desk:tw--inline text-white">
-            ©2020 InnateTheory ·&nbsp;All rights reserved
+            ©2021 InnateTheory ·&nbsp;All rights reserved
           </p>
         
           <n-link to="/termsandconditions" class="legal-link component--base-link global--cta secondary light">
