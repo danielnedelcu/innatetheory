@@ -42,7 +42,8 @@ export default {
         ...createSEOMeta({
           title: `Innate Theory | Health`,
           url: this.url,
-          description: `Innate Theory Health strategy, digital platforms and cloud computing services`
+          description: `Innate Theory Health strategy, digital platforms and cloud computing services`,
+          keywords: "digital health, digital strategy, healthcare market research, healthcare content strategy, digital experience platform, personalization, data analytics, content management systems, cloud consulting, cloud migration, healthcare seo, healthcare social media"
         })
       ]
     }

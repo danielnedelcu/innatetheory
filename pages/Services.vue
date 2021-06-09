@@ -39,7 +39,8 @@ export default {
       inviewEnter: this.$inviewEnter,
       title: 'Innate Theory | What We Do',
       sectionLabel: 'strategy',
-      sectionTitle: 'Through strategic solutions rooted in technology we help our clients navigate the digital and competitive landscape to deliver concrete results'
+      sectionTitle: 'Through strategic solutions rooted in technology we help our clients navigate the digital and competitive landscape to deliver concrete results',
+      keywords: "sitecore development, website development, atlanta web development, atlanta sitecore development, digital strategy, market research, user experience, interface design, digital experience platforms, cloud infrasturcture, ecommerce development"
     }
   },
 

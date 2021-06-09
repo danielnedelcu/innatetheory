@@ -23,5 +23,10 @@ export const createSEOMeta = data => [
     hid: `og:url`,
     property: 'og:url',
     content: data.url
+  },
+  {
+    hid: 'keywords',
+    name: 'keywords',
+    content: data.keywords
   }
 ]

@@ -90,7 +90,8 @@ export default {
         ...createSEOMeta({
           description: "A boutique digital consultancy that provides personalized attention and strategic solutions, rooted in technology, to some of the most innovative clients. We aim to help brands and businesses navigate the waves of today's digital landscape to deliver tangible business results",
           title: this.title,
-          url: this.url
+          url: this.url,
+          keywords: "digital marketing agency, innate theory, innnate theory agency, sitecore agency, sitecore development, atlanta digital agency, atlanta sitecore agency, web content management system"
         })
       ]
     }

@@ -56,7 +56,8 @@ export default {
         ...createSEOMeta({
           url: this.url,
           description: "Find out how Sitecore’s customer experience systems enhance business strategies.",
-          title: this.title
+          title: this.title,
+          keywords: "sitecore agency, cms architecure, sitecore development, sitecore training, sitecore personalization, sitecore experience database, sitecore experience platform, azure hosting support"
         })
       ]
     }

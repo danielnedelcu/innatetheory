@@ -37,7 +37,8 @@ export default {
         ...createSEOMeta({
           title: `Innate Theory | Personalization`,
           url: this.url,
-          description: `Innate Theory Personalization`
+          description: `Innate Theory Personalization`,
+          keywords: "engagement analytics, integrated campaigns, ab testing, market automation, sitecore experience profile, customer journey, user profiling"
         })
       ]
     }

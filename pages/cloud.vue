@@ -37,7 +37,8 @@ export default {
         ...createSEOMeta({
           title: `Innate Theory | Cloud Infrastructure`,
           url: this.url,
-          description: `Innate Theory Cloud Infrastructure`
+          description: `Innate Theory Cloud Infrastructure`,
+          keywords: "cloud consulting, cloud migration, cloud support, cloud architecture, sitecore azure support, azure support"
         })
       ]
     }
